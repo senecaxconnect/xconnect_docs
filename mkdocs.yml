@@ -3,6 +3,9 @@ site_url: http://docs.senecaxconnect.com
 site_description: xConnect Documentation Library
 site_author: Seneca
 
+repo_name: 'senecaxconnect/xconnect_docs'
+repo_url: 'https://github.com/senecaxconnect/xconnect_docs'
+
 nav:
     - Platform:
        - Overview: Overview.md
