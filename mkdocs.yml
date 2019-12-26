@@ -1,4 +1,8 @@
 site_name: xConnect Documentation Library
+site_url: http://docs.senecaxconnect.com
+site_description: xConnect Documentation Library
+site_author: Seneca
+
 nav:
     - Platform:
        - Overview: Overview.md
@@ -16,9 +20,12 @@ nav:
        - Data Flow: Data_Flow.md
        - Cyber-Security: Cyber_Security.md
     - Support: Support.md
+
 theme:
   name: 'material'
   palette:
     primary: 'blue grey'
     accent: 'cyan'
   logo: 'images/logo.svg'
+
+copyright: Copyright &copy; 2020 <a href="https://www.senecadata.com"> - Seneca Data Distributors, Inc</a>
