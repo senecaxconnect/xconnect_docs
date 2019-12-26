@@ -1,0 +1,15 @@
+site_name: xConnect Documentation Library
+nav:
+    - Home: index.md
+    - Overview: Overview.md
+    - Server Agent: Agent.md
+    - Gateway: Gateway.md
+    - Web Dashboard: Dashboard.md
+    - Installation: Onboard.md
+    - Support: Support.md
+theme:
+  name: 'material'
+  palette:
+    primary: 'blue grey'
+    accent: 'cyan'
+  logo: 'images/logo.svg'
