@@ -1,3 +1,5 @@
+<img style="float: right;" src="images/xconnect_logo.png">
+
 # Documentation Repository
 This page will serve as a centralized location for all 
 documentation around the xConnect Platform and it's underlying components.
