@@ -1,122 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-     <loc>http://docs.senecaxconnect.com/Platform_Overview/</loc>
+     <loc>https://senecaxconnect.github.io/xconnect_docs/Platform_Overview/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Agent_Overview/</loc>
+     <loc>https://senecaxconnect.github.io/xconnect_docs/Agent_Overview/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Gateway_Overview/</loc>
+     <loc>https://senecaxconnect.github.io/xconnect_docs/Gateway_Overview/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Dashboard_Overview/</loc>
+     <loc>https://senecaxconnect.github.io/xconnect_docs/Dashboard_Overview/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Getting_Started/</loc>
+     <loc>https://senecaxconnect.github.io/xconnect_docs/Getting_Started/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Gateway_TurnKey/</loc>
+     <loc>https://senecaxconnect.github.io/xconnect_docs/Gateway_TurnKey/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Gateway_Docker/</loc>
+     <loc>https://senecaxconnect.github.io/xconnect_docs/Gateway_Docker/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Agent_Install/</loc>
+     <loc>https://senecaxconnect.github.io/xconnect_docs/Agent_Install/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Dashboard_Setup/</loc>
+     <loc>https://senecaxconnect.github.io/xconnect_docs/Dashboard_Setup/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Usage_Dashboards/</loc>
+     <loc>https://senecaxconnect.github.io/xconnect_docs/Usage_Dashboards/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Usage_Bookmarks/</loc>
+     <loc>https://senecaxconnect.github.io/xconnect_docs/Usage_Bookmarks/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Usage_Roles/</loc>
+     <loc>https://senecaxconnect.github.io/xconnect_docs/Usage_Roles/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Usage_ManageCustomers/</loc>
+     <loc>https://senecaxconnect.github.io/xconnect_docs/Usage_ManageCustomers/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Usage_ManageUsers/</loc>
+     <loc>https://senecaxconnect.github.io/xconnect_docs/Usage_ManageUsers/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Usage_ManageGateways/</loc>
+     <loc>https://senecaxconnect.github.io/xconnect_docs/Usage_ManageGateways/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Usage_ManageDevices/</loc>
+     <loc>https://senecaxconnect.github.io/xconnect_docs/Usage_ManageDevices/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Usage_ManageEventConfigurations/</loc>
+     <loc>https://senecaxconnect.github.io/xconnect_docs/Usage_ManageEventConfigurations/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Usage_ManageEmailProfiles/</loc>
+     <loc>https://senecaxconnect.github.io/xconnect_docs/Usage_ManageEmailProfiles/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Usage_ManageRemoteCommands/</loc>
+     <loc>https://senecaxconnect.github.io/xconnect_docs/Usage_ManageRemoteCommands/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Usage_ManageConnectors/</loc>
+     <loc>https://senecaxconnect.github.io/xconnect_docs/Usage_ManageConnectors/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Usage_EventLogs/</loc>
+     <loc>https://senecaxconnect.github.io/xconnect_docs/Usage_EventLogs/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Data_Flow/</loc>
+     <loc>https://senecaxconnect.github.io/xconnect_docs/Data_Flow/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Network_Security/</loc>
+     <loc>https://senecaxconnect.github.io/xconnect_docs/Network_Security/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Support/</loc>
+     <loc>https://senecaxconnect.github.io/xconnect_docs/Support/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
