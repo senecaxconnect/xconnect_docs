@@ -70,7 +70,7 @@ located at [downloads.senecaxconnect.com](http://downloads.senecaxconnect.com).
 
 The Server Agent consists of multiple components but are rolled into a single Windows Service, the xConnect Agent Core.
 
-Additional technical detail can be found here: [xConnect Server Agent Detail](/Agent_Overview) 
+Additional technical detail can be found here: [xConnect Server Agent Detail](/xconnect_docs/Agent_Overview) 
 
 ## xConnect Gateway
 
@@ -87,7 +87,7 @@ with the purchase of professional services.
 onboard a gateway in minutes with minimal configuration. Some features (ie. Remote Desktop and Secure Tunneling) are not available
 without configuration help by Seneca.
 
-Additional technical detail can be found here: [xConnect Secure Gateway Detail](/Gateway_Overview)
+Additional technical detail can be found here: [xConnect Secure Gateway Detail](/xconnect_docs/Gateway_Overview)
 
 ## xConnect Web Dashboard
 
@@ -103,4 +103,4 @@ Administration team to access the Web Dashboard.
 When launching the URL, you will be prompted to enter your username and password. This is
 the account provided by the xConnect Administration team or your account owner. 
 
-Additional technical detail can be found here: [xConnect Web Dashboard](/Dashboard_Overview)
+Additional technical detail can be found here: [xConnect Web Dashboard](/xconnect_docs/Dashboard_Overview)
