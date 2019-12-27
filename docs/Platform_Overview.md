@@ -34,7 +34,7 @@ This agent is responsible for collecting health information (also
 called telemetry) as well as securely facilitating remote management features.
 
 The latest version of the Server Agent installation executable is available on our downloads repo 
-located at [download.senecaxconnect.com](https://download.senecaxconnect.com).
+located at [downloads.senecaxconnect.com](http://downloads.senecaxconnect.com).
 
 The Server Agent consists of multiple components but are rolled into a single Windows Service, the xConnect Agent Core.
 
@@ -63,10 +63,10 @@ The Web Dashboard is hosted by Seneca via Microsoft Azure and is included in the
 xConnect Remote Management Platform license annual fees. No need to manage your own
 cloud costs, we take care of that for you!
 
-The Web Client Dashboard can be accessed at [senecaxconnect.com](https://www.senecaxconnect.com)
+The Web Dashboard can be accessed at [senecaxconnect.com](https://senecaxconnect.com)
 
-You will be provided a master login account and be onboarded by the xConnect
-Administration team to access the Web Client Dashboard.
+You will be provided an account by the xConnect
+Administration team to access the Web Dashboard.
 
 When launching the URL, you will be prompted to enter your username and password. This is
 the account provided by the xConnect Administration team or your account owner. 

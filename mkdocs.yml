@@ -8,10 +8,10 @@ repo_url: 'https://github.com/senecaxconnect/xconnect_docs'
 
 nav:
     - Platform:
-       - Overview: Overview.md
-       - Server Agent: Agent.md
-       - Gateway: Gateway.md
-       - Web Dashboard: Dashboard.md
+       - Overview: Platform_Overview.md
+       - Server Agent: Agent_Overview.md
+       - Gateway: Gateway_Overview.md
+       - Web Dashboard: Dashboard_Overview.md
     - Installation:
        - Getting Started: Getting_Started.md
        - Step 1 - Gateway Setup:
