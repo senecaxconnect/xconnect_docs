@@ -281,9 +281,86 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Server Agent
+      </label>
+    
     <a href="./" title="Server Agent" class="md-nav__link md-nav__link--active">
       Server Agent
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#windows-service" class="md-nav__link">
+    Windows Service
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xconnect-telemetry-engine" class="md-nav__link">
+    xConnect Telemetry Engine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xconnect-vms-integration-module" class="md-nav__link">
+    xConnect VMS Integration Module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xconnect-updater-service" class="md-nav__link">
+    xConnect Updater Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xconnect-agent-web-interface" class="md-nav__link">
+    xConnect Agent Web Interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remote-command-module" class="md-nav__link">
+    Remote Command Module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agent-restful-api" class="md-nav__link">
+    Agent RESTful API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -694,6 +771,70 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#windows-service" class="md-nav__link">
+    Windows Service
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xconnect-telemetry-engine" class="md-nav__link">
+    xConnect Telemetry Engine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xconnect-vms-integration-module" class="md-nav__link">
+    xConnect VMS Integration Module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xconnect-updater-service" class="md-nav__link">
+    xConnect Updater Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xconnect-agent-web-interface" class="md-nav__link">
+    xConnect Agent Web Interface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remote-command-module" class="md-nav__link">
+    Remote Command Module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agent-restful-api" class="md-nav__link">
+    Agent RESTful API
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -713,29 +854,42 @@ Remote Management Platform. </p>
 <p>This agent is responsible for collecting health information (also
 called telemetry) as well as securely facilitating remote management features.</p>
 <p>The latest version of the Server Agent installation executable is available on our download repository: <a href="http://downloads.senecaxconnect.com">downloads.senecaxconnect.com</a>..</p>
-<p>The Server Agent consists of 1 main background Windows Service, the <strong>xConnect Agent Core</strong>:</p>
-<p>Within </p>
-<p>xConnect Engine
-• This service is the telemetry collection engine that continuously polls various sensors
+<h2 id="windows-service">Windows Service</h2>
+<p>The Server Agent consists of a single background Windows Service, the <strong>xConnect Agent Core</strong>.</p>
+<p>The Agent Core service will be responsible for the following functions and modules:</p>
+<h3 id="xconnect-telemetry-engine">xConnect Telemetry Engine</h3>
+<p>This function is the telemetry collection engine that continuously polls various sensors
 throughout the system. It is also responsible for transmitting this telemetry to the Secure
-Gateway. Starts Automatically.
-xConnect Updater Service
-• This service handles touchless over the wire updates for all aspects of the Server Agent.
+Gateway. <strong>Telemetry Collection and Submission occurs every 2 minutes (every even minute).</strong></p>
+<h3 id="xconnect-vms-integration-module">xConnect VMS Integration Module</h3>
+<p>This module is the telemetry collection engine that continuously polls 
+supported Video Management Systems for health and meta data of connected IP cameras.
+It is also responsible for transmitting this telemetry to the Secure
+Gateway.
+<strong>Telemetry Collection and Submission occurs every 2 minutes (every odd minute).</strong></p>
+<h3 id="xconnect-updater-service">xConnect Updater Service</h3>
+<p>This module handles touchless over the wire updates of the Server Agent.
 An update package can be delivered to the Secure Gateway, and the Server Agent will
-automatically download and install this update unattended. Starts Automatically.
-xConnect Agent Web Interface
-• This service provides a local (or LAN accessible) web interface for managing and
-configuring the Server Agent. Starts Automatically.
-xConnect Remote Command Service
-• This service handles remote commands that are securely transmitted through the
+automatically download and install this update unattended. 
+<strong>Checks for updates every 5 minutes</strong></p>
+<h3 id="xconnect-agent-web-interface">xConnect Agent Web Interface</h3>
+<p>This module provides a local (or LAN accessible) web interface for managing and
+configuring the Server Agent. Starts Automatically as part of the Agent Core and
+is accessible from the local machine @ <a href="http://localhost:8885">http://localhost:8885</a> or on a networked machine
+@ http://<IP_OF_SERVER>:8885</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This web interface is required to enable Cloud support and configuration of the gateway
+connection! </p>
+</div>
+<h3 id="remote-command-module">Remote Command Module</h3>
+<p>This module handles remote commands that are securely received through the
 gateway. It is responsible for executing and tracking status of remotely triggered
 commands. Commands or scripts that are currently supported are Windows CMD and
-Windows PowerShell. Startup Type is Manual and needs to be changed to
-Automatic if you’d like to use this feature.
-xConnect Agent RESTful API
-• This service provides a mechanism for 3<sup>rd</sup> party applications to ingest or transmit
-telemetry in and out of the Server Agent. Startup Type is Manual and needs to be
-changed to Automatic if you’d like to use this feature.</p>
+Windows PowerShell. </p>
+<h3 id="agent-restful-api">Agent RESTful API</h3>
+<p>This module provides a mechanism for 3<sup>rd</sup> party applications to ingest or transmit
+telemetry in and out of the Server Agent. </p>
                 
                   
                 
