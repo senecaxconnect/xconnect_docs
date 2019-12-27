@@ -53,8 +53,6 @@ extra_css:
 markdown_extensions:
   - admonition
   - codehilite
-  - git-revision-date-localized:
-      type: timeago
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
