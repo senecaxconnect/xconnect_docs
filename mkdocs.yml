@@ -1,6 +1,6 @@
-site_name: xConnect Platform Documentation
+site_name: xConnect Documentation
 site_url: http://docs.senecaxconnect.com
-site_description: xConnect Platform Documentation
+site_description: xConnect Documentation
 site_author: Seneca
 
 repo_name: 'senecaxconnect/xconnect_docs'
