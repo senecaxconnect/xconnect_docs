@@ -1013,20 +1013,19 @@ Gateway.</p>
 <p>We now support deploying a "bare minimum" Gateway image via Docker. This option allows you to have 
 an xConnect Secure Gateway deployed in minutes, granted you can supply a machine that Docker can be installed on.</p>
 <p>As of this writing, you can use any Linux OS of your choosing to deploy the xConnect Gateway software with Docker.</p>
-<p>Docker-Compose files are available on our github page:
+<p>Container installation instruction files are available on our github page:
 <a href="https://github.com/senecaxconnect/xconnect_gateway_docker">https://github.com/senecaxconnect/xconnect_gateway_docker</a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Docker for Windows will not be officially supported until WSL2 is publicly available. However,
-you could install a Linux OS within a Hyper-V VM on Windows and it will be fully supported.</p>
+you could install a Linux OS within a Hyper-V VM on Windows and it would be fully supported.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Certain features will <strong>NOT</strong> be available (without Seneca consultation) when using the Docker gateway:
-- Remote Desktop Pass-through
-- Seneca Remote Support Services</p>
+<p>Certain features (Remote Desktop Pass-through and Seneca Remote Support Services) will <strong>NOT</strong> be available 
+(without Seneca consultation) when using the Docker gateway:</p>
 </div>
-<p>Installation instructions are available in the "Getting Started" chapter. </p>
+<p>Installation instructions are also available in the "Getting Started" chapter. </p>
 <h2 id="secure-gateway-services">Secure Gateway Services</h2>
 <p>The xConnect Secure Gateway is a device, or virtual machine, that runs a customized and
 hardened Ubuntu Server system image. Within this image are several key services:</p>
@@ -1038,14 +1037,26 @@ APIs.</p>
 <h4 id="gateway-configuration-manager">Gateway Configuration Manager</h4>
 <p>This is a built-in local (or LAN accessible) web interface for configuration all relevant
 features to the xConnect Remote Management Platform.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Not available with Docker container</p>
+</div>
 <h4 id="remote-desktop-gateway">Remote Desktop Gateway</h4>
 <p>This is a service that provides client-less remote desktop connections from the Web
 Client Dashboard through to the Server Agent system. At time of this publication, RDP is
 the only protocol supported.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Not available with Docker container</p>
+</div>
 <h4 id="secure-tunnel-service">Secure Tunnel Service</h4>
 <p>This service provides secure HTTP and TCP tunnels to and from the Web Client
 Dashboard and the private network being managed. All connections are encrypted web
 sockets through port 443 (HTTPS).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Not available with Docker container</p>
+</div>
 <h2 id="network-requirements">Network Requirements</h2>
 <p>The xConnect Secure Gateway requires very minimal network configuration or firewall rules to
 be fully functional. Some common industry standard ports that are required to be open are:</p>
