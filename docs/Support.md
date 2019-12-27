@@ -18,16 +18,16 @@ gather the following information to include in your support request:
 
 - 
 
-##### E-mail:
+##### E-mail
 [Seneca Customer Care](mailto:senecacustomercare@arrow.com)
-##### Phone:
+##### Phone
 1.800.227.3432
 (Available Mon-Fri 8:00a – 6:00p Eastern)
 
 ## xConnect Application Support
-##### E-mail:
+##### E-mail
 [Seneca xConnect Team](mailto:support@senecaxconnect.com)
 
 ## xConnect Application Support
-##### E-mail:
+##### E-mail
 [Seneca xConnect Team](mailto:support@senecaxconnect.com)
