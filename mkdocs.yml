@@ -31,4 +31,8 @@ theme:
     accent: 'cyan'
   logo: 'images/logo.svg'
 
+plugins:
+    - search
+    - pdf-export
+
 copyright: Copyright &copy; 2020 <a href="https://www.senecadata.com"> - Seneca Data Distributors, Inc</a>
