@@ -293,9 +293,120 @@
       
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Gateway
+      </label>
+    
     <a href="./" title="Gateway" class="md-nav__link md-nav__link--active">
       Gateway
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#physical-turnkey-gateway" class="md-nav__link">
+    Physical (Turnkey) Gateway
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtual-gateway-option" class="md-nav__link">
+    Virtual Gateway Option
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-container" class="md-nav__link">
+    Docker Container
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secure-gateway-services" class="md-nav__link">
+    Secure Gateway Services
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arrow-connect-gateway-engine" class="md-nav__link">
+    Arrow Connect Gateway Engine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gateway-configuration-manager" class="md-nav__link">
+    Gateway Configuration Manager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remote-desktop-gateway" class="md-nav__link">
+    Remote Desktop Gateway
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secure-tunnel-service" class="md-nav__link">
+    Secure Tunnel Service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-requirements" class="md-nav__link">
+    Network Requirements
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agent-gateway-access-requirement" class="md-nav__link">
+    Agent --&gt; Gateway Access Requirement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gateway-cloud-access-requirement" class="md-nav__link">
+    Gateway --&gt; Cloud Access Requirement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -694,6 +805,104 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#physical-turnkey-gateway" class="md-nav__link">
+    Physical (Turnkey) Gateway
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#virtual-gateway-option" class="md-nav__link">
+    Virtual Gateway Option
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker-container" class="md-nav__link">
+    Docker Container
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secure-gateway-services" class="md-nav__link">
+    Secure Gateway Services
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arrow-connect-gateway-engine" class="md-nav__link">
+    Arrow Connect Gateway Engine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gateway-configuration-manager" class="md-nav__link">
+    Gateway Configuration Manager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remote-desktop-gateway" class="md-nav__link">
+    Remote Desktop Gateway
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secure-tunnel-service" class="md-nav__link">
+    Secure Tunnel Service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-requirements" class="md-nav__link">
+    Network Requirements
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agent-gateway-access-requirement" class="md-nav__link">
+    Agent --&gt; Gateway Access Requirement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gateway-cloud-access-requirement" class="md-nav__link">
+    Gateway --&gt; Cloud Access Requirement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -708,6 +917,160 @@
                 
                 
                 <h1 id="gateway">Gateway</h1>
+<p>This is a required component of the xConnect Remote Management Platform. This physical or
+virtual gateway is responsible for being the encrypted tunnel between the Server Agents and the
+Web Client Dashboard hosted in our cloud.</p>
+<p>There are three installation options for this Secure Gateway:</p>
+<ul>
+<li>Physical (Turnkey)</li>
+<li>Virtual</li>
+<li>Docker Container</li>
+</ul>
+<h2 id="physical-turnkey-gateway">Physical (Turnkey) Gateway</h2>
+<p>The physical gateway option greatly reduces setup time. This is a physical hardware device
+provided by Arrow that has our hardened system image and most configuration details already
+pre-configured from our factory.</p>
+<p>The physical gateway highlighted in this guide is an ultra-small form factor embedded PC
+provided by Arrow. The specifications of this physical gateway are:</p>
+<table>
+<thead>
+<tr>
+<th><strong>SYSTEM</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manufacturer</td>
+<td>Seneca®</td>
+</tr>
+<tr>
+<td>Operating System</td>
+<td>Ubuntu Linux 16.04 LTS Server</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>8GB DDR3L 1600MHz</td>
+</tr>
+<tr>
+<td>Processor</td>
+<td>Intel® Celeron® N3060 1.6-2.48Ghz 2MB Cache</td>
+</tr>
+<tr>
+<td>USB</td>
+<td>4x USB3.0 (Front), 1x USB2.0 (Front), 2x Micro USB 2.0 (Side)</td>
+</tr>
+<tr>
+<td>Physical Security</td>
+<td>1x Kensington Lock</td>
+</tr>
+<tr>
+<td>Warranty</td>
+<td>3 and 5 Year Warranty Options Available</td>
+</tr>
+<tr>
+<td><strong>MECHANICALS</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Thermals</td>
+<td>0ºC to 35ºC / 32ºF to 95ºF</td>
+</tr>
+<tr>
+<td>Power Draw</td>
+<td>15W</td>
+</tr>
+<tr>
+<td>Cooling</td>
+<td>Aluminum Extrusion Chassis Heatsink</td>
+</tr>
+<tr>
+<td>Mounting</td>
+<td>VESA/Wall Mountable, Brackets included, Rack shelf available for purchase</td>
+</tr>
+<tr>
+<td>Dimensions (w x h x d)</td>
+<td>7.5 x 1.75 x 4.25 inches / 191 x 46 x 108 millimeters</td>
+</tr>
+<tr>
+<td>Weight</td>
+<td>3 lbs. / 1.4 kg</td>
+</tr>
+</tbody>
+</table>
+<p>Onboarding/Installation instructions are available in the "Getting Started" chapter. </p>
+<h2 id="virtual-gateway-option">Virtual Gateway Option</h2>
+<p>The virtual gateway option is available when using existing infrastructure to host the Secure
+Gateway is desired.</p>
+<p>A Hyper-V Virtual Disk or VMWare OVA can be provided upon request and needs to be imported into the
+ appropriate hypervisor. </p>
+<p>It is recommended to have 2 virtual switches attached to the VM. 1 Virtual Switch with connectivity
+to your internal LAN assets, and 1 Virtual Switch with Internet connectivity.</p>
+<p>Professional Services are available to assist in importing and configuration of the virtual Secure
+Gateway.</p>
+<p>Onboarding/Installation instructions are available in the "Getting Started" chapter. </p>
+<h2 id="docker-container">Docker Container</h2>
+<p>We now support deploying a "bare minimum" Gateway image via Docker. This option allows you to have 
+an xConnect Secure Gateway deployed in minutes, granted you can supply a machine that Docker can be installed on.</p>
+<p>As of this writing, you can use any Linux OS of your choosing to deploy the xConnect Gateway software with Docker.</p>
+<p>Docker-Compose files are available on our github page:
+<a href="https://github.com/senecaxconnect/xconnect_gateway_docker">https://github.com/senecaxconnect/xconnect_gateway_docker</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Docker for Windows will not be officially supported until WSL2 is publicly available. However,
+you could install a Linux OS within a Hyper-V VM on Windows and it will be fully supported.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Certain features will <strong>NOT</strong> be available (without Seneca consultation) when using the Docker gateway:
+- Remote Desktop Pass-through
+- Seneca Remote Support Services</p>
+</div>
+<p>Installation instructions are available in the "Getting Started" chapter. </p>
+<h2 id="secure-gateway-services">Secure Gateway Services</h2>
+<p>The xConnect Secure Gateway is a device, or virtual machine, that runs a customized and
+hardened Ubuntu Server system image. Within this image are several key services:</p>
+<h4 id="arrow-connect-gateway-engine">Arrow Connect Gateway Engine</h4>
+<p>This service is the main data consumption and transmission engine responsible for
+ingesting telemetry from all Server Agents and transmitting telemetry to Arrow Connect
+IoT. Arrow Connect IoT provides telemetry to the Web Client Dashboard through secure
+APIs.</p>
+<h4 id="gateway-configuration-manager">Gateway Configuration Manager</h4>
+<p>This is a built-in local (or LAN accessible) web interface for configuration all relevant
+features to the xConnect Remote Management Platform.</p>
+<h4 id="remote-desktop-gateway">Remote Desktop Gateway</h4>
+<p>This is a service that provides client-less remote desktop connections from the Web
+Client Dashboard through to the Server Agent system. At time of this publication, RDP is
+the only protocol supported.</p>
+<h4 id="secure-tunnel-service">Secure Tunnel Service</h4>
+<p>This service provides secure HTTP and TCP tunnels to and from the Web Client
+Dashboard and the private network being managed. All connections are encrypted web
+sockets through port 443 (HTTPS).</p>
+<h2 id="network-requirements">Network Requirements</h2>
+<p>The xConnect Secure Gateway requires very minimal network configuration or firewall rules to
+be fully functional. Some common industry standard ports that are required to be open are:</p>
+<h3 id="agent-gateway-access-requirement">Agent &rarr; Gateway Access Requirement</h3>
+<p>This is typically on your LAN so access rules are rarely required unless running on a hardened network.</p>
+<p>In the case of internal LAN traffic being managed, verify the following access is granted between 
+the hosts (Agents) and the Gateway asset
+- Port 8080 (TCP/HTTP)
+- Port 1883 (TCP/MQTT)</p>
+<h3 id="gateway-cloud-access-requirement">Gateway &rarr; Cloud Access Requirement</h3>
+<p>Microsoft Azure access is bare minimum required:
+- Destination IPs will vary based on region and load-balancing so a hostname based rule is preferred.
+- A wildcard access rule for outbound traffic to <em>.senecaxconnect.com is the safest bet to future proof your firewall rules.
+- Outbound TCP traffic via **Port 443*</em> to <em>.senecaxconnect.com
+- Outbound TCP traffic via **Port 8883*</em> to <em>.senecaxconnect.com
+- **No inbound rules required*</em> </p>
+<p>Amazon EC2 access is optional but is highly recommend and required for the following features to function:
+- Seneca’s administrative interface to connect to your gateway to push updates
+- Server Agent OTA updates
+- General support/troubleshooting of your gateway
+- Secure Remote Desktop Passthrough
+- If you wish to opt-in to these features and enable our team to continually support your platform, 
+please whitelist <strong>Outbound TCP 443</strong> to ***.ngrok.io** and ***.ngrok.com**. 
+We cannot provide a reliable IP address list due to auto load balancing on the cluster, 
+they’re a moving target.</p>
                 
                   
                 
