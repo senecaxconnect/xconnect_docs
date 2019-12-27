@@ -26,10 +26,15 @@ nav:
 
 theme:
   name: 'material'
+  custom_dir: 'theme'
   palette:
     primary: 'blue grey'
     accent: 'cyan'
   logo: 'images/logo.svg'
+
+extra_css:
+  - stylesheets/dark_theme.css
+  - stylesheets/codehilite.css
 
 markdown_extensions:
   - admonition
