@@ -1,4 +1,36 @@
-# xConnect Overview
+# Feature Overview
+
+xConnect Remote Management Platform is the latest enhancement to the already impressive Seneca Physical Security line of products. xConnect allows you to audit, manage, and maintain all aspects of a security installation. From camera function to storage integrity, xConnect puts you in control of your entire environment from a single, intuitive dashboard.
+
+xConnect monitors your security environment with advanced intelligence, and empowers you to manage and maintain many functions of your installation from a single web-based user interface. While its functionality may be expected to center around the performance monitoring of network video recorders, the application also provides command and control functionality on the device level.
+
+This platform is designed with managed service providers in mind to enable intuitive, but powerful, enterprise level management of one or many security networks through a single pane of glass. Reduce the amount of service calls and truck rolls by getting in front of issues before your end-user realizes that something has happened.
+
+## Audit
+
+- Temperatures, fan speeds, power supplies
+- RAID controllers, physical, logical and virtual storage
+- System utilizations
+- Application monitoring
+- Network bandwidth analysis
+- VMS Log Analysis
+
+## Manage
+
+- Client-less remote desktop
+- Secure tunneling to private networks
+- Access to Out of Band Management (iLO, iDRAC, ASMB [Seneca])
+- Remote command and execution
+- Designed for Service Providers managing multiple sites
+
+## Act
+
+- Automatic Remote Command Execution
+- Mobile Push Notification
+- 3rd Party API Posting
+- Email notifications
+
+# Platform Overview
 
 The xConnect Remote Management Platform consists of three main components each requiring
 setup and configuration. 
@@ -38,7 +70,7 @@ located at [downloads.senecaxconnect.com](http://downloads.senecaxconnect.com).
 
 The Server Agent consists of multiple components but are rolled into a single Windows Service, the xConnect Agent Core.
 
-Additional technical detail can be found here: [xConnect Server Agent Detail](/Agent) 
+Additional technical detail can be found here: [xConnect Server Agent Detail](/Agent_Overview) 
 
 ## xConnect Gateway
 
@@ -55,7 +87,7 @@ with the purchase of professional services.
 onboard a gateway in minutes with minimal configuration. Some features (ie. Remote Desktop and Secure Tunneling) are not available
 without configuration help by Seneca.
 
-Additional technical detail can be found here: [xConnect Secure Gateway Detail](/Gateway)
+Additional technical detail can be found here: [xConnect Secure Gateway Detail](/Gateway_Overview)
 
 ## xConnect Web Dashboard
 
@@ -71,4 +103,4 @@ Administration team to access the Web Dashboard.
 When launching the URL, you will be prompted to enter your username and password. This is
 the account provided by the xConnect Administration team or your account owner. 
 
-Additional technical detail can be found here: [xConnect Web Dashboard](/Dashboard)
+Additional technical detail can be found here: [xConnect Web Dashboard](/Dashboard_Overview)

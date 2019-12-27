@@ -1,6 +1,6 @@
-site_name: xConnect Documentation Library
+site_name: xConnect Platform Documentation
 site_url: http://docs.senecaxconnect.com
-site_description: xConnect Documentation Library
+site_description: xConnect Platform Documentation
 site_author: Seneca
 
 repo_name: 'senecaxconnect/xconnect_docs'
@@ -12,13 +12,27 @@ nav:
        - Server Agent: Agent_Overview.md
        - Gateway: Gateway_Overview.md
        - Web Dashboard: Dashboard_Overview.md
-    - Installation:
-       - Getting Started: Getting_Started.md
+    - Getting Started:
+       - Quick Start Guide: Getting_Started.md
        - Step 1 - Gateway Setup:
          - Turnkey: Gateway_TurnKey.md
          - Docker: Gateway_Docker.md
        - Step 2 - Install Agent: Agent_Install.md
        - Step 3 - Web Dashboard: Dashboard_Setup.md
+    - User Guide:
+        - Dashboards: Usage_Dashboards.md
+        - Bookmarks: Usage_Bookmarks.md
+        - User Types: Usage_Roles.md
+        - Management:
+            - Customers: Usage_ManageCustomers.md
+            - Users: Usage_ManageUsers.md
+            - Gateways: Usage_ManageGateways.md
+            - Devices: Usage_ManageDevices.md
+            - Event Configurations: Usage_ManageEventConfigurations.md
+            - Email Profiles: Usage_ManageEmailProfiles.md
+            - Remote Commands: Usage_ManageRemoteCommands.md
+            - 3rd Party Connectors: Usage_ManageConnectors.md
+        - Event Logs: Usage_EventLogs.md
     - Additional Documentation:
        - Data Flow: Data_Flow.md
        - Cyber-Security: Cyber_Security.md
