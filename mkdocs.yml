@@ -19,7 +19,7 @@ nav:
          - Docker: Gateway_Docker.md
        - Step 2 - Install Agent: Agent_Install.md
        - Step 3 - Web Dashboard: Dashboard_Setup.md
-    - User Guide:
+    - Usage Guide:
         - Dashboards: Usage_Dashboards.md
         - Bookmarks: Usage_Bookmarks.md
         - User Types: Usage_Roles.md
@@ -35,7 +35,7 @@ nav:
         - Event Logs: Usage_EventLogs.md
     - Additional Documentation:
        - Data Flow: Data_Flow.md
-       - Cyber-Security: Cyber_Security.md
+       - Network Security: Network_Security.md
     - Support: Support.md
 
 theme:
@@ -53,6 +53,8 @@ extra_css:
 markdown_extensions:
   - admonition
   - codehilite
+  - git-revision-date-localized:
+      type: timeago
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
