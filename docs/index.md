@@ -4,7 +4,7 @@ documentation around the xConnect Platform and it's underlying components.
 
 Topics that are covered:
 
-##Overviews
+##Overview
 - [Features](/xconnect_docs/Platform_Overview)
 - [Platform and Architecture](/xconnect_docs/Platform_Overview)
 - [Server Agent](/xconnect_docs/Platform_Overview/#xconnect-server-agent)
