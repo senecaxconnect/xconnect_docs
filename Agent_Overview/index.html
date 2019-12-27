@@ -300,6 +300,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#download" class="md-nav__link">
+    Download
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#windows-service" class="md-nav__link">
     Windows Service
   </a>
@@ -308,29 +315,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#xconnect-telemetry-engine" class="md-nav__link">
-    xConnect Telemetry Engine
+  <a href="#telemetry-engine" class="md-nav__link">
+    Telemetry Engine
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#xconnect-vms-integration-module" class="md-nav__link">
-    xConnect VMS Integration Module
+  <a href="#vms-integration-module" class="md-nav__link">
+    VMS Integration Module
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#xconnect-updater-service" class="md-nav__link">
-    xConnect Updater Service
+  <a href="#auto-updater-module" class="md-nav__link">
+    Auto-Updater Module
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#xconnect-agent-web-interface" class="md-nav__link">
-    xConnect Agent Web Interface
+  <a href="#agent-web-interface" class="md-nav__link">
+    Agent Web Interface
   </a>
   
 </li>
@@ -775,6 +782,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#download" class="md-nav__link">
+    Download
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#windows-service" class="md-nav__link">
     Windows Service
   </a>
@@ -783,29 +797,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#xconnect-telemetry-engine" class="md-nav__link">
-    xConnect Telemetry Engine
+  <a href="#telemetry-engine" class="md-nav__link">
+    Telemetry Engine
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#xconnect-vms-integration-module" class="md-nav__link">
-    xConnect VMS Integration Module
+  <a href="#vms-integration-module" class="md-nav__link">
+    VMS Integration Module
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#xconnect-updater-service" class="md-nav__link">
-    xConnect Updater Service
+  <a href="#auto-updater-module" class="md-nav__link">
+    Auto-Updater Module
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#xconnect-agent-web-interface" class="md-nav__link">
-    xConnect Agent Web Interface
+  <a href="#agent-web-interface" class="md-nav__link">
+    Agent Web Interface
   </a>
   
 </li>
@@ -853,26 +867,36 @@
 Remote Management Platform. </p>
 <p>This agent is responsible for collecting health information (also
 called telemetry) as well as securely facilitating remote management features.</p>
-<p>The latest version of the Server Agent installation executable is available on our download repository: <a href="http://downloads.senecaxconnect.com">downloads.senecaxconnect.com</a>..</p>
+<h2 id="download">Download</h2>
+<p>The latest version of the Server Agent installation executable is available on our download repository: <a href="http://downloads.senecaxconnect.com">downloads.senecaxconnect.com</a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is important! The background services may fail to install if the installer is not ran with elevated privileges!</p>
+</div>
+<ol>
+<li>Proceed through installer, accepting all prompts</li>
+<li>Open Windows Service Manager and verify "xConnect Agent Core" service exists and is <strong>Running</strong></li>
+</ol>
 <h2 id="windows-service">Windows Service</h2>
 <p>The Server Agent consists of a single background Windows Service, the <strong>xConnect Agent Core</strong>.</p>
-<p>The Agent Core service will be responsible for the following functions and modules:</p>
-<h3 id="xconnect-telemetry-engine">xConnect Telemetry Engine</h3>
+<p>The Agent Core service is responsible for the following functions and modules:</p>
+<h3 id="telemetry-engine">Telemetry Engine</h3>
 <p>This function is the telemetry collection engine that continuously polls various sensors
 throughout the system. It is also responsible for transmitting this telemetry to the Secure
-Gateway. <strong>Telemetry Collection and Submission occurs every 2 minutes (every even minute).</strong></p>
-<h3 id="xconnect-vms-integration-module">xConnect VMS Integration Module</h3>
+Gateway. </p>
+<p><strong>Telemetry Collection and Submission occurs every 2 minutes (every even minute).</strong></p>
+<h3 id="vms-integration-module">VMS Integration Module</h3>
 <p>This module is the telemetry collection engine that continuously polls 
 supported Video Management Systems for health and meta data of connected IP cameras.
 It is also responsible for transmitting this telemetry to the Secure
-Gateway.
-<strong>Telemetry Collection and Submission occurs every 2 minutes (every odd minute).</strong></p>
-<h3 id="xconnect-updater-service">xConnect Updater Service</h3>
+Gateway.</p>
+<p><strong>Telemetry Collection and Submission occurs every 2 minutes (every odd minute).</strong></p>
+<h3 id="auto-updater-module">Auto-Updater Module</h3>
 <p>This module handles touchless over the wire updates of the Server Agent.
 An update package can be delivered to the Secure Gateway, and the Server Agent will
-automatically download and install this update unattended. 
-<strong>Checks for updates every 5 minutes</strong></p>
-<h3 id="xconnect-agent-web-interface">xConnect Agent Web Interface</h3>
+automatically download and install this update unattended. </p>
+<p><strong>Checks for updates every 5 minutes</strong></p>
+<h3 id="agent-web-interface">Agent Web Interface</h3>
 <p>This module provides a local (or LAN accessible) web interface for managing and
 configuring the Server Agent. Starts Automatically as part of the Agent Core and
 is accessible from the local machine @ <a href="http://localhost:8885">http://localhost:8885</a> or on a networked machine
