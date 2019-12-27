@@ -1,58 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-     <loc>http://docs.senecaxconnect.com/Overview/</loc>
+     <loc>http://docs.senecaxconnect.com/Platform_Overview/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Agent/</loc>
+     <loc>http://docs.senecaxconnect.com/Agent_Overview/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Gateway/</loc>
+     <loc>http://docs.senecaxconnect.com/Gateway_Overview/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://docs.senecaxconnect.com/Dashboard/</loc>
+     <loc>http://docs.senecaxconnect.com/Dashboard_Overview/</loc>
      <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>http://docs.senecaxconnect.com/Getting_Started/</loc>
+     <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>http://docs.senecaxconnect.com/Gateway_TurnKey/</loc>
+     <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>http://docs.senecaxconnect.com/Gateway_Docker/</loc>
+     <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>http://docs.senecaxconnect.com/Agent_Install/</loc>
+     <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>http://docs.senecaxconnect.com/Dashboard_Setup/</loc>
+     <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>http://docs.senecaxconnect.com/Data_Flow/</loc>
+     <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc></loc>
-     
+     <loc>http://docs.senecaxconnect.com/Cyber_Security/</loc>
+     <lastmod>2019-12-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
