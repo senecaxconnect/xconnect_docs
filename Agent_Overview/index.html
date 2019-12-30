@@ -307,6 +307,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#windows-service" class="md-nav__link">
     Windows Service
   </a>
@@ -789,6 +796,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#windows-service" class="md-nav__link">
     Windows Service
   </a>
@@ -869,14 +883,18 @@ Remote Management Platform. </p>
 called telemetry) as well as securely facilitating remote management features.</p>
 <h2 id="download">Download</h2>
 <p>The latest version of the Server Agent installation executable is available on our download repository: <a href="http://downloads.senecaxconnect.com">downloads.senecaxconnect.com</a></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This is important! The background services may fail to install if the installer is not ran with elevated privileges!</p>
-</div>
+<h2 id="installation">Installation</h2>
 <ol>
+<li>Download the latest xConnect Agent from the Downloads Repository</li>
+<li>Extract zip file</li>
+<li>Right-click on the setup file and select 'Run as Administrator'</li>
 <li>Proceed through installer, accepting all prompts</li>
 <li>Open Windows Service Manager and verify "xConnect Agent Core" service exists and is <strong>Running</strong></li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Step 3 is important! The background services may fail to install if the installer is not ran with elevated privileges!</p>
+</div>
 <h2 id="windows-service">Windows Service</h2>
 <p>The Server Agent consists of a single background Windows Service, the <strong>xConnect Agent Core</strong>.</p>
 <p>The Agent Core service is responsible for the following functions and modules:</p>
