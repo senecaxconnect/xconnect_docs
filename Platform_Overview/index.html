@@ -73,11 +73,13 @@
     
       <link rel="stylesheet" href="../stylesheets/codehilite.css">
     
+      <link rel="stylesheet" href="../stylesheets/mermaid.css">
+    
     
       
     
     
-<meta name="theme-color" content="#212121">
+<meta name="theme-color" content="#808080">
 
 <link rel='icon' href='/assets/images/favicon.ico'>
 
@@ -816,6 +818,13 @@ setup and configuration. </p>
 <li>xConnect Gateway</li>
 <li>xConnect Web Dashboard (Cloud)</li>
 </ul>
+<div class="mermaid">      graph LR
+          A(Edge Devices) --&gt; B(Agent)
+          B --&gt; A
+          B --&gt;|MQTT - Port 1883|C(Gateway)
+          C --&gt;|SSL - Port 443|D(xConnect Cloud Dashboard - Azure)
+          C --&gt;|SSL - Port 443|E(xConnect Cloud Management- AWS);</div>
+
 <p>For greenfield projects where servers and gateways are being 
 manufactured by Seneca, this setup and configuration is greatly simplified by Seneca pre-configuring and
 pre-installing a majority of this installation.</p>
@@ -832,6 +841,14 @@ data to the xConnect web interface, providing system and device information. In 
 issue, xConnect can trigger a workflow to immediately notify or react to an issue in the
 environment.</p>
 <h2 id="xconnect-server-agent">xConnect Server Agent</h2>
+<div class="mermaid">      graph LR
+          A(Edge Devices) --&gt; B(Agent)
+          style B fill:#04acec
+          B --&gt; A
+          B --&gt;|MQTT - Port 1883|C(Gateway)
+          C --&gt;|SSL - Port 443|D(xConnect Cloud Dashboard - Azure)
+          C --&gt;|SSL - Port 443|E(xConnect Cloud Management- AWS);</div>
+
 <p>This is a required component for any server that you would like to be monitored by the xConnect Platform. </p>
 <p>This agent is responsible for collecting health information (also 
 called telemetry) as well as securely facilitating remote management features.</p>
@@ -840,6 +857,14 @@ located at <a href="http://downloads.senecaxconnect.com">downloads.senecaxconnec
 <p>The Server Agent consists of multiple components but are rolled into a single Windows Service, the xConnect Agent Core.</p>
 <p>Additional technical detail can be found here: <a href="/xconnect_docs/Agent_Overview">xConnect Server Agent Detail</a> </p>
 <h2 id="xconnect-gateway">xConnect Gateway</h2>
+<div class="mermaid">      graph LR
+          A(Edge Devices) --&gt; B(Agent)
+          B --&gt; A
+          B --&gt;|MQTT - Port 1883|C(Gateway)
+          C --&gt;|SSL - Port 443|D(xConnect Cloud Dashboard - Azure)
+          C --&gt;|SSL - Port 443|E(xConnect Cloud Management- AWS);
+          style C fill:#04acec</div>
+
 <p>This is a required component of the xConnect Remote Management Platform. This physical or
 virtual gateway is responsible for being the encrypted tunnel between the Server Agents and the
 Web Client Dashboard.</p>
@@ -854,6 +879,14 @@ without configuration help by Seneca.</li>
 </ul>
 <p>Additional technical detail can be found here: <a href="/xconnect_docs/Gateway_Overview">xConnect Secure Gateway Detail</a></p>
 <h2 id="xconnect-web-dashboard">xConnect Web Dashboard</h2>
+<div class="mermaid">      graph LR
+          A(Edge Devices) --&gt; B(Agent)
+          B --&gt; A
+          B --&gt;|MQTT - Port 1883|C(Gateway)
+          C --&gt;|SSL - Port 443|D(xConnect Cloud Dashboard - Azure)
+          C --&gt;|SSL - Port 443|E(xConnect Cloud Management- AWS);
+          style D fill:#04acec</div>
+
 <p>The Web Dashboard is hosted by Seneca via Microsoft Azure and is included in the cost of
 xConnect Remote Management Platform license annual fees. No need to manage your own
 cloud costs, we take care of that for you!</p>
@@ -926,6 +959,8 @@ the account provided by the xConnect Administration team or your account owner. 
       <script src="../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="https://unpkg.com/mermaid@7.0.9/dist/mermaid.min.js"></script>
       
     
   </body>

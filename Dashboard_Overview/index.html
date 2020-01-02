@@ -73,11 +73,13 @@
     
       <link rel="stylesheet" href="../stylesheets/codehilite.css">
     
+      <link rel="stylesheet" href="../stylesheets/mermaid.css">
+    
     
       
     
     
-<meta name="theme-color" content="#212121">
+<meta name="theme-color" content="#808080">
 
 <link rel='icon' href='/assets/images/favicon.ico'>
 
@@ -838,6 +840,14 @@
 <p>The Web Client Dashboard is hosted by Arrow via Microsoft Azure and is included in the cost of
 xConnect Remote Management Platform license annual fees. No need to manage your own
 cloud costs, we take care of that for you!</p>
+<div class="mermaid">      graph LR
+          A(Edge Devices) --&gt; B(Agent)
+          B --&gt; A
+          B --&gt;|MQTT - Port 1883|C(Gateway)
+          C --&gt;|SSL - Port 443|D(xConnect Cloud Dashboard - Azure)
+          C --&gt;|SSL - Port 443|E(xConnect Cloud Management- AWS);
+          style D fill:#04acec</div>
+
 <h2 id="gaining-access">Gaining Access</h2>
 <p>The Web Client Dashboard can be accessed at the following URL: <a href="https://senecaxconnect.com">https://senecaxconnect.com</a></p>
 <p>You will need to be onboarded by the xConnect Administration team to access the Web Client Dashboard. 
@@ -942,6 +952,8 @@ documentation library.</p>
       <script src="../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="https://unpkg.com/mermaid@7.0.9/dist/mermaid.min.js"></script>
       
     
   </body>

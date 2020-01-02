@@ -73,11 +73,13 @@
     
       <link rel="stylesheet" href="../stylesheets/codehilite.css">
     
+      <link rel="stylesheet" href="../stylesheets/mermaid.css">
+    
     
       
     
     
-<meta name="theme-color" content="#212121">
+<meta name="theme-color" content="#808080">
 
 <link rel='icon' href='/assets/images/favicon.ico'>
 
@@ -881,6 +883,14 @@
 Remote Management Platform. </p>
 <p>This agent is responsible for collecting health information (also
 called telemetry) as well as securely facilitating remote management features.</p>
+<div class="mermaid">      graph LR
+          A(Edge Devices) --&gt; B(Agent)
+          B --&gt; A
+          B --&gt;|MQTT - Port 1883|C(Gateway)
+          C --&gt;|SSL - Port 443|D(xConnect Cloud Dashboard - Azure)
+          C --&gt;|SSL - Port 443|E(xConnect Cloud Management- AWS);
+          style B fill:#04acec</div>
+
 <h2 id="download">Download</h2>
 <p>The latest version of the Server Agent installation executable is available on our download repository: <a href="http://downloads.senecaxconnect.com">downloads.senecaxconnect.com</a></p>
 <h2 id="installation">Installation</h2>
@@ -1009,6 +1019,8 @@ telemetry in and out of the Server Agent. </p>
       <script src="../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="https://unpkg.com/mermaid@7.0.9/dist/mermaid.min.js"></script>
       
     
   </body>

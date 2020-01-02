@@ -73,11 +73,13 @@
     
       <link rel="stylesheet" href="../stylesheets/codehilite.css">
     
+      <link rel="stylesheet" href="../stylesheets/mermaid.css">
+    
     
       
     
     
-<meta name="theme-color" content="#212121">
+<meta name="theme-color" content="#808080">
 
 <link rel='icon' href='/assets/images/favicon.ico'>
 
@@ -754,7 +756,7 @@
                 
                 <h1 id="quick-start-guide">Quick Start Guide</h1>
 <p>This guide is a condensed version of the installation process. Detailed instructions are available 
-for each step of the installation and can be found within this guide or on the navigation menu.</p>
+for each step of the installation process and can be found within this guide or on the navigation menu.</p>
 <p>Please follow the steps below in the same order of operations as described:</p>
 <ol>
 <li>Confirm Prerequisites</li>
@@ -762,24 +764,27 @@ for each step of the installation and can be found within this guide or on the n
 <li>Configure Agent(s)</li>
 <li>Configure Dashboard</li>
 </ol>
-<p><a href="https://image.flaticon.com/icons/svg/394/394592.svg">https://image.flaticon.com/icons/svg/394/394592.svg</a></p>
 <h2 id="prerequisites">Prerequisites</h2>
+<p><div class="aligncenter">
 <p class="aligncenter">
     <img src="https://image.flaticon.com/icons/svg/394/394592.svg" style="max-width:25%;" alt="" />
 </p>
-
-<p>Confirm the following before continuing you xConnect installation and configuration:</p>
+</div>
+Confirm the following before continuing your xConnect installation and configuration:</p>
 <ul>
 <li>Network Access has been configured or confirmed:<ul>
-<li>Agent System - Outbound Port 1883</li>
-<li>Agent System - Outbound Port 8885</li>
+<li>Agent System - Outbound Port TCP 1883 (MQTT)</li>
+<li>Agent System - Outbound Port TCP 8885 (HTTP)</li>
+<li>Gateway - Outbound Port TCP 443 (HTTPS)</li>
+<li>Gateway - Outbound Port TCP 8883 (Secure MQTT)</li>
 </ul>
 </li>
-<li>
-<p>asdffdsa</p>
-</li>
-<li>
-<p>asdfafsd</p>
+<li>You've received credentials for the xConnect Web Dashboard (<a href="http://senecaxconnect.com">senecaxconnect.com</a>)</li>
+<li>Have a PC that can be used to complete IP address changes to gateway<ul>
+<li>Can be configured for the default static network of 10.0.0.0/24
+  <strong>or</strong></li>
+<li>Is on the same DHCP network as the gateway and can obtain the IP of the gateway from DHCP server</li>
+</ul>
 </li>
 </ul>
                 
@@ -859,6 +864,8 @@ for each step of the installation and can be found within this guide or on the n
       <script src="../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="https://unpkg.com/mermaid@7.0.9/dist/mermaid.min.js"></script>
       
     
   </body>
