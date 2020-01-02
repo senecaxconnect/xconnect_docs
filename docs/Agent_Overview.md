@@ -6,6 +6,16 @@ Remote Management Platform.
 This agent is responsible for collecting health information (also
 called telemetry) as well as securely facilitating remote management features.
 
+```mermaid
+      graph LR
+          A(Edge Devices) --> B(Agent)
+          B --> A
+          B -->|MQTT - Port 1883|C(Gateway)
+          C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure)
+          C -->|SSL - Port 443|E(xConnect Cloud Management- AWS);
+          style B fill:#04acec
+```
+
 ## Download
 The latest version of the Server Agent installation executable is available on our download repository: [downloads.senecaxconnect.com](http://downloads.senecaxconnect.com)
 
@@ -13,10 +23,12 @@ The latest version of the Server Agent installation executable is available on o
 1. Download the latest xConnect Agent from the Downloads Repository
 2. Extract zip file
 3. Right-click on the setup file and select 'Run as Administrator'
-!!! warning
-    This is important! The background services may fail to install if the installer is not ran with elevated privileges!
 4. Proceed through installer, accepting all prompts
 5. Open Windows Service Manager and verify "xConnect Agent Core" service exists and is **Running**
+
+!!! note
+    Step 3 is important! The background services may fail to install if the installer is not ran with elevated privileges!
+    
 ## Windows Service
 The Server Agent consists of a single background Windows Service, the **xConnect Agent Core**.
 
@@ -48,7 +60,7 @@ automatically download and install this update unattended.
 This module provides a local (or LAN accessible) web interface for managing and
 configuring the Server Agent. Starts Automatically as part of the Agent Core and
 is accessible from the local machine @ http://localhost:8885 or on a networked machine
-@ http://<IP_OF_SERVER>:8885
+@ http://IP_OF_SERVER:8885
 
 !!! note
     This web interface is required to enable Cloud support and configuration of the gateway

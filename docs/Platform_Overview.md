@@ -39,6 +39,15 @@ setup and configuration.
 - xConnect Gateway
 - xConnect Web Dashboard (Cloud)
 
+```mermaid
+      graph LR
+          A(Edge Devices) --> B(Agent)
+          B --> A
+          B -->|MQTT - Port 1883|C(Gateway)
+          C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure)
+          C -->|SSL - Port 443|E(xConnect Cloud Management- AWS);
+```
+
 For greenfield projects where servers and gateways are being 
 manufactured by Seneca, this setup and configuration is greatly simplified by Seneca pre-configuring and
 pre-installing a majority of this installation.
@@ -60,6 +69,16 @@ environment.
 
 ## xConnect Server Agent
 
+```mermaid
+      graph LR
+          A(Edge Devices) --> B(Agent)
+          style B fill:#04acec
+          B --> A
+          B -->|MQTT - Port 1883|C(Gateway)
+          C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure)
+          C -->|SSL - Port 443|E(xConnect Cloud Management- AWS);
+```
+
 This is a required component for any server that you would like to be monitored by the xConnect Platform. 
 
 This agent is responsible for collecting health information (also 
@@ -73,6 +92,16 @@ The Server Agent consists of multiple components but are rolled into a single Wi
 Additional technical detail can be found here: [xConnect Server Agent Detail](/xconnect_docs/Agent_Overview) 
 
 ## xConnect Gateway
+
+```mermaid
+      graph LR
+          A(Edge Devices) --> B(Agent)
+          B --> A
+          B -->|MQTT - Port 1883|C(Gateway)
+          C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure)
+          C -->|SSL - Port 443|E(xConnect Cloud Management- AWS);
+          style C fill:#04acec
+```
 
 This is a required component of the xConnect Remote Management Platform. This physical or
 virtual gateway is responsible for being the encrypted tunnel between the Server Agents and the
@@ -90,6 +119,16 @@ without configuration help by Seneca.
 Additional technical detail can be found here: [xConnect Secure Gateway Detail](/xconnect_docs/Gateway_Overview)
 
 ## xConnect Web Dashboard
+
+```mermaid
+      graph LR
+          A(Edge Devices) --> B(Agent)
+          B --> A
+          B -->|MQTT - Port 1883|C(Gateway)
+          C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure)
+          C -->|SSL - Port 443|E(xConnect Cloud Management- AWS);
+          style D fill:#04acec
+```
 
 The Web Dashboard is hosted by Seneca via Microsoft Azure and is included in the cost of
 xConnect Remote Management Platform license annual fees. No need to manage your own

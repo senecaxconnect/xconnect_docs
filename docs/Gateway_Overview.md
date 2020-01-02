@@ -4,6 +4,16 @@ This is a required component of the xConnect Remote Management Platform. This ph
 virtual gateway is responsible for being the encrypted tunnel between the Server Agents and the
 Web Client Dashboard hosted in our cloud.
 
+```mermaid
+      graph LR
+          A(Edge Devices) --> B(Agent)
+          B --> A
+          B -->|MQTT - Port 1883|C(Gateway)
+          C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure)
+          C -->|SSL - Port 443|E(xConnect Cloud Management- AWS);
+          style C fill:#04acec
+```
+
 There are three installation options for this Secure Gateway:
 
 - Physical (Turnkey)

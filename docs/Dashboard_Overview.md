@@ -4,6 +4,16 @@ The Web Client Dashboard is hosted by Arrow via Microsoft Azure and is included 
 xConnect Remote Management Platform license annual fees. No need to manage your own
 cloud costs, we take care of that for you!
 
+```mermaid
+      graph LR
+          A(Edge Devices) --> B(Agent)
+          B --> A
+          B -->|MQTT - Port 1883|C(Gateway)
+          C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure)
+          C -->|SSL - Port 443|E(xConnect Cloud Management- AWS);
+          style D fill:#04acec
+```
+
 ## Gaining Access
 The Web Client Dashboard can be accessed at the following URL: https://senecaxconnect.com
 
@@ -34,9 +44,9 @@ Manage Gateways screen and are assigned to a
 Customer
 
 ### Level 3 – Server/Device
-These are all servers and devices that contain a
-Server Agent and are successfully submitting
-telemetry to the platform
+These are all servers that contain a
+Server Agent or Devices (connected via integration or added as IP Device) 
+that are successfully submitting telemetry to the platform.
 
 ## Configuration
 

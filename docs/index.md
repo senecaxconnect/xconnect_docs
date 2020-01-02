@@ -9,7 +9,7 @@
 
 
 This site will serve as a centralized location for all 
-documentation related to the xConnect Platform.
+documentation related to the xConnect Platform. 
 
 ##Overview
 - [Features](/xconnect_docs/Platform_Overview)

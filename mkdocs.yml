@@ -46,10 +46,6 @@ theme:
     accent: 'cyan'
   logo: 'images/logo.svg'
 
-extra_css:
-  - stylesheets/dark_theme.css
-  - stylesheets/codehilite.css
-
 markdown_extensions:
   - admonition
   - codehilite
@@ -65,9 +61,21 @@ markdown_extensions:
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+
+extra_css:
+  - stylesheets/dark_theme.css
+  - stylesheets/codehilite.css
+  - stylesheets/mermaid.css
+
+extra_javascript:
+    - https://unpkg.com/mermaid@7.0.9/dist/mermaid.min.js
 
 copyright: Copyright &copy; 2020 <a href="https://www.senecadata.com"> - Seneca Data Distributors, Inc</a>
