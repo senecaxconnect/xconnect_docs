@@ -368,6 +368,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#gateway-setup" class="md-nav__link">
+    Gateway Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent-setup" class="md-nav__link">
+    Agent Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dashboard-setup" class="md-nav__link">
+    Dashboard Setup
+  </a>
+  
+</li>
+      
       
       
       
@@ -404,8 +425,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Gateway_TurnKey/" title="Turnkey" class="md-nav__link">
-      Turnkey
+    <a href="../Gateway_TurnKey/" title="Turnkey Appliance" class="md-nav__link">
+      Turnkey Appliance
     </a>
   </li>
 
@@ -416,8 +437,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Gateway_Docker/" title="Docker" class="md-nav__link">
-      Docker
+    <a href="../Gateway_Docker/" title="Virtual/Software/Docker" class="md-nav__link">
+      Virtual/Software/Docker
     </a>
   </li>
 
@@ -735,6 +756,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#gateway-setup" class="md-nav__link">
+    Gateway Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent-setup" class="md-nav__link">
+    Agent Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dashboard-setup" class="md-nav__link">
+    Dashboard Setup
+  </a>
+  
+</li>
+      
       
       
       
@@ -758,6 +800,11 @@
 <p>This guide is a condensed version of the installation process. Detailed instructions are available 
 for each step of the installation process and can be found within this guide or on the navigation menu.</p>
 <p>Please follow the steps below in the same order of operations as described:</p>
+<div class="mermaid">      graph LR
+          A(Prerequisites) --&gt; B(Gateway Setup)
+          B --&gt;C(Agent Setup)
+          C --&gt;D(Dashboard Setup);</div>
+
 <ol>
 <li>Confirm Prerequisites</li>
 <li>Configure Gateway</li>
@@ -765,28 +812,70 @@ for each step of the installation process and can be found within this guide or 
 <li>Configure Dashboard</li>
 </ol>
 <h2 id="prerequisites">Prerequisites</h2>
-<p><div class="aligncenter">
-<p class="aligncenter">
+<p><div class="aligncenter" style="width: 100%">
+<p class="aligncenter" style="text-align: center">
     <img src="https://image.flaticon.com/icons/svg/394/394592.svg" style="max-width:25%;" alt="" />
 </p>
 </div>
 Confirm the following before continuing your xConnect installation and configuration:</p>
 <ul>
-<li>Network Access has been configured or confirmed:<ul>
-<li>Agent System - Outbound Port TCP 1883 (MQTT)</li>
-<li>Agent System - Outbound Port TCP 8885 (HTTP)</li>
-<li>Gateway - Outbound Port TCP 443 (HTTPS)</li>
-<li>Gateway - Outbound Port TCP 8883 (Secure MQTT)</li>
-</ul>
+<li>
+<p>Network Access has been configured or confirmed:</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Destination</th>
+<th>Port</th>
+<th>Protocol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agent System(s)</td>
+<td>Gateway</td>
+<td>1883</td>
+<td>MQTT (TCP)</td>
+</tr>
+<tr>
+<td>Agent System(s)</td>
+<td>Gateway</td>
+<td>8080</td>
+<td>HTTP (TCP)</td>
+</tr>
+<tr>
+<td>Gateway</td>
+<td>Internet</td>
+<td>443</td>
+<td>SSL  (TCP)</td>
+</tr>
+<tr>
+<td>Gateway</td>
+<td>Internet</td>
+<td>8883</td>
+<td>RabbitMQ (TCP)</td>
+</tr>
+</tbody>
+</table>
 </li>
-<li>You've received credentials for the xConnect Web Dashboard (<a href="http://senecaxconnect.com">senecaxconnect.com</a>)</li>
-<li>Have a PC that can be used to complete IP address changes to gateway<ul>
-<li>Can be configured for the default static network of 10.0.0.0/24
-  <strong>or</strong></li>
-<li>Is on the same DHCP network as the gateway and can obtain the IP of the gateway from DHCP server</li>
-</ul>
+<li>
+<p>You've received credentials for the xConnect Web Dashboard (<a href="http://senecaxconnect.com">senecaxconnect.com</a>)</p>
 </li>
+<li>Have a PC that can be used to complete IP address changes to gateway (if desired)</li>
 </ul>
+<h2 id="gateway-setup">Gateway Setup</h2>
+<p>If you purchased a turnkey gateway appliance from Seneca, complete the setup steps here:</p>
+<p><a href="/xconnect_docs/Gateway_TurnKey">Turnkey Gateway Setup</a></p>
+<p>If you are setting up a virtual machine gateway, complete the setup steps here:</p>
+<p><a href="/xconnect_docs/Gateway_Docker">Docker Gateway Setup</a></p>
+<h2 id="agent-setup">Agent Setup</h2>
+<p>It is recommended to always download the latest version of the Agent. This is available from our 
+download repository here:</p>
+<p><a href="https://downloads.senecaxconnect.com">Download repository</a></p>
+<h2 id="dashboard-setup">Dashboard Setup</h2>
+<p>Once the gateway and agent(s) are installed and configured, you can login to your xConnect
+Dashboard instance here:</p>
+<p><a href="https://www.senecaxconnect.com">Seneca xConnect Cloud Dashboard</a></p>
                 
                   
                 
@@ -823,13 +912,13 @@ Confirm the following before continuing your xConnect installation and configura
           </a>
         
         
-          <a href="../Gateway_TurnKey/" title="Turnkey" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Gateway_TurnKey/" title="Turnkey Appliance" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Turnkey
+                Turnkey Appliance
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

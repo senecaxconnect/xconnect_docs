@@ -42,7 +42,7 @@
     
     
       
-        <title>Docker - xConnect Documentation</title>
+        <title>Virtual/Software/Docker - xConnect Documentation</title>
       
     
     
@@ -105,7 +105,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#gateway-docker-container-deployment" tabindex="1" class="md-skip">
+      <a href="#virtualsoftwaredocker-gateway" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -131,7 +131,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Docker
+                Virtual/Software/Docker
               
             </span>
           
@@ -368,8 +368,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Gateway_TurnKey/" title="Turnkey" class="md-nav__link">
-      Turnkey
+    <a href="../Gateway_TurnKey/" title="Turnkey Appliance" class="md-nav__link">
+      Turnkey Appliance
     </a>
   </li>
 
@@ -388,9 +388,105 @@
       
     
     
-    <a href="./" title="Docker" class="md-nav__link md-nav__link--active">
-      Docker
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Virtual/Software/Docker
+      </label>
+    
+    <a href="./" title="Virtual/Software/Docker" class="md-nav__link md-nav__link--active">
+      Virtual/Software/Docker
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#minimum-requirements" class="md-nav__link">
+    Minimum Requirements
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#virtual-machine" class="md-nav__link">
+    Virtual Machine
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    Hardware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    Software
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bare-metal-physical-device" class="md-nav__link">
+    Bare Metal (Physical Device)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hardware_1" class="md-nav__link">
+    Hardware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software_1" class="md-nav__link">
+    Software
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -698,6 +794,89 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#minimum-requirements" class="md-nav__link">
+    Minimum Requirements
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#virtual-machine" class="md-nav__link">
+    Virtual Machine
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hardware" class="md-nav__link">
+    Hardware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    Software
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bare-metal-physical-device" class="md-nav__link">
+    Bare Metal (Physical Device)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hardware_1" class="md-nav__link">
+    Hardware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software_1" class="md-nav__link">
+    Software
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -711,7 +890,65 @@
                   <a href="https://github.com/senecaxconnect/xconnect_docs/edit/master/docs/Gateway_Docker.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="gateway-docker-container-deployment">Gateway - Docker Container Deployment</h1>
+                <h1 id="virtualsoftwaredocker-gateway">Virtual/Software/Docker Gateway</h1>
+<p>Seneca now offers a flexible alternative to the purchase of a turnkey hardware gateway.
+For customers that wish to use existing infrastructure, whether virtualized or bare metal, 
+the setup of the xConnect Gateway software can be installed with a few easy steps.</p>
+<h2 id="minimum-requirements">Minimum Requirements</h2>
+<h4 id="virtual-machine">Virtual Machine</h4>
+<h5 id="hardware">Hardware</h5>
+<ul>
+<li>2 vCPU</li>
+<li>8GB RAM</li>
+<li>60GB of Storage</li>
+<li>2 Network Adapters<ul>
+<li>1 adapter connected to vSwitch of assets being monitored (Agent Network)</li>
+<li>1 adapter connected to vSwitch that has outbound internet access (Internet-enabled Network)</li>
+</ul>
+</li>
+</ul>
+<h5 id="software">Software</h5>
+<ul>
+<li>Any Debian-based Linux Distribution (Recommend Ubuntu Server 18.04 LTS or equivalent)</li>
+<li>Docker.io and Docker-Compose</li>
+</ul>
+<h4 id="bare-metal-physical-device">Bare Metal (Physical Device)</h4>
+<h5 id="hardware_1">Hardware</h5>
+<ul>
+<li>Core i3 or greater</li>
+<li>8GB RAM</li>
+<li>60GB of Storage</li>
+<li>2 Network Adapters<ul>
+<li>1 adapter connected to Switch of assets being monitored (Agent Network)</li>
+<li>1 adapter connected to Switch that has outbound internet access (Internet-enabled Network)</li>
+</ul>
+</li>
+</ul>
+<h5 id="software_1">Software</h5>
+<ul>
+<li>Any Debian-based Linux Distribution (Recommend Ubuntu Server 18.04 LTS or equivalent)</li>
+<li>Docker.io and Docker-Compose</li>
+<li>Nano or text editor of choice</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<ol>
+<li>Open a shell into your Linux installation </li>
+<li><code class="codehilite"><span class="err">apt install docker.io docker-compose</span></code> to install the docker container engine</li>
+<li><code class="codehilite"><span class="err">mkdir /etc/xconnect &amp;&amp; cd /etc/xconnect</span></code></li>
+<li><code class="codehilite"><span class="err">git clone https://github.com/senecaxconnect/xconnect_gateway_docker</span></code></li>
+<li><code class="codehilite"><span class="err">nano gw.env</span></code></li>
+<li>Modify gw.env with the provided API and SecretKey provided by the Seneca xConnect Support Team. Replace the placeholders with the provided keys:<br>
+<code class="codehilite"><span class="err">SELENE_APIKEY=&lt;APIKEYHERE&gt;</span></code><br>
+<code class="codehilite"><span class="err">SELENE_SECRETKEY=&lt;SECRETKEYHERE&gt;</span></code></li>
+<li>
+<p>To start the gateway software, execute the following command:<br>
+<code class="codehilite"><span class="err">MQTT_PORT={Desired MQTT Input Port} GW_NAME={Desired Gateway Name} docker-compose up -d</span></code><br>
+Replace {Desired MQTT Input Port} with 1883 unless otherwise instructed<br>
+Replace {Desired Gateway Name} with XCGW-<em>some_identifying_name</em></p>
+<p>Example:
+<code class="codehilite"><span class="err">MQTT_PORT=1883 GW_NAME=XCGW-DOCK01 docker-compose up -d</span></code></p>
+</li>
+</ol>
                 
                   
                 
@@ -733,7 +970,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Gateway_TurnKey/" title="Turnkey" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Gateway_TurnKey/" title="Turnkey Appliance" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -742,7 +979,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Turnkey
+                Turnkey Appliance
               </span>
             </div>
           </a>

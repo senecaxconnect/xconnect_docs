@@ -42,7 +42,7 @@
     
     
       
-        <title>Turnkey - xConnect Documentation</title>
+        <title>Turnkey Appliance - xConnect Documentation</title>
       
     
     
@@ -105,7 +105,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#gateway-turnkey-gateway" tabindex="1" class="md-skip">
+      <a href="#turnkey-gateway-setup" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -131,7 +131,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Turnkey
+                Turnkey Appliance
               
             </span>
           
@@ -376,9 +376,45 @@
       
     
     
-    <a href="./" title="Turnkey" class="md-nav__link md-nav__link--active">
-      Turnkey
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Turnkey Appliance
+      </label>
+    
+    <a href="./" title="Turnkey Appliance" class="md-nav__link md-nav__link--active">
+      Turnkey Appliance
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#option-1-plug-and-go-dhcpsingle-network" class="md-nav__link">
+    Option 1 - Plug and Go (DHCP/Single Network)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-2-static-ips-dual-network" class="md-nav__link">
+    Option 2 - Static IPs (Dual Network)
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -389,8 +425,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Gateway_Docker/" title="Docker" class="md-nav__link">
-      Docker
+    <a href="../Gateway_Docker/" title="Virtual/Software/Docker" class="md-nav__link">
+      Virtual/Software/Docker
     </a>
   </li>
 
@@ -698,6 +734,29 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#option-1-plug-and-go-dhcpsingle-network" class="md-nav__link">
+    Option 1 - Plug and Go (DHCP/Single Network)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-2-static-ips-dual-network" class="md-nav__link">
+    Option 2 - Static IPs (Dual Network)
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -711,7 +770,84 @@
                   <a href="https://github.com/senecaxconnect/xconnect_docs/edit/master/docs/Gateway_TurnKey.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="gateway-turnkey-gateway">Gateway - Turnkey Gateway</h1>
+                <h1 id="turnkey-gateway-setup">Turnkey Gateway Setup</h1>
+<p>You have 2 connectivity options.</p>
+<p><strong>Option 1 (Plug and Go)</strong><br>
+This is the easiest of the 2 options to get up and running quickly. However, this will 
+require a DHCP and internet enabled network connection.</p>
+<p><strong>Option 2 (Set Static IPs of Gateway)</strong><br>
+This option should be taken if you would like to assign static IP or IPs to the network ports of the gateway.
+A PC and an ethernet cable that can connect to the gateway is required for this option.</p>
+<h2 id="option-1-plug-and-go-dhcpsingle-network">Option 1 - Plug and Go (DHCP/Single Network)</h2>
+<p>With this option you can be up and running in minutes without any special setup steps. However, 
+all agent systems must be on the same network as the gateway.</p>
+<ol>
+<li>Power on your Secure Gateway Device</li>
+<li>Connect <strong>PORT 2</strong> to an <strong>Internet-Enabled</strong> DHCP network</li>
+</ol>
+<p>You are all done! </p>
+<h2 id="option-2-static-ips-dual-network">Option 2 - Static IPs (Dual Network)</h2>
+<p>For configuration you will temporarily use an available computer
+and its web browser. Also, due to security reasons the default password will need to be obtained from 
+our support team by emailing <a href="mailto:support@senecaxconnect.com">support@senecaxconnect.com</a></p>
+<ol>
+<li>
+<p>Power on your Secure Gateway Device and connect an
+Ethernet cable from <strong>PORT 1</strong> of the Gateway to an
+Ethernet port on the PC that can be used for configuration.</p>
+</li>
+<li>
+<p>Set a static IP on your PC to 10.0.0.x, where x is anything between 1 and 254 except for 250</p>
+</li>
+<li>
+<p>Access the gateway portal by going to <a href="http://10.0.0.250:8885/">http://10.0.0.250:8885/</a> in a web browser from your PC. 
+    !!! note
+        (NOTE: 10.0.0.250 is the default
+        IP. If the gateway IP has changed, use the new one
+        instead).</p>
+</li>
+<li>
+<p>Log in to the Gateway with the following credentials:</p>
+<p>Username: admin<br>
+Password: <strong><e-mail <a href="mailto:support@senecaxconnect.com">support@senecaxconnect.com</a> for password></strong></p>
+</li>
+<li>
+<p>Click “IP Address Config” on the top menu</p>
+<p>You can choose to use 1 or 2 NICs on the gateway. Using 2 NICs is recommended for extra security.</p>
+<p><strong>Single NIC Use:</strong>
+<br> Select Static and Enter the IP Address, Subnet Mask, Gateway, and DNS server(s) for the <strong>Primary Network</strong></p>
+<p><strong>Dual NIC Use (Recommended):</strong>
+<br>  Select Static and Enter the IP Address and Subnet Mask only for the <strong>Primary Network</strong>
+<br> Select Static and Enter the IP Address, Subnet Mask, Gateway, and DNS server(s) for the <strong>Secondary Network</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are configuring IP addresses on both NICs, you will need to ensure
+there is an active network plugged into both NICs. Only NICs that have active connections
+will appear in the dropdown menu in the IP Address Configuration screen</p>
+</div>
+<p>This is an example of the network configuration for Dual NIC Setup:<br>
+Primary Network - 192.168.1.0/255.255.255.0<br>
+Secondary Network - 10.252.13.0/255.255.255.0<br>
+<div class="mermaid">  graph LR
+        c1--&gt;b1
+        a1(Internet)
+        b1(Gateway NIC 1&lt;br&gt;192.168.1.200/24)
+        b1---b2
+        b2(Gateway NIC 2&lt;br&gt;10.252.13.5/24)--&gt;a1
+        c1(Agent NIC&lt;br&gt;192.168.1.5/24)</div></p>
+</li>
+<li>
+<p>Click ‘Save’ to finalize the network interface update</p>
+</li>
+<li>
+<p>Wait 1-2 minutes for the gateway to reboot. </p>
+</li>
+<li>
+<p>Verify you can successfully ping the IP address you
+specified as “primary” from the same network which your
+Server Agents will reside</p>
+</li>
+</ol>
                 
                   
                 
@@ -748,13 +884,13 @@
           </a>
         
         
-          <a href="../Gateway_Docker/" title="Docker" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Gateway_Docker/" title="Virtual/Software/Docker" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Docker
+                Virtual/Software/Docker
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
