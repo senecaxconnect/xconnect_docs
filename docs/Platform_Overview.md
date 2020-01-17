@@ -55,7 +55,7 @@ pre-installing a majority of this installation.
 We will explain how to install the xConnect Server Agent on existing servers, and how to
 configure it once installed. If purchasing a new server from Seneca, the installation process is not
 necessary, and you can jump straight to the configuration step. 
-However, **it is recommended to always grab the latest version from our [download repository](https://download.senecaxconnect.com)**
+However, **it is recommended to always grab the latest version from our [download repository](https://downloads.senecaxconnect.com)**
 
 Once the xConnect Server Agents are installed and configured, your next step is to configure
 your xConnect Secure Gateway. The Secure Gateway is responsible for providing a seamless

@@ -76,6 +76,6 @@ extra_css:
   - stylesheets/mermaid.css
 
 extra_javascript:
-    - https://unpkg.com/mermaid@7.0.9/dist/mermaid.min.js
-
+  - https://unpkg.com/mermaid@7.0.9/dist/mermaid.min.js
+  #- https://unpkg.com/mermaid@8.4.5/dist/mermaid.min.js
 copyright: Copyright &copy; 2020 <a href="https://www.senecadata.com"> - Seneca Data Distributors, Inc</a>

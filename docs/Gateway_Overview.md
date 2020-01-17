@@ -45,7 +45,7 @@ provided by Arrow. The specifications of this physical gateway are:
 | Dimensions (w x h x d)  | 7.5 x 1.75 x 4.25 inches / 191 x 46 x 108 millimeters                     |
 | Weight                  | 3 lbs. / 1.4 kg                                                           |
 
-Onboarding/Installation instructions are available in the "Getting Started" chapter. 
+Onboarding/Installation instructions are available in the [Getting Started](/xconnect_docs/Getting_Started) chapter. 
 
 ## Virtual Machine Gateway Option
 The virtual gateway option is available when using existing infrastructure to host the Secure

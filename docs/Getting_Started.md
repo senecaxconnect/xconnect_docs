@@ -5,6 +5,13 @@ for each step of the installation process and can be found within this guide or 
 
 Please follow the steps below in the same order of operations as described:
 
+```mermaid
+      graph LR
+          A(Prerequisites) --> B(Gateway Setup)
+          B -->C(Agent Setup)
+          C -->D(Dashboard Setup);
+```
+
 1. Confirm Prerequisites
 2. Configure Gateway
 3. Configure Agent(s)
@@ -18,21 +25,40 @@ Please follow the steps below in the same order of operations as described:
 </div>
 Confirm the following before continuing your xConnect installation and configuration:
 
+
 * Network Access has been configured or confirmed:
-    * Agent System - Outbound Port TCP 1883 (MQTT)
-    * Agent System - Outbound Port TCP 8885 (HTTP)
-    * Gateway - Outbound Port TCP 443 (HTTPS)
-    * Gateway - Outbound Port TCP 8883 (Secure MQTT)
+
+    | Source          |   Destination |   Port | Protocol  |
+    |-----------------|---------------|--------|-----------|
+    | Agent System(s) | Gateway       |  1883  | MQTT (TCP)|
+    | Agent System(s) | Gateway       |  8080  | HTTP (TCP)|
+    | Gateway         | Internet      |  443   | SSL  (TCP)|
+    | Gateway         | Internet      |  8883  | RabbitMQ (TCP)|
+
 * You've received credentials for the xConnect Web Dashboard ([senecaxconnect.com](http://senecaxconnect.com))
-* Have a PC that can be used to complete IP address changes to gateway
-    * Can be configured for the default static network of 10.0.0.0/24
-      **or**
-    * Is on the same DHCP network as the gateway and can obtain the IP of the gateway from DHCP server
+* Have a PC that can be used to complete IP address changes to gateway (if desired)
     
 
-## Gateway Setup (For Turnkey model)
+## Gateway Setup
 
-1. Unbox your Secure Gateway and connect an Ethernet cable from Port 1 of the Gateway to 
-an Ethernet port on the temporary configuration computer
-2. Connect to the network
+If you purchased a turnkey gateway appliance from Seneca, complete the setup steps here:
 
+[Turnkey Gateway Setup](/xconnect_docs/Gateway_TurnKey)
+
+If you are setting up a virtual machine gateway, complete the setup steps here:
+
+[Docker Gateway Setup](/xconnect_docs/Gateway_Docker)
+
+## Agent Setup
+
+It is recommended to always download the latest version of the Agent. This is available from our 
+download repository here:
+
+[Download repository](https://downloads.senecaxconnect.com)
+
+## Dashboard Setup
+
+Once the gateway and agent(s) are installed and configured, you can login to your xConnect
+Dashboard instance here:
+
+[Seneca xConnect Cloud Dashboard](https://www.senecaxconnect.com)
