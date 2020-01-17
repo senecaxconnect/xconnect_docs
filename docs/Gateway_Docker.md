@@ -6,27 +6,27 @@ the setup of the xConnect Gateway software can be installed with a few easy step
 
 ## Minimum Requirements
 
-#### Virtual Machine
-##### Hardware
+### Virtual Machine
+#### Hardware
 * 2 vCPU
 * 8GB RAM
 * 60GB of Storage
 * 2 Network Adapters
     * 1 adapter connected to vSwitch of assets being monitored (Agent Network)
     * 1 adapter connected to vSwitch that has outbound internet access (Internet-enabled Network)
-##### Software
+#### Software
 * Any Debian-based Linux Distribution (Recommend Ubuntu Server 18.04 LTS or equivalent)
 * Docker.io and Docker-Compose
 
-#### Bare Metal (Physical Device)
-##### Hardware
+### Bare Metal (Physical Device)
+#### Hardware
 * Core i3 or greater
 * 8GB RAM
 * 60GB of Storage
 * 2 Network Adapters
     * 1 adapter connected to Switch of assets being monitored (Agent Network)
     * 1 adapter connected to Switch that has outbound internet access (Internet-enabled Network)
-##### Software
+#### Software
 * Any Debian-based Linux Distribution (Recommend Ubuntu Server 18.04 LTS or equivalent)
 * Docker.io and Docker-Compose
 * Nano or text editor of choice

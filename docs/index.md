@@ -1,7 +1,9 @@
-<p class="aligncenter">
+<div class="aligncenter" style="width: 100%">
+<p class="aligncenter" style="text-align: center">
     <img src="images/xconnect_logo.png" style="max-width:75%;" alt="" />
     <img src="images/audit_manage_act.png" style="max-width:55%;" alt="" />
 </p>
+</div>
 
 <div class="aligncenter">
     <h1> Documentation Repository </h1>
@@ -19,9 +21,9 @@ documentation related to the xConnect Platform.
 - [Web Dashboard](/xconnect_docs/Platform_Overview/#xconnect-web-dashboard)
 
 ## Installation and Configuration
--[Quick Start Guide](/xconnect_docs/Getting_Started)
--[Gateway Setup - Turnkey Appliance](/xconnect_docs/Gateway_Turnkey)
--[Gateway Setup - Virtual/Software/Docker](/xconnect_docs/Gateway_Docker)
+- [Quick Start Guide](/xconnect_docs/Getting_Started)
+- [Gateway Setup - Turnkey Appliance](/xconnect_docs/Gateway_Turnkey)
+- [Gateway Setup - Virtual/Software/Docker](/xconnect_docs/Gateway_Docker)
 
 ##Technical Documentation
 - [Server Agent](/xconnect_docs/Agent_Overview)
