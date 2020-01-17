@@ -18,6 +18,11 @@ documentation related to the xConnect Platform.
 - [Gateway](/xconnect_docs/Platform_Overview/#xconnect-gateway)
 - [Web Dashboard](/xconnect_docs/Platform_Overview/#xconnect-web-dashboard)
 
+## Installation and Configuration
+-[Quick Start Guide](/xconnect_docs/Getting_Started)
+-[Gateway Setup - Turnkey Appliance](/xconnect_docs/Gateway_Turnkey)
+-[Gateway Setup - Virtual/Software/Docker](/xconnect_docs/Gateway_Docker)
+
 ##Technical Documentation
 - [Server Agent](/xconnect_docs/Agent_Overview)
 - [Gateway](/xconnect_docs/Gateway_Overview)
@@ -43,7 +48,3 @@ documentation related to the xConnect Platform.
 - [Sales](/xconnect_docs/Support)
 - [Technical Support / RMA](/xconnect_docs/Support)
 - [xConnect Application Support](/xconnect_docs/Support)
-
-
-
-##
