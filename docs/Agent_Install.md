@@ -5,6 +5,9 @@ However, it is highly recommended to always download and install the latest vers
 
 ## Installation
 1. Download the latest xConnect Server Agent, found at www.senecaxconnect.com (Click the Download Agent link)
+
+    !!! note
+        Make sure to run as Administrator! (Right-click the installation file and click Run As Administrator)
 2. Proceed with installation, completing all prompts
 
 
