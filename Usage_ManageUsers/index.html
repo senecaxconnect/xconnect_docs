@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
@@ -46,7 +46,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -57,7 +57,7 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
@@ -105,14 +105,18 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#manage-users" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://senecaxconnect.github.io/xconnect_docs" title="xConnect Documentation" class="md-header-nav__button md-logo">
+        <a href="https://senecaxconnect.github.io/xconnect_docs" title="xConnect Documentation" aria-label="xConnect Documentation" class="md-header-nav__button md-logo">
           
-            <img src="../images/logo.svg" width="24" height="24">
+            <img alt="logo" src="../images/logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -141,7 +145,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -204,7 +208,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://senecaxconnect.github.io/xconnect_docs" title="xConnect Documentation" class="md-nav__button md-logo">
       
-        <img src="../images/logo.svg" width="48" height="48">
+        <img alt="logo" src="../images/logo.svg" width="48" height="48">
       
     </a>
     xConnect Documentation
@@ -451,6 +455,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../Usage_SideNav/" title="Side Navigation" class="md-nav__link">
+      Side Navigation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../Usage_Bookmarks/" title="Bookmarks" class="md-nav__link">
       Bookmarks
     </a>
@@ -478,13 +494,13 @@
 
   <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-5" type="checkbox" id="nav-3-5" checked>
     
-    <label class="md-nav__link" for="nav-3-4">
+    <label class="md-nav__link" for="nav-3-5">
       Management
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-3-4">
+      <label class="md-nav__title" for="nav-3-5">
         Management
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -513,10 +529,48 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Users
+      </label>
     
     <a href="./" title="Users" class="md-nav__link md-nav__link--active">
       Users
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#add-a-user" class="md-nav__link">
+    Add a user
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-an-existing-user" class="md-nav__link">
+    Update an existing user
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -682,6 +736,44 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#add-a-user" class="md-nav__link">
+    Add a user
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-an-existing-user" class="md-nav__link">
+    Update an existing user
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -690,9 +782,43 @@
                   <a href="https://github.com/senecaxconnect/xconnect_docs/edit/master/docs/Usage_ManageUsers.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Users</h1>
-                
-                
+                <h1 id="manage-users">Manage Users</h1>
+<p>Power users have the ability to add, remove or modify existing users on their xConnect instance. End users can be associated with a specific customer which will show that customer's dashboard to the end user upon login.</p>
+<p>You can access the manage users by going to the settings tab, and clicking "Manage Users". Once there you can </p>
+<p>1. Log in as a power user</p>
+<p>2. Click on the settings tab on the left-side menu </p>
+<p><img alt="Side Navigation" src="../images/menu_settings.png" title="Account Overview" /></p>
+<p>3. Click on "Manage Users".</p>
+<p>Once there you will see the primary management interface:</p>
+<p><img alt="Side Navigation" src="../images/manage_users.png" title="Account Overview" /></p>
+<p>All power users will be listed on the Power Users table, any end users will be listed on the End Users section. 
+You can deactivate a user by clicking the "Deactivate" button, or activate them by clicking "Activate" </p>
+<p>For more information on the differences between Power and End users, please visit <a href="https://senecaxconnect.github.io/xconnect_docs/Usage_Roles/">User Types</a></p>
+<h2 id="add-a-user">Add a user</h2>
+<ol>
+<li>Click on the "New User" button (both buttons will take you to the correct page)</li>
+<li>
+<p>Once the User entry modal appears, Enter the following information for your user:</p>
+<ul>
+<li>User's e-mail (used for login)</li>
+<li>Password</li>
+<li>User type (either Power user or End user)</li>
+</ul>
+</li>
+<li>
+<p>Click save. </p>
+</li>
+</ol>
+<p>The user will be created and sent an activation e-mail. Once they have confirmed their account, they will be able to access the xConnect portal.</p>
+<h2 id="update-an-existing-user">Update an existing user</h2>
+<p>1. Click on the user's name via the grid on the main manage users page:</p>
+<p><img alt="Side Navigation" src="../images/manage_users_update.png" title="Manage user update" /></p>
+<p>2. The update modal will appear and allow you to make any changes that you require. </p>
+<p><img alt="Side Navigation" src="../images/edit_users.png" title="Manage user update" /></p>
+<ol>
+<li>Lock Account: This will lock the user's account so they can no longer login until you unlock it. Note: a user can unlock their account if they reset their password.</li>
+<li>Disable User: Marks the account as disabled. User will not be able to access their account until they are activated. </li>
+</ol>
                 
                   
                 
@@ -755,9 +881,9 @@
           </div>
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
@@ -767,9 +893,9 @@
       
     </div>
     
-      <script src="../assets/javascripts/application.808e90bb.js"></script>
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
       
         <script src="https://unpkg.com/mermaid@7.0.9/dist/mermaid.min.js"></script>
       
