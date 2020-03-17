@@ -1,6 +1,7 @@
+# Dashboard Setup
 Once you have set up your gateway and installed the necessary agents, you can access the web dashboard by going to https://senecaxconnect.com
 
-# Initial Configuration
+## Initial Configuration
 1\. Log in to xConnect by going to https://www.senecaxconnect.com using a modern web browser such as Chrome, Firefox, or Edge. You should have received your login information via e-mail.
 
 2\. At login, you will see a left-side navigation that will enable you to navigate through the various pages within xConnect. There are 3 tabs included on the left-side navigation:
@@ -22,14 +23,14 @@ Once you have set up your gateway and installed the necessary agents, you can ac
 
 6\. Once you have added one or more customers, click on "Manage Gateways", this will take you to the Manage Gateways page that can be leveraged to assign a gateway to a customer. 
 The "Awaiting Approval" table shows a list of gateways that have yet to be assigned to a customer. You can assign a gateway by clicking the "Assign" button next to your desired gateway: 
-![Side Navigation](images/assign_gateways.png "Assign Gateways")
+![Side Navigation](images/assign_gateways.png "")
 
 7\. Once you click the "Assign" button, a modal will appear and you can choose your desired customer. 
 
-![Side Navigation](images/assign_customer_dropdown.png "Assign Gateways")
+![Side Navigation](images/assign_customer_dropdown.png "")
 
 8\. Once you have approved gateways, you will see the entry added under the assigned customer within the left-side
 menu. Verify that the appropriate monitored devices are listed under the gateway
 
-![Side Navigation](images/device_list.png "Assign Gateways")
+![Side Navigation](images/device_list.png "")
     
