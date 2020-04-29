@@ -1,6 +1,6 @@
 # Support
 
-Contact our team today by leveraging the many support options below based on your need.
+Contact our team today by leveraging the many support options available below.
 
 ## Sales Support:
 If you have a licensing or sales-related inquiry, please contact your 
@@ -22,7 +22,8 @@ gather the following information to include in your support request:
 - Dell TSR Log, if applicable
 - xConnect Agent logs (C:\ProgramData\xConnect\logs\)
 
-**E-mail:**[Seneca Customer Care](mailto:senecacustomercare@arrow.com)
+**E-mail:**
+[Seneca Customer Care](mailto:senecacustomercare@arrow.com)
 
 **Phone:**
 1.800.227.3432
