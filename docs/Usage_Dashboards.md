@@ -39,7 +39,7 @@ devices. These dashboards include 4 different levels:
    
 2) **Customer Dashboard:** Provides a view of all monitored devices that are being reported from a specific gateway.
     
-    - Customer Overview: Provides a breakdown of all device types and their health for a **specific customer**. Each type will be represented by a circular chart. 
+  - Customer Overview: Provides a breakdown of all device types and their health for a **specific customer**. Each type will be represented by a circular chart. 
 
 ![Side Navigation](images/widget_customer_overview.png "Customer Overview")
    
