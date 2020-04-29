@@ -29,8 +29,6 @@ documentation related to the xConnect Platform.
 - [Server Agent](/xconnect_docs/Agent_Overview)
 - [Gateway](/xconnect_docs/Gateway_Overview)
 - [Web Dashboard](/xconnect_docs/Dashboard_Overview)
-- [Data Flow Diagrams](/xconnect_docs/Data_Flow)
-- [Network Security](/xconnect_docs/Network_Security)
 
 ## Usage Guide
 - [Dashboards](/xconnect_docs/Usage_Dashboards)

@@ -28,7 +28,7 @@ devices. These dashboards include 4 different levels:
    ![Side Navigation](images/widget_account_overview.png "Account Overview")
    
    For guidance on how health is defined, please see topic [Defining Health](#defining-health)
-  
+
   - Event Feed: Provides a list of events that have been thrown over the last 36 hours.
   
   ![Side Navigation](images/widget_event_feed.png "Event Feed")
@@ -39,7 +39,7 @@ devices. These dashboards include 4 different levels:
    
 2) **Customer Dashboard:** Provides a view of all monitored devices that are being reported from a specific gateway.
     
-  - Customer Overview: Provides a breakdown of all device types and their health for a **specific customer**. Each type will be represented by a circular chart. 
+    - Customer Overview: Provides a breakdown of all device types and their health for a **specific customer**. Each type will be represented by a circular chart. 
 
 ![Side Navigation](images/widget_customer_overview.png "Customer Overview")
    

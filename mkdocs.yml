@@ -33,9 +33,6 @@ nav:
             - Remote Commands: Usage_ManageRemoteCommands.md
             - 3rd Party Connectors: Usage_ManageConnectors.md
         - Event Logs: Usage_EventLogs.md
-    - Additional Documentation:
-       - Data Flow: Data_Flow.md
-       - Network Security: Network_Security.md
     - Support: Support.md
 
 theme:
