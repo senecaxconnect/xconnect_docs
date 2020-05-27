@@ -48,3 +48,6 @@ documentation related to the xConnect Platform.
 - [Sales](/xconnect_docs/Support)
 - [Technical Support / RMA](/xconnect_docs/Support)
 - [xConnect Application Support](/xconnect_docs/Support)
+
+## Release Notes
+- [xConnect Release Notes](/xconnect_docs/Release_Notes)

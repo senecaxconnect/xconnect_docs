@@ -34,6 +34,8 @@ nav:
             - 3rd Party Connectors: Usage_ManageConnectors.md
         - Event Logs: Usage_EventLogs.md
     - Support: Support.md
+    - Release Notes: Release_Notes.md
+
 
 theme:
   name: 'material'
