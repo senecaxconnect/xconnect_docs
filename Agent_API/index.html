@@ -666,19 +666,25 @@
     Get Latest Sensor Data
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#success-response" class="md-nav__link">
     Success Response
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#error-response" class="md-nav__link">
     Error Response
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -687,12 +693,18 @@
     Submit Telemetry to xConnect
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#success-response_1" class="md-nav__link">
     Success Response
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -761,19 +773,25 @@
     Get Latest Sensor Data
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#success-response" class="md-nav__link">
     Success Response
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#error-response" class="md-nav__link">
     Error Response
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -782,12 +800,18 @@
     Submit Telemetry to xConnect
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#success-response_1" class="md-nav__link">
     Success Response
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -812,15 +836,18 @@
                 
                 <h1 id="agent-api">Agent API</h1>
 <p>The following are endpoints that can be used to interact with the xConnect Agent. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p><strong>As of current release, the API is only bound to localhost or 127.0.0.1 and cannot be 
 accessed by any other networked machines.</strong> If a remote device needs to access the API, please contact
-support for an HTTPS version of the API. </p>
+support for an HTTPS version of the API.</p>
+</div>
 <h2 id="get-latest-sensor-data">Get Latest Sensor Data</h2>
 <p>Used to collect the latest sensor data from all xConnect Agent sensor points</p>
 <p><strong>URL</strong> : <code class="codehilite"><span class="c">http://localhost:8886/getSensorLatest</span></code></p>
 <p><strong>Method</strong> : <code class="codehilite"><span class="err">GET</span></code></p>
 <p><strong>Auth required</strong> : NO</p>
-<h2 id="success-response">Success Response</h2>
+<h4 id="success-response">Success Response</h4>
 <p><strong>Code</strong> : <code class="codehilite"><span class="err">200 OK</span></code></p>
 <p><strong>Content example</strong></p>
 <div class="codehilite"><pre><span></span><code><span class="p">[</span>
@@ -841,7 +868,7 @@ support for an HTTPS version of the API. </p>
 <span class="p">]</span>
 </code></pre></div>
 
-<h2 id="error-response">Error Response</h2>
+<h4 id="error-response">Error Response</h4>
 <p><strong>Condition</strong> : If route is incorrect, you will receive a not found response.</p>
 <p><strong>Code</strong> : <code class="codehilite"><span class="err">404 NOT FOUND</span></code></p>
 <h2 id="submit-telemetry-to-xconnect">Submit Telemetry to xConnect</h2>
@@ -900,7 +927,7 @@ or you will receive a malformed JSON response</p>
 <span class="p">}</span>
 </code></pre></div>
 
-<h2 id="success-response_1">Success Response</h2>
+<h4 id="success-response_1">Success Response</h4>
 <p><strong>Code</strong> : <code class="codehilite"><span class="err">201 OK</span></code></p>
                 
                   
