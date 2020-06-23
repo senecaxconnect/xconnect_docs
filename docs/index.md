@@ -5,7 +5,7 @@
 </p>
 </div>
 
-<div class="aligncenter">
+<div class="aligncenter" style="text-align: center">
     <h1> Documentation Repository </h1>
 </div>
 
