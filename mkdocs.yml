@@ -69,6 +69,7 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  - toc
 
 extra_css:
   - stylesheets/dark_theme.css
