@@ -880,8 +880,13 @@ will consume this object and submit it to the xConnect Gateway and appear on you
 <p><strong>Data constraints</strong></p>
 <p><code class="codehilite"><span class="err">uid</span></code> value should be a unique UUID per device or object. These can be generated at:
 <a href="https://www.uuidgenerator.net/version4">https://www.uuidgenerator.net/version4</a></p>
-<p><code class="codehilite"><span class="err">type</span></code> value will drive how the device is categorized on the cloud dashboard</p>
-<p><code class="codehilite"><span class="err">name</span></code> value is what the friendly name of the device will be on the cloud dashboard</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You may use the value "self" for the <code class="codehilite"><span class="err">uid</span></code> which will inherit the uid, type, and name that agent is 
+already using for system telemetry</p>
+</div>
+<p><code class="codehilite"><span class="err">type</span></code> value will drive how the device is categorized on the cloud dashboard (Only needed when not using "self")</p>
+<p><code class="codehilite"><span class="err">name</span></code> value is what the friendly name of the device will be on the cloud dashboard (Only needed when not using "self")</p>
 <p><code class="codehilite"><span class="err">telemetry</span></code> value is a list that can be a single object or multiple objects. Each object must contain
 3 "categories" that are used to assemble the telemetry key</p>
 <p>Each <code class="codehilite"><span class="err">telemetry</span></code> list object needs to have a <code class="codehilite"><span class="err">primaryCategory</span></code>, <code class="codehilite"><span class="err">secondaryCategory</span></code>, and <code class="codehilite"><span class="err">tertiaryCategory</span></code> specified 
