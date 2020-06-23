@@ -13,7 +13,7 @@
         <meta name="description" content="xConnect Documentation">
       
       
-        <link rel="canonical" href="https://senecaxconnect.github.io/xconnect_docs/Usage_ManageEmailProfiles/">
+        <link rel="canonical" href="https://senecaxconnect.github.io/xconnect_docs/Agent_API/">
       
       
         <meta name="author" content="Seneca">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Email Profiles - xConnect Documentation</title>
+        <title>Agent API - xConnect Documentation</title>
       
     
     
@@ -105,7 +105,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#manage-e-mail-profiles" tabindex="0" class="md-skip">
+      <a href="#agent-api" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -131,7 +131,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Email Profiles
+                Agent API
               
             </span>
           
@@ -420,12 +420,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Usage Guide
@@ -477,12 +475,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
     
     <label class="md-nav__link" for="nav-3-4">
       Management
@@ -558,56 +554,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Email Profiles
-      </label>
-    
-    <a href="./" title="Email Profiles" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../Usage_ManageEmailProfiles/" title="Email Profiles" class="md-nav__link">
       Email Profiles
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#accessing-e-mail-profiles" class="md-nav__link">
-    Accessing E-mail Profiles
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#defining-a-new-profile" class="md-nav__link">
-    Defining a new profile
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -661,10 +612,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       Additional Documentation
@@ -680,11 +633,77 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Agent_API/" title="Agent API" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Agent API
+      </label>
+    
+    <a href="./" title="Agent API" class="md-nav__link md-nav__link--active">
       Agent API
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#get-latest-sensor-data" class="md-nav__link">
+    Get Latest Sensor Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#success-response" class="md-nav__link">
+    Success Response
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-response" class="md-nav__link">
+    Error Response
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submit-telemetry-to-xconnect" class="md-nav__link">
+    Submit Telemetry to xConnect
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#success-response_1" class="md-nav__link">
+    Success Response
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -738,15 +757,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#accessing-e-mail-profiles" class="md-nav__link">
-    Accessing E-mail Profiles
+  <a href="#get-latest-sensor-data" class="md-nav__link">
+    Get Latest Sensor Data
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#defining-a-new-profile" class="md-nav__link">
-    Defining a new profile
+  <a href="#success-response" class="md-nav__link">
+    Success Response
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-response" class="md-nav__link">
+    Error Response
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submit-telemetry-to-xconnect" class="md-nav__link">
+    Submit Telemetry to xConnect
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#success-response_1" class="md-nav__link">
+    Success Response
   </a>
   
 </li>
@@ -767,89 +807,104 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/senecaxconnect/xconnect_docs/edit/master/docs/Usage_ManageEmailProfiles.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/senecaxconnect/xconnect_docs/edit/master/docs/Agent_API.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="manage-e-mail-profiles">Manage E-mail Profiles</h1>
-<p>E-mail profiles are similar to mailing lists for a particular event, which supports one or more recipients and a custom e-mail template. </p>
-<h2 id="accessing-e-mail-profiles">Accessing E-mail Profiles</h2>
-<p>1. Log in as a power user</p>
-<p>2. Click on the settings tab on the left-side menu </p>
-<p><img alt="Side Navigation" src="../images/menu_settings.png" title="" /></p>
-<p>3. Click on the "Email Profiles" menu item</p>
-<p><img alt="Side Navigation" src="../images/settings_mail_profiles.png" title="" /></p>
-<h2 id="defining-a-new-profile">Defining a new profile</h2>
-<p>1. Click on "New Email Profile"</p>
-<p>2. Define an e-mail profile name, and a list of e-mail recipients. Multiple recipients can be separated by a comma (,)</p>
-<p>3. Choose an e-mail template using the dropdown. If you require a new template, please see <a href="#defining-an-e-mail-template">Defining a template</a></p>
-<h1 id="manage-e-mail-templates">Manage E-mail Templates</h1>
-<p>E-mail templates define the content for the e-mails that are sent to the defined profile.</p>
-<h2 id="accessing-e-mail-templates">Accessing E-mail Templates</h2>
-<p>E-mail templates can be accessed by clicking the "New Email Profile" button, and clicking the "Settings" link:</p>
-<p><img alt="Side Navigation" src="../images/settings_profile_template.png" title="" /></p>
-<h2 id="defining-an-e-mail-template">Defining an E-mail Template</h2>
-<p>You can define one or more e-mail templates that can be leveraged for your alerts. Custom templates provide your users a meaningful e-mail alert that can empower them to take action on a certain alert. </p>
-<p>1. Click on the "New Email Template" button (or to edit, click on the name of the template) </p>
-<p><img alt="Side Navigation" src="../images/settings_template_grid.png" title="" /></p>
-<p>2. The editor modal will appear and you may define your e-mail template. HTML is supported and you can define dynamic values by leveraging <a href="#Smart_Tags">Smart Tags</a></p>
-<p><img alt="Side Navigation" src="../images/settings_template_editor.png" title="" /></p>
-<p>3. Once you have defined your template, you can associate it to an e-mail profile via the dropdown in the profile editor. </p>
-<h2 id="smart-tags">Smart Tags</h2>
-<p>Smart tags can be used in any e-mail template, remote command or 3<sup>rd</sup> party connector. A smart tag is a dynamic label that is altered based on the device that fired the event. </p>
-<table>
-<thead>
-<tr>
-<th align="left">Smart Tag</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">{Criteria}</td>
-<td align="left">Shows the criteria that fired the event.</td>
-</tr>
-<tr>
-<td align="left">{DeviceHID}</td>
-<td align="left">Device HID</td>
-</tr>
-<tr>
-<td align="left">{DeviceName}</td>
-<td align="left">Name of the device that fired the event.</td>
-</tr>
-<tr>
-<td align="left">{DeviceUID}</td>
-<td align="left">Unique ID for a device.</td>
-</tr>
-<tr>
-<td align="left">{DeviceType}</td>
-<td align="left">Asset type of the device that fired the event.</td>
-</tr>
-<tr>
-<td align="left">{Timestamp}</td>
-<td align="left">Date/time when the event was fired.</td>
-</tr>
-<tr>
-<td align="left">{FullTelemetry}</td>
-<td align="left">Full telemetry payload that caused the event to fire.</td>
-</tr>
-<tr>
-<td align="left">{TelemetryValue}</td>
-<td align="left">Telemetry value that caused the event to fire.</td>
-</tr>
-<tr>
-<td align="left">{TelemetryName}</td>
-<td align="left">Raw telemetry key that caused the event to fire.</td>
-</tr>
-<tr>
-<td align="left">{TelemetryDescription}</td>
-<td align="left">Telemetry friendly name that fired the event.</td>
-</tr>
-<tr>
-<td align="left">{ThresholdValue}</td>
-<td align="left">Value that the event was comparing against. Defined in the event configuration</td>
-</tr>
-</tbody>
-</table>
+                <h1 id="agent-api">Agent API</h1>
+<p>The following are endpoints that can be used to interact with the xConnect Agent. </p>
+<div class="codehilite"><pre><span></span><code><span class="err">!!! note</span>
+<span class="err">    As of current release, the API is only bound to localhost or 127.0.0.1 and cannot be </span>
+<span class="err">    accessed by any other networked machines.</span>
+</code></pre></div>
+
+
+<h2 id="get-latest-sensor-data">Get Latest Sensor Data</h2>
+<p>Used to collect the latest sensor data from all xConnect Agent sensor points</p>
+<p><strong>URL</strong> : <code class="codehilite"><span class="c">http://localhost:8886/getSensorLatest</span></code></p>
+<p><strong>Method</strong> : <code class="codehilite"><span class="err">GET</span></code></p>
+<p><strong>Auth required</strong> : NO</p>
+<h2 id="success-response">Success Response</h2>
+<p><strong>Code</strong> : <code class="codehilite"><span class="err">200 OK</span></code></p>
+<p><strong>Content example</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;SensorID&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;SensorSource&quot;</span><span class="p">:</span> <span class="s2">&quot;WMI&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;SensorName&quot;</span><span class="p">:</span> <span class="s2">&quot;Network NIC1 MaxLinkSpeed&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;SensorUnit&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;SensorFullKey&quot;</span><span class="p">:</span> <span class="s2">&quot;Network_NIC1_MaxLinkSpeed&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;DataType&quot;</span><span class="p">:</span> <span class="s2">&quot;Integer&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;LatestValue&quot;</span><span class="p">:</span> <span class="s2">&quot;492&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;LocalSensorThreshold&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;LocalStrictOperator&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;DashboardEnabled&quot;</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="nt">&quot;GaugeEnabled&quot;</span><span class="p">:</span> <span class="kc">null</span>
+  <span class="p">},</span>
+  <span class="err">...</span> <span class="err">repeated</span> <span class="err">list</span> <span class="err">of</span> <span class="err">arrays</span> <span class="err">for</span> <span class="err">all</span> <span class="err">sensors</span>
+<span class="p">]</span>
+</code></pre></div>
+
+<h2 id="error-response">Error Response</h2>
+<p><strong>Condition</strong> : If route is incorrect, you will receive a not found response.</p>
+<p><strong>Code</strong> : <code class="codehilite"><span class="err">404 NOT FOUND</span></code></p>
+<h2 id="submit-telemetry-to-xconnect">Submit Telemetry to xConnect</h2>
+<p>Used to collect telemetry from 3<sup>rd</sup> party applications that can POST a formed JSON object. The API
+will consume this object and submit it to the xConnect Gateway and appear on your cloud dashboard.</p>
+<p><strong>URL</strong> : <code class="codehilite"><span class="c">http://localhost:8886/submitTelemetry</span></code></p>
+<p><strong>Method</strong> : <code class="codehilite"><span class="err">POST</span></code></p>
+<p><strong>Auth required</strong> : NO</p>
+<p><strong>Data constraints</strong></p>
+<p><code class="codehilite"><span class="err">uid</span></code> value should be a unique UUID per device or object. These can be generated at:
+<a href="https://www.uuidgenerator.net/version4">https://www.uuidgenerator.net/version4</a></p>
+<p><code class="codehilite"><span class="err">type</span></code> value will drive how the device is categorized on the cloud dashboard</p>
+<p><code class="codehilite"><span class="err">name</span></code> value is what the friendly name of the device will be on the cloud dashboard</p>
+<p><code class="codehilite"><span class="err">telemetry</span></code> value is a list that can be a single object or multiple objects. Each object must contain
+3 "categories" that are used to assemble the telemetry key</p>
+<p>Each <code class="codehilite"><span class="err">telemetry</span></code> list object needs to have a <code class="codehilite"><span class="err">primaryCategory</span></code>, <code class="codehilite"><span class="err">secondaryCategory</span></code>, and <code class="codehilite"><span class="err">tertiaryCategory</span></code> specified 
+or you will receive a malformed JSON response</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;xconnect&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;uid&quot;</span><span class="p">:</span> <span class="s2">&quot;[unique UID per device or object]&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;[Device or Asset Type]&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;[Device Name that is human friendly]&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;telemetry&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;primaryCategory&quot;</span><span class="p">:</span> <span class="s2">&quot;[First Value of Telemetry Key]&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;secondaryCategory&quot;</span><span class="p">:</span> <span class="s2">&quot;[Second Value of Telemetry Key]&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tertiaryCategory&quot;</span><span class="p">:</span> <span class="s2">&quot;[Third Value of Telemetry Key]&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;[1920x1080]&quot;</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><strong>Data example</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;xconnect&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;uid&quot;</span><span class="p">:</span> <span class="s2">&quot;2bf2aa37-fb9c-460b-8f49-5d671017bec4&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Display&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Device1234567&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;telemetry&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;primaryCategory&quot;</span><span class="p">:</span> <span class="s2">&quot;Display&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;secondaryCategory&quot;</span><span class="p">:</span> <span class="s2">&quot;Model1234&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tertiaryCategory&quot;</span><span class="p">:</span> <span class="s2">&quot;Resolution&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;1920x1080&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;primaryCategory&quot;</span><span class="p">:</span> <span class="s2">&quot;Display&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;secondaryCategory&quot;</span><span class="p">:</span> <span class="s2">&quot;Model1234&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;tertiaryCategory&quot;</span><span class="p">:</span> <span class="s2">&quot;Power State&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;Standby&quot;</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="success-response_1">Success Response</h2>
+<p><strong>Code</strong> : <code class="codehilite"><span class="err">201 OK</span></code></p>
                 
                   
                 
@@ -871,7 +926,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Usage_ManageEventConfigurations/" title="Event Configurations" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Usage_EventLogs/" title="Event Logs" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -880,19 +935,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Event Configurations
+                Event Logs
               </span>
             </div>
           </a>
         
         
-          <a href="../Usage_ManageRemoteCommands/" title="Remote Commands" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Support/" title="Support" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Remote Commands
+                Support
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
