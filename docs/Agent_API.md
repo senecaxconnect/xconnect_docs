@@ -1,10 +1,17 @@
 # Agent API
 The following are endpoints that can be used to interact with the xConnect Agent. 
 
-**As of current release, the API is only bound to localhost or 127.0.0.1 and cannot be 
-accessed by any other networked machines.** If a remote device needs to access the API, please contact
-support for an HTTPS version of the API. 
+ 
         
+
+!!! note
+    **As of current release, the API is only bound to localhost or 127.0.0.1 and cannot be 
+    accessed by any other networked machines.** If a remote device needs to access the API, please contact
+    support for an HTTPS version of the API.
+ 
+
+
+
 
 ## Get Latest Sensor Data
 
@@ -16,7 +23,7 @@ Used to collect the latest sensor data from all xConnect Agent sensor points
 
 **Auth required** : NO
 
-## Success Response
+#### Success Response
 
 **Code** : `200 OK`
 
@@ -41,7 +48,7 @@ Used to collect the latest sensor data from all xConnect Agent sensor points
 ]
 ```
 
-## Error Response
+#### Error Response
 
 **Condition** : If route is incorrect, you will receive a not found response.
 
@@ -62,10 +69,14 @@ will consume this object and submit it to the xConnect Gateway and appear on you
 
 `uid` value should be a unique UUID per device or object. These can be generated at:
 https://www.uuidgenerator.net/version4
+    
+!!! note
+    You may use the value "self" for the `uid` which will inherit the uid, type, and name that agent is 
+    already using for system telemetry
 
-`type` value will drive how the device is categorized on the cloud dashboard
+`type` value will drive how the device is categorized on the cloud dashboard (Only needed when not using "self")
 
-`name` value is what the friendly name of the device will be on the cloud dashboard
+`name` value is what the friendly name of the device will be on the cloud dashboard (Only needed when not using "self")
 
 `telemetry` value is a list that can be a single object or multiple objects. Each object must contain
 3 "categories" that are used to assemble the telemetry key
@@ -84,7 +95,7 @@ or you will receive a malformed JSON response
         "primaryCategory": "[First Value of Telemetry Key]",
         "secondaryCategory": "[Second Value of Telemetry Key]",
         "tertiaryCategory": "[Third Value of Telemetry Key]",
-        "value": "[1920x1080]"
+        "value": "[TelemetryValue]"
       }
     ]
   }
@@ -117,6 +128,6 @@ or you will receive a malformed JSON response
 }
 ```
 
-## Success Response
+#### Success Response
 
 **Code** : `201 OK`
