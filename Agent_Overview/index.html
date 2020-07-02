@@ -105,7 +105,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#server-agent" tabindex="0" class="md-skip">
+      <a href="#agent" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -331,8 +331,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#vms-integration-module" class="md-nav__link">
-    VMS Integration Module
+  <a href="#vmscms-integration-module" class="md-nav__link">
+    VMS/CMS Integration Module
   </a>
   
 </li>
@@ -820,8 +820,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#vms-integration-module" class="md-nav__link">
-    VMS Integration Module
+  <a href="#vmscms-integration-module" class="md-nav__link">
+    VMS/CMS Integration Module
   </a>
   
 </li>
@@ -878,8 +878,8 @@
                   <a href="https://github.com/senecaxconnect/xconnect_docs/edit/master/docs/Agent_Overview.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="server-agent">Server Agent</h1>
-<p>This is a required component to any server that you would like to be monitored by the xConnect
+                <h1 id="agent">Agent</h1>
+<p>This is a required component to any system or edge device that you would like to be monitored by the xConnect
 Remote Management Platform. </p>
 <p>This agent is responsible for collecting health information (also
 called telemetry) as well as securely facilitating remote management features.</p>
@@ -892,41 +892,41 @@ called telemetry) as well as securely facilitating remote management features.</
           style B fill:#04acec</div>
 
 <h2 id="download">Download</h2>
-<p>The latest version of the Server Agent installation executable is available on our download repository: <a href="http://downloads.senecaxconnect.com">downloads.senecaxconnect.com</a></p>
+<p>The latest version of the Agent installation executable is available on our download repository: <a href="http://downloads.senecaxconnect.com">downloads.senecaxconnect.com</a></p>
 <h2 id="installation">Installation</h2>
 <ol>
 <li>Download the latest xConnect Agent from the Downloads Repository</li>
 <li>Extract zip file</li>
 <li>Right-click on the setup file and select 'Run as Administrator'</li>
 <li>Proceed through installer, accepting all prompts</li>
-<li>Open Windows Service Manager and verify "xConnect Agent Core" service exists and is <strong>Running</strong></li>
+<li>Open Windows Service Manager and verify "xConnect Agent Core" service exists and is <code class="codehilite"><span class="err">Running</span></code></li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Step 3 is important! The background services may fail to install if the installer is not ran with elevated privileges!</p>
 </div>
 <h2 id="windows-service">Windows Service</h2>
-<p>The Server Agent consists of a single background Windows Service, the <strong>xConnect Agent Core</strong>.</p>
+<p>The Agent consists of a single background Windows Service, the <code class="codehilite"><span class="err">xConnect Agent Core</span></code>.</p>
 <p>The Agent Core service is responsible for the following functions and modules:</p>
 <h3 id="telemetry-engine">Telemetry Engine</h3>
 <p>This function is the telemetry collection engine that continuously polls various sensors
 throughout the system. It is also responsible for transmitting this telemetry to the Secure
 Gateway. </p>
 <p><strong>Telemetry Collection and Submission occurs every 2 minutes (every even minute).</strong></p>
-<h3 id="vms-integration-module">VMS Integration Module</h3>
+<h3 id="vmscms-integration-module">VMS/CMS Integration Module</h3>
 <p>This module is the telemetry collection engine that continuously polls 
-supported Video Management Systems for health and meta data of connected IP cameras.
+supported Video Management Systems or Content Management Systems for health and additional meta data of connected IP cameras (VMS).
 It is also responsible for transmitting this telemetry to the Secure
 Gateway.</p>
 <p><strong>Telemetry Collection and Submission occurs every 2 minutes (every odd minute).</strong></p>
 <h3 id="auto-updater-module">Auto-Updater Module</h3>
-<p>This module handles touchless over the wire updates of the Server Agent.
-An update package can be delivered to the Secure Gateway, and the Server Agent will
+<p>This module handles touchless over the wire updates of the Agent.
+An update package can be delivered to the Secure Gateway, and the Agent will
 automatically download and install this update unattended. </p>
 <p><strong>Checks for updates every 5 minutes</strong></p>
 <h3 id="agent-web-interface">Agent Web Interface</h3>
 <p>This module provides a local (or LAN accessible) web interface for managing and
-configuring the Server Agent. Starts Automatically as part of the Agent Core and
+configuring the Agent. Starts Automatically as part of the Agent Core and
 is accessible from the local machine @ <a href="http://localhost:8885">http://localhost:8885</a> or on a networked machine
 @ <a href="http://IP_OF_SERVER:8885">http://IP_OF_SERVER:8885</a></p>
 <div class="admonition note">
@@ -941,7 +941,7 @@ commands. Commands or scripts that are currently supported are Windows CMD and
 Windows PowerShell. </p>
 <h3 id="agent-restful-api">Agent RESTful API</h3>
 <p>This module provides a mechanism for 3<sup>rd</sup> party applications to ingest or transmit
-telemetry in and out of the Server Agent. </p>
+telemetry in and out of the Agent. </p>
                 
                   
                 

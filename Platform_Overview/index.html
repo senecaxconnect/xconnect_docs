@@ -814,7 +814,7 @@
 <p>The xConnect Remote Management Platform consists of three main components each requiring
 setup and configuration. </p>
 <ul>
-<li>xConnect Server Agent</li>
+<li>xConnect Agent</li>
 <li>xConnect Gateway</li>
 <li>xConnect Web Dashboard (Cloud)</li>
 </ul>
@@ -822,25 +822,24 @@ setup and configuration. </p>
           A(Edge Devices) --&gt; B(Agent)
           B --&gt; A
           B --&gt;|MQTT - Port 1883|C(Gateway)
-          C --&gt;|SSL - Port 443|D(xConnect Cloud Dashboard - Azure)
-          C --&gt;|SSL - Port 443|E(xConnect Cloud Management- AWS);</div>
+          C --&gt;|SSL - Port 443|D(xConnect Cloud Dashboard - Azure);</div>
 
 <p>For greenfield projects where servers and gateways are being 
 manufactured by Seneca, this setup and configuration is greatly simplified by Seneca pre-configuring and
 pre-installing a majority of this installation.</p>
-<p>We will explain how to install the xConnect Server Agent on existing servers, and how to
+<p>We will explain how to install the xConnect Agent on existing servers, and how to
 configure it once installed. If purchasing a new server from Seneca, the installation process is not
 necessary, and you can jump straight to the configuration step. 
 However, <strong>it is recommended to always grab the latest version from our <a href="https://downloads.senecaxconnect.com">download repository</a></strong></p>
-<p>Once the xConnect Server Agents are installed and configured, your next step is to configure
+<p>Once the xConnect Agents are installed and configured, your next step is to configure
 your xConnect Secure Gateway. The Secure Gateway is responsible for providing a seamless
-encrypted tunnel between Server Agents and the xConnect Web Client Dashboard.</p>
+encrypted tunnel between Agents and the xConnect Web Client Dashboard.</p>
 <p>The xConnect Agent resides locally on network servers discovering network devices and
 applications interfacing with a secure gateway device. The xConnect Gateway sends real-time
 data to the xConnect web interface, providing system and device information. In the event of an
 issue, xConnect can trigger a workflow to immediately notify or react to an issue in the
 environment.</p>
-<h2 id="xconnect-server-agent">xConnect Server Agent</h2>
+<h2 id="xconnect-agent">xConnect Agent</h2>
 <div class="mermaid">      graph LR
           A(Edge Devices) --&gt; B(Agent)
           style B fill:#04acec
@@ -852,10 +851,10 @@ environment.</p>
 <p>This is a required component for any server that you would like to be monitored by the xConnect Platform. </p>
 <p>This agent is responsible for collecting health information (also 
 called telemetry) as well as securely facilitating remote management features.</p>
-<p>The latest version of the Server Agent installation executable is available on our downloads repo 
+<p>The latest version of the Agent installation executable is available on our downloads repo 
 located at <a href="http://downloads.senecaxconnect.com">downloads.senecaxconnect.com</a>.</p>
-<p>The Server Agent consists of multiple components but are rolled into a single Windows Service, the xConnect Agent Core.</p>
-<p>Additional technical detail can be found here: <a href="/xconnect_docs/Agent_Overview">xConnect Server Agent Detail</a> </p>
+<p>The Agent consists of multiple components but are rolled into a single Windows Service, the xConnect Agent Core.</p>
+<p>Additional technical detail can be found here: <a href="/xconnect_docs/Agent_Overview">xConnect Agent Detail</a> </p>
 <h2 id="xconnect-gateway">xConnect Gateway</h2>
 <div class="mermaid">      graph LR
           A(Edge Devices) --&gt; B(Agent)
@@ -866,7 +865,7 @@ located at <a href="http://downloads.senecaxconnect.com">downloads.senecaxconnec
           style C fill:#04acec</div>
 
 <p>This is a required component of the xConnect Remote Management Platform. This physical or
-virtual gateway is responsible for being the encrypted tunnel between the Server Agents and the
+virtual gateway is responsible for being the encrypted tunnel between the Agents and the
 Web Client Dashboard.</p>
 <p>There are multiple deployment options for this Secure Gateway:</p>
 <ul>
