@@ -11,8 +11,7 @@ called telemetry) as well as securely facilitating remote management features.
           A(Edge Devices) --> B(Agent)
           B --> A
           B -->|MQTT - Port 1883|C(Gateway)
-          C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure)
-          C -->|SSL - Port 443|E(xConnect Cloud Management- AWS);
+          C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure);
           style B fill:#04acec
 ```
 

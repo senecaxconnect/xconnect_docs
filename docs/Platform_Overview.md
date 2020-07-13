@@ -74,8 +74,7 @@ environment.
           style B fill:#04acec
           B --> A
           B -->|MQTT - Port 1883|C(Gateway)
-          C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure)
-          C -->|SSL - Port 443|E(xConnect Cloud Management- AWS);
+          C -->|SSL - Port 443|E(xConnect Cloud Management- Azure);
 ```
 
 This is a required component for any server that you would like to be monitored by the xConnect Platform. 
@@ -97,8 +96,7 @@ Additional technical detail can be found here: [xConnect Agent Detail](/xconnect
           A(Edge Devices) --> B(Agent)
           B --> A
           B -->|MQTT - Port 1883|C(Gateway)
-          C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure)
-          C -->|SSL - Port 443|E(xConnect Cloud Management- AWS);
+          C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure);
           style C fill:#04acec
 ```
 
@@ -124,8 +122,7 @@ Additional technical detail can be found here: [xConnect Secure Gateway Detail](
           A(Edge Devices) --> B(Agent)
           B --> A
           B -->|MQTT - Port 1883|C(Gateway)
-          C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure)
-          C -->|SSL - Port 443|E(xConnect Cloud Management- AWS);
+          C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure);
           style D fill:#04acec
 ```
 

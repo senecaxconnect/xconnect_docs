@@ -9,8 +9,7 @@ cloud costs, we take care of that for you!
           A(Edge Devices) --> B(Agent)
           B --> A
           B -->|MQTT - Port 1883|C(Gateway)
-          C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure)
-          C -->|SSL - Port 443|E(xConnect Cloud Management- AWS);
+          C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure);
           style D fill:#04acec
 ```
 
