@@ -16,7 +16,7 @@ documentation related to the xConnect Platform.
 ##Overview
 - [Features](/xconnect_docs/Platform_Overview)
 - [Platform and Architecture](/xconnect_docs/Platform_Overview)
-- [Server Agent](/xconnect_docs/Platform_Overview/#xconnect-server-agent)
+- [Agent](/xconnect_docs/Platform_Overview/#xconnect-agent)
 - [Gateway](/xconnect_docs/Platform_Overview/#xconnect-gateway)
 - [Web Dashboard](/xconnect_docs/Platform_Overview/#xconnect-web-dashboard)
 
@@ -26,7 +26,7 @@ documentation related to the xConnect Platform.
 - [Gateway Setup - Virtual/Software/Docker](/xconnect_docs/Gateway_Docker)
 
 ##Technical Documentation
-- [Server Agent](/xconnect_docs/Agent_Overview)
+- [Agent](/xconnect_docs/Agent_Overview)
 - [Gateway](/xconnect_docs/Gateway_Overview)
 - [Web Dashboard](/xconnect_docs/Dashboard_Overview)
 

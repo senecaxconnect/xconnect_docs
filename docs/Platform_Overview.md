@@ -1,10 +1,10 @@
 # Feature Overview
 
-xConnect Remote Management Platform is the latest enhancement to the already impressive Seneca Physical Security line of products. xConnect allows you to audit, manage, and maintain all aspects of a security installation. From camera function to storage integrity, xConnect puts you in control of your entire environment from a single, intuitive dashboard.
+xConnect Remote Management Platform is the latest enhancement to the already impressive Seneca line of products. xConnect allows you to audit, manage, and maintain all aspects of a enterprise or end-user's network. From edge device monitoring to storage integrity, xConnect puts you in control of your entire environment from a single, intuitive dashboard.
 
-xConnect monitors your security environment with advanced intelligence, and empowers you to manage and maintain many functions of your installation from a single web-based user interface. While its functionality may be expected to center around the performance monitoring of network video recorders, the application also provides command and control functionality on the device level.
+xConnect monitors your environment with advanced intelligence, and empowers you to manage and maintain many functions of your installation from a single web-based user interface. While its functionality may be expected to center around the performance monitoring of servers, the application also provides command and control functionality on the device level.
 
-This platform is designed with managed service providers in mind to enable intuitive, but powerful, enterprise level management of one or many security networks through a single pane of glass. Reduce the amount of service calls and truck rolls by getting in front of issues before your end-user realizes that something has happened.
+This platform is designed with managed service providers in mind to enable intuitive, but powerful, enterprise level management of one or many networks through a single pane of glass. Reduce the amount of service calls and truck rolls by getting in front of issues before your end-user realizes that something has happened.
 
 ## Audit
 
@@ -13,7 +13,7 @@ This platform is designed with managed service providers in mind to enable intui
 - System utilizations
 - Application monitoring
 - Network bandwidth analysis
-- VMS Log Analysis
+- Application Log Analysis
 
 ## Manage
 
@@ -35,7 +35,7 @@ This platform is designed with managed service providers in mind to enable intui
 The xConnect Remote Management Platform consists of three main components each requiring
 setup and configuration. 
 
-- xConnect Server Agent
+- xConnect Agent
 - xConnect Gateway
 - xConnect Web Dashboard (Cloud)
 
@@ -44,22 +44,21 @@ setup and configuration.
           A(Edge Devices) --> B(Agent)
           B --> A
           B -->|MQTT - Port 1883|C(Gateway)
-          C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure)
-          C -->|SSL - Port 443|E(xConnect Cloud Management- AWS);
+          C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure);
 ```
 
 For greenfield projects where servers and gateways are being 
 manufactured by Seneca, this setup and configuration is greatly simplified by Seneca pre-configuring and
 pre-installing a majority of this installation.
 
-We will explain how to install the xConnect Server Agent on existing servers, and how to
+We will explain how to install the xConnect Agent on existing servers, and how to
 configure it once installed. If purchasing a new server from Seneca, the installation process is not
 necessary, and you can jump straight to the configuration step. 
 However, **it is recommended to always grab the latest version from our [download repository](https://downloads.senecaxconnect.com)**
 
-Once the xConnect Server Agents are installed and configured, your next step is to configure
+Once the xConnect Agents are installed and configured, your next step is to configure
 your xConnect Secure Gateway. The Secure Gateway is responsible for providing a seamless
-encrypted tunnel between Server Agents and the xConnect Web Client Dashboard.
+encrypted tunnel between Agents and the xConnect Web Client Dashboard.
 
 The xConnect Agent resides locally on network servers discovering network devices and
 applications interfacing with a secure gateway device. The xConnect Gateway sends real-time
@@ -67,7 +66,7 @@ data to the xConnect web interface, providing system and device information. In 
 issue, xConnect can trigger a workflow to immediately notify or react to an issue in the
 environment.
 
-## xConnect Server Agent
+## xConnect Agent
 
 ```mermaid
       graph LR
@@ -84,12 +83,12 @@ This is a required component for any server that you would like to be monitored 
 This agent is responsible for collecting health information (also 
 called telemetry) as well as securely facilitating remote management features.
 
-The latest version of the Server Agent installation executable is available on our downloads repo 
+The latest version of the Agent installation executable is available on our downloads repo 
 located at [downloads.senecaxconnect.com](http://downloads.senecaxconnect.com).
 
-The Server Agent consists of multiple components but are rolled into a single Windows Service, the xConnect Agent Core.
+The Agent consists of multiple components but are rolled into a single Windows Service, the xConnect Agent Core.
 
-Additional technical detail can be found here: [xConnect Server Agent Detail](/xconnect_docs/Agent_Overview) 
+Additional technical detail can be found here: [xConnect Agent Detail](/xconnect_docs/Agent_Overview) 
 
 ## xConnect Gateway
 
@@ -104,7 +103,7 @@ Additional technical detail can be found here: [xConnect Server Agent Detail](/x
 ```
 
 This is a required component of the xConnect Remote Management Platform. This physical or
-virtual gateway is responsible for being the encrypted tunnel between the Server Agents and the
+virtual gateway is responsible for being the encrypted tunnel between the Agents and the
 Web Client Dashboard.
 
 There are multiple deployment options for this Secure Gateway:

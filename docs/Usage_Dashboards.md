@@ -1,5 +1,5 @@
 #Dashboards 
-xConnect features intuitive dashboards that enable you to review the current status of your ecosystem across all of your security-related systems. 
+xConnect features intuitive dashboards that enable you to review the current status of your ecosystem across all of your networked edge devices. 
 
 The web client dashboard can be accessed by going to https://www.senecaxconnect.com
 
