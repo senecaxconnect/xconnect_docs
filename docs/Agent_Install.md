@@ -4,7 +4,7 @@ If you purchased an appliance from Seneca, it may already contain the xConnect S
 However, it is highly recommended to always download and install the latest version available at time of setup.
 
 ## Installation
-1. Download the latest xConnect Server Agent, found at www.senecaxconnect.com (Click the Download Agent link)
+1. Download the latest xConnect Agent, found at www.senecaxconnect.com (Click the Download Agent link)
 2. Proceed with installation (Run as Administrator), completing all prompts.
 
     !!! note

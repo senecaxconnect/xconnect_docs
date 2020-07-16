@@ -7,34 +7,36 @@ repo_name: 'senecaxconnect/xconnect_docs'
 repo_url: 'https://github.com/senecaxconnect/xconnect_docs'
 
 nav:
-    - Platform:
-       - Overview: Platform_Overview.md
-       - Server Agent: Agent_Overview.md
-       - Gateway: Gateway_Overview.md
-       - Web Dashboard: Dashboard_Overview.md
-    - Getting Started:
-       - Quick Start Guide: Getting_Started.md
-       - Step 1 - Gateway Setup:
-         - Turnkey Appliance: Gateway_TurnKey.md
-         - Virtual/Software/Docker: Gateway_Docker.md
-       - Step 2 - Install Agent: Agent_Install.md
-       - Step 3 - Web Dashboard: Dashboard_Setup.md
-    - Usage Guide:
-        - Dashboards: Usage_Dashboards.md
-        - Bookmarks: Usage_Bookmarks.md
-        - User Types: Usage_Roles.md
-        - Management:
-            - Customers: Usage_ManageCustomers.md
-            - Users: Usage_ManageUsers.md
-            - Gateways: Usage_ManageGateways.md
-            - Devices: Usage_ManageDevices.md
-            - Event Configurations: Usage_ManageEventConfigurations.md
-            - Email Profiles: Usage_ManageEmailProfiles.md
-            - Remote Commands: Usage_ManageRemoteCommands.md
-            - 3rd Party Connectors: Usage_ManageConnectors.md
-        - Event Logs: Usage_EventLogs.md
-    - Support: Support.md
-    - Release Notes: Release_Notes.md
+  - Platform:
+      - Overview: Platform_Overview.md
+      - Server Agent: Agent_Overview.md
+      - Gateway: Gateway_Overview.md
+      - Web Dashboard: Dashboard_Overview.md
+  - Getting Started:
+      - Quick Start Guide: Getting_Started.md
+      - Step 1 - Gateway Setup:
+          - Turnkey Appliance: Gateway_TurnKey.md
+          - Virtual/Software/Docker: Gateway_Docker.md
+      - Step 2 - Install Agent: Agent_Install.md
+      - Step 3 - Web Dashboard: Dashboard_Setup.md
+  - Usage Guide:
+      - Dashboards: Usage_Dashboards.md
+      - Bookmarks: Usage_Bookmarks.md
+      - User Types: Usage_Roles.md
+      - Management:
+          - Customers: Usage_ManageCustomers.md
+          - Users: Usage_ManageUsers.md
+          - Gateways: Usage_ManageGateways.md
+          - Devices: Usage_ManageDevices.md
+          - Event Configurations: Usage_ManageEventConfigurations.md
+          - Email Profiles: Usage_ManageEmailProfiles.md
+          - Remote Commands: Usage_ManageRemoteCommands.md
+          - 3rd Party Connectors: Usage_ManageConnectors.md
+      - Event Logs: Usage_EventLogs.md
+  - Additional Documentation:
+      - Agent API: Agent_API.md
+  - Support: Support.md
+  - Release Notes: Release_Notes.md
 
 
 theme:
