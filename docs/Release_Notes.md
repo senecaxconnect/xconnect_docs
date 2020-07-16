@@ -1,6 +1,27 @@
 # xConnect Release Notes
 [TOC]
 
+# Release 13.1: July 16th, 2020
+
+## Enhancements
+- Alert Summary E-mail Support
+   - We've added the ability to group your e-mail alerts together within a standard summary e-mail template. 
+   
+   **How to Enable**:
+     - Log in using your credentials *note: You must be a power user in order to access this functionality
+     - Click on the Settings tab on the left-side menu
+     - Click on "Global Settings"
+     ![Side Navigation](images/menu_global_settings.png "Global Settings")
+     - Upon going to the Global Settings page, check the "Enable Summary Alerting" checkbox and enter one or more e-mail addresses separated by a comma
+     ![Settings](images/global_settings.png "Global Settings")
+     - Once finished, click the "Apply" button
+     
+    Once enabled, you will no longer receive individual e-mail alerts based on your event configurations. 
+    A summarized e-mail will be sent that lists the impacted devices and the criteria of the event.
+
+## Bug Fixes
+- Newly added devices will now automatically be applied with e-mail alerts, remote commands, or third party connectors based on the enabled Global Event Configurations.
+
 # Release 13: June 23rd, 2020
 
 ## Enhancements
