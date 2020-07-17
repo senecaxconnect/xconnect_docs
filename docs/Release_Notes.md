@@ -16,8 +16,7 @@
      ![Settings](images/global_settings.png "Global Settings")
      - Once finished, click the "Apply" button
      
-    Once enabled, you will no longer receive individual e-mail alerts based on your event configurations. 
-    A summarized e-mail will be sent that lists the impacted devices and the criteria of the event.
+   - Once enabled, you will no longer receive individual e-mail alerts based on your event configurations. A summarized e-mail will be sent that lists the impacted devices and the criteria of the event.
 
 ## Bug Fixes
 - Newly added devices will now automatically be applied with e-mail alerts, remote commands, or third party connectors based on the enabled Global Event Configurations.
