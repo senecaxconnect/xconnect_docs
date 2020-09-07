@@ -714,20 +714,55 @@
 <div class="toc">
 <ul>
 <li><a href="#xconnect-release-notes">xConnect Release Notes</a></li>
-<li><a href="#release-131-july-16th-2020">Release 13.1: July 16<sup>th</sup>, 2020</a><ul>
+<li><a href="#release-140-september-7th-2020">Release 14.0: September 7<sup>th</sup>, 2020</a><ul>
 <li><a href="#enhancements">Enhancements</a></li>
 <li><a href="#bug-fixes">Bug Fixes</a></li>
 </ul>
 </li>
-<li><a href="#release-13-june-23rd-2020">Release 13: June 23<sup>rd</sup>, 2020</a><ul>
+<li><a href="#release-131-july-16th-2020">Release 13.1: July 16<sup>th</sup>, 2020</a><ul>
 <li><a href="#enhancements_1">Enhancements</a></li>
 <li><a href="#bug-fixes_1">Bug Fixes</a></li>
 </ul>
 </li>
+<li><a href="#release-13-june-23rd-2020">Release 13: June 23<sup>rd</sup>, 2020</a><ul>
+<li><a href="#enhancements_2">Enhancements</a></li>
+<li><a href="#bug-fixes_2">Bug Fixes</a></li>
+</ul>
+</li>
 </ul>
 </div>
-<h1 id="release-131-july-16th-2020">Release 13.1: July 16<sup>th</sup>, 2020</h1>
+<h1 id="release-140-september-7th-2020">Release 14.0: September 7<sup>th</sup>, 2020</h1>
 <h2 id="enhancements">Enhancements</h2>
+<ul>
+<li>
+<p>Remote Command Execution Status Support</p>
+<ul>
+<li>We've added the ability to see the current status of a remote command execution on the device dashboard.
+   <img alt="Side Navigation" src="../images/device_remoteCommand_status.png" title="Remote Command Status" />
+   <strong>Note: in order to see an accurate status, you must update your xConnect agent to version 4040 or later.</strong></li>
+</ul>
+</li>
+<li>
+<p>Remote Command History</p>
+<ul>
+<li>There is now a complete list of previous executions for a remote command. You can see this by going to Settings &gt; Remote Commands
+<img alt="Side Navigation" src="../images/remotecommand_history.png" title="Remote Command History" /></li>
+</ul>
+</li>
+<li>
+<p>Backend Process Improvements</p>
+<ul>
+<li>We've implemented several performance improvements on our backend design to ensure the best user experience possible.</li>
+</ul>
+</li>
+</ul>
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+<li>Unlocking a user from Manage Users will now clear out prior bad log in attempts.</li>
+<li>Remote Commands will now fire automatically if assigned to an event.</li>
+</ul>
+<h1 id="release-131-july-16th-2020">Release 13.1: July 16<sup>th</sup>, 2020</h1>
+<h2 id="enhancements_1">Enhancements</h2>
 <ul>
 <li>Alert Summary E-mail Support</li>
 <li>We've added the ability to group your e-mail alerts together within a standard summary e-mail template. </li>
@@ -743,12 +778,12 @@
 <ul>
 <li>Once enabled, you will no longer receive individual e-mail alerts based on your event configurations. A summarized e-mail will be sent that lists the impacted devices and the criteria of the event.</li>
 </ul>
-<h2 id="bug-fixes">Bug Fixes</h2>
+<h2 id="bug-fixes_1">Bug Fixes</h2>
 <ul>
 <li>Newly added devices will now automatically be applied with e-mail alerts, remote commands, or third party connectors based on the enabled Global Event Configurations.</li>
 </ul>
 <h1 id="release-13-june-23rd-2020">Release 13: June 23<sup>rd</sup>, 2020</h1>
-<h2 id="enhancements_1">Enhancements</h2>
+<h2 id="enhancements_2">Enhancements</h2>
 <ul>
 <li>Event Feed alterations to the navigation links.</li>
 <li>Modified the way the event feed links navigate a user to the appropriate device dashboard and event log listing.</li>
@@ -772,7 +807,7 @@
 <ul>
 <li>User preferences now preserves your selections for expanding or collapsing panels on your dashboards. </li>
 </ul>
-<h2 id="bug-fixes_1">Bug Fixes</h2>
+<h2 id="bug-fixes_2">Bug Fixes</h2>
 <ul>
 <li>Event logs now include custom outage duration notices instead of default 60 minute outage windows. </li>
 </ul>
