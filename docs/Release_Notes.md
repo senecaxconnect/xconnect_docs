@@ -1,6 +1,25 @@
 # xConnect Release Notes
 [TOC]
 
+# Release 14.0: September 7th, 2020
+
+## Enhancements
+- Remote Command Execution Status Support
+    - We've added the ability to see the current status of a remote command execution on the device dashboard.
+   ![Side Navigation](images/device_remoteCommand_status.png "Remote Command Status")
+   __Note: in order to see an accurate status, you must update your xConnect agent to version 4040 or later.__
+   
+- Remote Command History
+    - There is now a complete list of previous executions for a remote command. You can see this by going to Settings > Remote Commands
+    ![Side Navigation](images/remotecommand_history.png "Remote Command History")
+   
+- Backend Process Improvements
+    - We've implemented several performance improvements on our backend design to ensure the best user experience possible.
+   
+## Bug Fixes
+- Unlocking a user from Manage Users will now clear out prior bad log in attempts.
+- Remote Commands will now fire automatically if assigned to an event.
+
 # Release 13.1: July 16th, 2020
 
 ## Enhancements
