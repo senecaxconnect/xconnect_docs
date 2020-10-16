@@ -714,25 +714,90 @@
 <div class="toc">
 <ul>
 <li><a href="#xconnect-release-notes">xConnect Release Notes</a></li>
-<li><a href="#release-140-september-7th-2020">Release 14.0: September 7<sup>th</sup>, 2020</a><ul>
+<li><a href="#release-150-october-15th-2020">Release 15.0: October 15<sup>th</sup>, 2020</a><ul>
 <li><a href="#enhancements">Enhancements</a></li>
 <li><a href="#bug-fixes">Bug Fixes</a></li>
 </ul>
 </li>
-<li><a href="#release-131-july-16th-2020">Release 13.1: July 16<sup>th</sup>, 2020</a><ul>
+<li><a href="#release-140-september-7th-2020">Release 14.0: September 7<sup>th</sup>, 2020</a><ul>
 <li><a href="#enhancements_1">Enhancements</a></li>
 <li><a href="#bug-fixes_1">Bug Fixes</a></li>
 </ul>
 </li>
-<li><a href="#release-13-june-23rd-2020">Release 13: June 23<sup>rd</sup>, 2020</a><ul>
+<li><a href="#release-131-july-16th-2020">Release 13.1: July 16<sup>th</sup>, 2020</a><ul>
 <li><a href="#enhancements_2">Enhancements</a></li>
 <li><a href="#bug-fixes_2">Bug Fixes</a></li>
 </ul>
 </li>
+<li><a href="#release-13-june-23rd-2020">Release 13: June 23<sup>rd</sup>, 2020</a><ul>
+<li><a href="#enhancements_3">Enhancements</a></li>
+<li><a href="#bug-fixes_3">Bug Fixes</a></li>
+</ul>
+</li>
 </ul>
 </div>
-<h1 id="release-140-september-7th-2020">Release 14.0: September 7<sup>th</sup>, 2020</h1>
+<h1 id="release-150-october-15th-2020">Release 15.0: October 15<sup>th</sup>, 2020</h1>
 <h2 id="enhancements">Enhancements</h2>
+<ul>
+<li>
+<p>Enhanced Device Selection with Query Builder</p>
+<ul>
+<li>The Remote Command and Custom Event Configuration forms have been modified to support dynamic device queries, which will enable users to easily pull one or many devices based on the following criteria: <ul>
+<li>Name</li>
+<li>UID</li>
+<li>Device Type (Media Player, Camera, Server, etc...)</li>
+<li>Model</li>
+<li>Serial #</li>
+</ul>
+</li>
+</ul>
+<p>There is currently no limit on how many filters can be added. NOTE: Any existing custom event configurations or remote commands will have their
+existing device associations preserved, but you must define a criteria if you <strong>edit</strong> the command/event. 
+   <img alt="Side Menu" src="../images/query_builder.png" title="Context" /></p>
+</li>
+</ul>
+<p>Remote Commands: </p>
+<p>You can access the remote command form by going to the Settings tab &gt; Remote Commands. Click Create New Command or the existing name of a command in the grid.</p>
+<p><img alt="Query" src="../images/query_builder_remote_command.png" title="Context" /></p>
+<p>Custom Event Configurations:</p>
+<p>You can access custom event configurations by going to the Settings tab &gt; Event Configurations &gt; Custom Configurations</p>
+<p><img alt="Query" src="../images/query_builder_event_configs.png" title="Context" /></p>
+<ul>
+<li>
+<p>Side Menu Paging</p>
+<ul>
+<li>The side menu now features enhanced pagination controls to ensure fast loading of your dashboards. The # of items displayed is driven by the 
+context menu featured by clicking the <img alt="Query Builder" src="../images/side_menu_context_button.png" title="Context" /> button:</li>
+</ul>
+<p><img alt="Side Menu" src="../images/side_menu_context.png" title="Context" /></p>
+<p>Choose an item from the "Items Per Page" dropdown and the side menu will only show that # of items per page when viewing devices/servers/media players:</p>
+<p><img alt="Side Menu" src="../images/side_menu_paging.png" title="Context" /></p>
+</li>
+<li>
+<p>Global Search</p>
+<ul>
+<li>We are now supporting global search! You can leverage the side bar search textbox to search across all asset types such as Customers, Gateways, Media Players, Devices, etc... 
+You can perform a search on any dashboard and it will provide you a complete list of matching items.</li>
+</ul>
+<p><img alt="Side Menu" src="../images/side_menu_global_search.png" title="Context" /></p>
+</li>
+<li>
+<p>Customizable Event Feed</p>
+<ul>
+<li>You can now customize how many events you want displayed on all event feed panels: </li>
+</ul>
+<p><img alt="Event Feed" src="../images/event_feed_widget.png" title="Gear" /></p>
+<p>Clicking the gear icon will open a modal enabling you to define how many items you would like displayed on each page: </p>
+<p><img alt="Event Feed" src="../images/event_feed_settings.png" title="Gear" /></p>
+</li>
+</ul>
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+<li>Name of the device is now driven by the hostname sent via the agent.</li>
+<li>Clicking on the bookmark tab preserves your current location on the site.</li>
+</ul>
+<h1 id="release-140-september-7th-2020">Release 14.0: September 7<sup>th</sup>, 2020</h1>
+<h2 id="enhancements_1">Enhancements</h2>
 <ul>
 <li>
 <p>Remote Command Execution Status Support</p>
@@ -756,13 +821,13 @@
 </ul>
 </li>
 </ul>
-<h2 id="bug-fixes">Bug Fixes</h2>
+<h2 id="bug-fixes_1">Bug Fixes</h2>
 <ul>
 <li>Unlocking a user from Manage Users will now clear out prior bad log in attempts.</li>
 <li>Remote Commands will now fire automatically if assigned to an event.</li>
 </ul>
 <h1 id="release-131-july-16th-2020">Release 13.1: July 16<sup>th</sup>, 2020</h1>
-<h2 id="enhancements_1">Enhancements</h2>
+<h2 id="enhancements_2">Enhancements</h2>
 <ul>
 <li>Alert Summary E-mail Support</li>
 <li>We've added the ability to group your e-mail alerts together within a standard summary e-mail template. </li>
@@ -778,12 +843,12 @@
 <ul>
 <li>Once enabled, you will no longer receive individual e-mail alerts based on your event configurations. A summarized e-mail will be sent that lists the impacted devices and the criteria of the event.</li>
 </ul>
-<h2 id="bug-fixes_1">Bug Fixes</h2>
+<h2 id="bug-fixes_2">Bug Fixes</h2>
 <ul>
 <li>Newly added devices will now automatically be applied with e-mail alerts, remote commands, or third party connectors based on the enabled Global Event Configurations.</li>
 </ul>
 <h1 id="release-13-june-23rd-2020">Release 13: June 23<sup>rd</sup>, 2020</h1>
-<h2 id="enhancements_2">Enhancements</h2>
+<h2 id="enhancements_3">Enhancements</h2>
 <ul>
 <li>Event Feed alterations to the navigation links.</li>
 <li>Modified the way the event feed links navigate a user to the appropriate device dashboard and event log listing.</li>
@@ -807,7 +872,7 @@
 <ul>
 <li>User preferences now preserves your selections for expanding or collapsing panels on your dashboards. </li>
 </ul>
-<h2 id="bug-fixes_2">Bug Fixes</h2>
+<h2 id="bug-fixes_3">Bug Fixes</h2>
 <ul>
 <li>Event logs now include custom outage duration notices instead of default 60 minute outage windows. </li>
 </ul>
