@@ -1,6 +1,64 @@
 # xConnect Release Notes
 [TOC]
 
+# Release 15.0: October 15th, 2020
+
+## Enhancements
+- Enhanced Device Selection with Query Builder
+    - The Remote Command and Custom Event Configuration forms have been modified to support dynamic device queries, which will enable users to easily pull one or many devices based on the following criteria: 
+        - Name
+        - UID
+        - Device Type (Media Player, Camera, Server, etc...)
+        - Model
+        - Serial #
+    
+    There is currently no limit on how many filters can be added. NOTE: Any existing custom event configurations or remote commands will have their
+    existing device associations preserved, but you must define a criteria if you **edit** the command/event. 
+   ![Side Menu](images/query_builder.png "Context")
+   
+   Remote Commands: 
+    
+   You can access the remote command form by going to the Settings tab > Remote Commands. Click Create New Command or the existing name of a command in the grid.
+   
+   ![Query](images/query_builder_remote_command.png "Context")
+   
+   Custom Event Configurations:
+   
+   You can access custom event configurations by going to the Settings tab > Event Configurations > Custom Configurations
+   
+   ![Query](images/query_builder_event_configs.png "Context")
+   
+- Side Menu Paging
+    - The side menu now features enhanced pagination controls to ensure fast loading of your dashboards. The # of items displayed is driven by the 
+    context menu featured by clicking the ![Query Builder](images/side_menu_context_button.png "Context") button:
+    
+    ![Side Menu](images/side_menu_context.png "Context")
+    
+    Choose an item from the "Items Per Page" dropdown and the side menu will only show that # of items per page when viewing devices/servers/media players:
+    
+    ![Side Menu](images/side_menu_paging.png "Context")
+    
+- Global Search
+    - We are now supporting global search! You can leverage the side bar search textbox to search across all asset types such as Customers, Gateways, Media Players, Devices, etc... 
+    You can perform a search on any dashboard and it will provide you a complete list of matching items.
+    
+    ![Side Menu](images/side_menu_global_search.png "Context")
+    
+- Customizable Event Feed
+    - You can now customize how many events you want displayed on all event feed panels: 
+   
+    ![Event Feed](images/event_feed_widget.png "Gear")
+    
+    Clicking the gear icon will open a modal enabling you to define how many items you would like displayed on each page: 
+    
+    ![Event Feed](images/event_feed_settings.png "Gear")
+    
+        
+## Bug Fixes
+- Name of the device is now driven by the hostname sent via the agent.
+- Clicking on the bookmark tab preserves your current location on the site.
+
+
 # Release 14.0: September 7th, 2020
 
 ## Enhancements
