@@ -1,4 +1,6 @@
 
+
+
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -9,14 +11,13 @@
         <meta name="description" content="xConnect Documentation">
       
       
-      
         <link rel="canonical" href="https://senecaxconnect.github.io/xconnect_docs/Getting_Started/">
       
       
         <meta name="author" content="Seneca">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.4">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.3.2">
     
     
       
@@ -24,21 +25,19 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.358818c7.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.fe0cca5b.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
+      
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.f0267088.min.css">
         
-          
-          
-          <meta name="theme-color" content="#546d78">
-        
+        <meta name="theme-color" content="#546e7a">
       
     
     
     
       
-        
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
@@ -46,11 +45,11 @@
     
     
     
+      <link rel="stylesheet" href="../stylesheets/dark_theme.css">
+    
       <link rel="stylesheet" href="../stylesheets/codehilite.css">
     
       <link rel="stylesheet" href="../stylesheets/mermaid.css">
-    
-      <link rel="stylesheet" href="../stylesheets/site.css">
     
     
       
@@ -70,11 +69,9 @@
     
     
     
-    
-    
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
-      
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="cyan">
   
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -90,9 +87,7 @@
       
     </div>
     
-      
-
-<header class="md-header" data-md-component="header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href="https://senecaxconnect.github.io/xconnect_docs" title="xConnect Documentation" class="md-header-nav__button md-logo" aria-label="xConnect Documentation">
       
@@ -166,6 +161,8 @@
     
     <div class="md-container" data-md-component="container">
       
+        
+      
       
         
       
@@ -176,9 +173,7 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="https://senecaxconnect.github.io/xconnect_docs" title="xConnect Documentation" class="md-nav__button md-logo" aria-label="xConnect Documentation">
       
@@ -214,11 +209,15 @@
     
     <label class="md-nav__link" for="nav-1">
       Platform
-      <span class="md-nav__icon md-icon"></span>
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
     <nav class="md-nav" aria-label="Platform" data-md-level="1">
       <label class="md-nav__title" for="nav-1">
-        <span class="md-nav__icon md-icon"></span>
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Platform
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -230,7 +229,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Platform_Overview/" class="md-nav__link">
+    <a href="../Platform_Overview/" title="Overview" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -242,7 +241,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Agent_Overview/" class="md-nav__link">
+    <a href="../Agent_Overview/" title="Server Agent" class="md-nav__link">
       Server Agent
     </a>
   </li>
@@ -254,7 +253,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Gateway_Overview/" class="md-nav__link">
+    <a href="../Gateway_Overview/" title="Gateway" class="md-nav__link">
       Gateway
     </a>
   </li>
@@ -266,7 +265,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Dashboard_Overview/" class="md-nav__link">
+    <a href="../Dashboard_Overview/" title="Web Dashboard" class="md-nav__link">
       Web Dashboard
     </a>
   </li>
@@ -290,11 +289,15 @@
     
     <label class="md-nav__link" for="nav-2">
       Getting Started
-      <span class="md-nav__icon md-icon"></span>
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
     <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        <span class="md-nav__icon md-icon"></span>
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Getting Started
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -316,10 +319,12 @@
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Quick Start Guide
-        <span class="md-nav__icon md-icon"></span>
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
       </label>
     
-    <a href="./" class="md-nav__link md-nav__link--active">
+    <a href="./" title="Quick Start Guide" class="md-nav__link md-nav__link--active">
       Quick Start Guide
     </a>
     
@@ -331,7 +336,9 @@
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -382,11 +389,15 @@
     
     <label class="md-nav__link" for="nav-2-2">
       Step 1 - Gateway Setup
-      <span class="md-nav__icon md-icon"></span>
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
     <nav class="md-nav" aria-label="Step 1 - Gateway Setup" data-md-level="2">
       <label class="md-nav__title" for="nav-2-2">
-        <span class="md-nav__icon md-icon"></span>
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Step 1 - Gateway Setup
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -398,7 +409,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Gateway_TurnKey/" class="md-nav__link">
+    <a href="../Gateway_TurnKey/" title="Turnkey Appliance" class="md-nav__link">
       Turnkey Appliance
     </a>
   </li>
@@ -410,7 +421,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Gateway_Docker/" class="md-nav__link">
+    <a href="../Gateway_Docker/" title="Virtual/Software/Docker" class="md-nav__link">
       Virtual/Software/Docker
     </a>
   </li>
@@ -427,7 +438,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Agent_Install/" class="md-nav__link">
+    <a href="../Agent_Install/" title="Step 2 - Install Agent" class="md-nav__link">
       Step 2 - Install Agent
     </a>
   </li>
@@ -439,7 +450,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Dashboard_Setup/" class="md-nav__link">
+    <a href="../Dashboard_Setup/" title="Step 3 - Web Dashboard" class="md-nav__link">
       Step 3 - Web Dashboard
     </a>
   </li>
@@ -461,11 +472,15 @@
     
     <label class="md-nav__link" for="nav-3">
       Usage Guide
-      <span class="md-nav__icon md-icon"></span>
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
     <nav class="md-nav" aria-label="Usage Guide" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
-        <span class="md-nav__icon md-icon"></span>
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Usage Guide
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -477,7 +492,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Usage_Dashboards/" class="md-nav__link">
+    <a href="../Usage_Dashboards/" title="Dashboards" class="md-nav__link">
       Dashboards
     </a>
   </li>
@@ -489,7 +504,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Usage_Bookmarks/" class="md-nav__link">
+    <a href="../Usage_Bookmarks/" title="Bookmarks" class="md-nav__link">
       Bookmarks
     </a>
   </li>
@@ -501,7 +516,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Usage_Roles/" class="md-nav__link">
+    <a href="../Usage_Roles/" title="User Types" class="md-nav__link">
       User Types
     </a>
   </li>
@@ -518,11 +533,15 @@
     
     <label class="md-nav__link" for="nav-3-4">
       Management
-      <span class="md-nav__icon md-icon"></span>
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
     <nav class="md-nav" aria-label="Management" data-md-level="2">
       <label class="md-nav__title" for="nav-3-4">
-        <span class="md-nav__icon md-icon"></span>
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Management
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -534,7 +553,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Usage_ManageCustomers/" class="md-nav__link">
+    <a href="../Usage_ManageCustomers/" title="Customers" class="md-nav__link">
       Customers
     </a>
   </li>
@@ -546,7 +565,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Usage_ManageUsers/" class="md-nav__link">
+    <a href="../Usage_ManageUsers/" title="Users" class="md-nav__link">
       Users
     </a>
   </li>
@@ -558,7 +577,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Usage_ManageGateways/" class="md-nav__link">
+    <a href="../Usage_ManageGateways/" title="Gateways" class="md-nav__link">
       Gateways
     </a>
   </li>
@@ -570,7 +589,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Usage_ManageDevices/" class="md-nav__link">
+    <a href="../Usage_ManageDevices/" title="Devices" class="md-nav__link">
       Devices
     </a>
   </li>
@@ -582,7 +601,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Usage_ManageEventConfigurations/" class="md-nav__link">
+    <a href="../Usage_ManageEventConfigurations/" title="Event Configurations" class="md-nav__link">
       Event Configurations
     </a>
   </li>
@@ -594,7 +613,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Usage_ManageEmailProfiles/" class="md-nav__link">
+    <a href="../Usage_ManageEmailProfiles/" title="Email Profiles" class="md-nav__link">
       Email Profiles
     </a>
   </li>
@@ -606,7 +625,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Usage_ManageRemoteCommands/" class="md-nav__link">
+    <a href="../Usage_ManageRemoteCommands/" title="Remote Commands" class="md-nav__link">
       Remote Commands
     </a>
   </li>
@@ -618,7 +637,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Usage_ManageConnectors/" class="md-nav__link">
+    <a href="../Usage_ManageConnectors/" title="3rd Party Connectors" class="md-nav__link">
       3rd Party Connectors
     </a>
   </li>
@@ -635,7 +654,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Usage_EventLogs/" class="md-nav__link">
+    <a href="../Usage_EventLogs/" title="Event Logs" class="md-nav__link">
       Event Logs
     </a>
   </li>
@@ -657,11 +676,15 @@
     
     <label class="md-nav__link" for="nav-4">
       Additional Documentation
-      <span class="md-nav__icon md-icon"></span>
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
     </label>
     <nav class="md-nav" aria-label="Additional Documentation" data-md-level="1">
       <label class="md-nav__title" for="nav-4">
-        <span class="md-nav__icon md-icon"></span>
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
         Additional Documentation
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -673,7 +696,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Agent_API/" class="md-nav__link">
+    <a href="../Agent_API/" title="Agent API" class="md-nav__link">
       Agent API
     </a>
   </li>
@@ -690,7 +713,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Support/" class="md-nav__link">
+    <a href="../Support/" title="Support" class="md-nav__link">
       Support
     </a>
   </li>
@@ -702,7 +725,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../Release_Notes/" class="md-nav__link">
+    <a href="../Release_Notes/" title="Release Notes" class="md-nav__link">
       Release Notes
     </a>
   </li>
@@ -726,7 +749,9 @@
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -768,12 +793,15 @@
             
           
           <div class="md-content">
-            <article class="md-content__inner md-typeset"><a class="md-content__button md-icon" download href="Getting_Started.pdf" title="PDF Export"><svg style="height: 1.2rem; width: 1.2rem;" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm76.45 211.36l-96.42 95.7c-6.65 6.61-17.39 6.61-24.04 0l-96.42-95.7C73.42 337.29 80.54 320 94.82 320H160v-80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v80h65.18c14.28 0 21.4 17.29 11.27 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"></path></svg></a>
+            <article class="md-content__inner md-typeset">
               
                 
                   <a href="https://github.com/senecaxconnect/xconnect_docs/edit/master/docs/Getting_Started.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
+                
+                
+                  
                 
                 
                 <h1 id="quick-start-guide">Quick Start Guide</h1>
@@ -783,8 +811,8 @@ for each step of the installation process and can be found within this guide or 
 <div class="mermaid">      graph LR
           A(Prerequisites) --&gt; B(Gateway Setup)
           B --&gt;C(Agent Setup)
-          C --&gt;D(Dashboard Setup);
-          linkStyle default stroke-width:2px,fill:none,stroke:black;</div>
+          C --&gt;D(Dashboard Setup);</div>
+
 <ol>
 <li>Confirm Prerequisites</li>
 <li>Configure Gateway</li>
@@ -792,12 +820,12 @@ for each step of the installation process and can be found within this guide or 
 <li>Configure Dashboard</li>
 </ol>
 <h2 id="prerequisites">Prerequisites</h2>
-<div class="aligncenter" style="width: 100%">
+<p><div class="aligncenter" style="width: 100%">
 <p class="aligncenter" style="text-align: center">
     <img src="https://image.flaticon.com/icons/svg/394/394592.svg" style="max-width:25%;" alt="" />
 </p>
 </div>
-<p>Confirm the following before continuing your xConnect installation and configuration:</p>
+Confirm the following before continuing your xConnect installation and configuration:</p>
 <ul>
 <li>
 <p>Network Access has been configured or confirmed:</p>
@@ -874,7 +902,7 @@ Dashboard instance here:</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../Dashboard_Overview/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Dashboard_Overview/" title="Web Dashboard" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -889,7 +917,7 @@ Dashboard instance here:</p>
           </a>
         
         
-          <a href="../Gateway_TurnKey/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Gateway_TurnKey/" title="Turnkey Appliance" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
@@ -926,15 +954,15 @@ Dashboard instance here:</p>
       
     </div>
     
-      <script src="../assets/javascripts/vendor.7e0ee788.min.js"></script>
-      <script src="../assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../assets/javascripts/bundle.7f4f3c92.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: [],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+            worker: "../assets/javascripts/worker/search.9b3611bd.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
