@@ -1,6 +1,36 @@
 # xConnect Release Notes
 [TOC]
 
+# Release 16.0: December 1st, 2020
+
+## Enhancements
+- New user experience for Server and Media Player Dashboards
+
+![Dashboard](images/server_dashboard_r16.png "Dashboard")
+
+- Customizable dashboard reboot button
+    - Users may now customize which command is run upon clicking the reboot button on the dashboards.
+    
+    ![Dashboard](images/reboot_button_dash.png "Dashboard")
+    
+    ### How to edit your command:
+    1. Go to your desired dashboard via the side menu
+    2. Click on the reboot button on the information panel.
+    3. If the menu is plain text, then the admin has not created a default template for you to use yet.
+    If the menu is clickable, you can edit the command by clicking the "Edit Reboot Command" link. 
+    
+    ![Dashboard](images/dashboard_edit_reboot.png "Dashboard")
+    
+- Added UUID to the device information panels
+
+![Dashboard](images/dashboard_info_panel.png "Dashboard")
+
+ ## Bug Fixes
+ - Fix for defining OR criteria on remote command query definitions. 
+    - You may now define two or more OR criteria and retrieve your desired devices correctly.
+    
+  
+
 # Release 15.0: October 15th, 2020
 
 ## Enhancements
