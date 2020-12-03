@@ -2,24 +2,24 @@
 /* Sequence Diagram variables */
 /* Gantt chart variables */
 .mermaid .label {
-  color: #ffffff;
+  color: #000000;
 }
 .node rect,
 .node circle,
 .node ellipse,
 .node polygon {
-  fill: #4b4b4b;
+  fill: #c3c3c3;
   stroke: #7f7f7f;
   stroke-width: 2px;
 }
 .arrowheadPath {
-  fill: #ffffff;
+  fill: #000000;
 }
 .edgePath .path {
-  stroke: #ffffff;
+  stroke: #000000;
 }
 .edgeLabel {
-  background-color: #1f1f1f;
+  background-color: #FFFFFF;
 }
 .cluster rect {
   fill: #ffffde !important;
