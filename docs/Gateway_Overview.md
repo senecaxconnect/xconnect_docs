@@ -11,6 +11,7 @@ Web Client Dashboard hosted in our cloud.
           B -->|MQTT - Port 1883|C(Gateway)
           C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure);
           style C fill:#04acec
+          linkStyle default stroke-width:2px,fill:none,stroke:black;
 ```
 
 There are three installation options for this Secure Gateway:

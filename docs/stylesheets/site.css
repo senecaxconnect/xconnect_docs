@@ -1,0 +1,18 @@
+@page {
+    size: a4 portrait;
+    counter-increment: page;
+    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: grey;
+    @top-center {
+        content: 'xConnect Documentation';
+    }
+    @bottom-left {
+        content: '© 2020 Arrow Electronics';
+    }
+    @bottom-center {
+        content: string(chapter);
+    }
+    @bottom-right {
+        content: 'Page ' counter(page);
+    }
+}

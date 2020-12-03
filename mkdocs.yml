@@ -43,10 +43,15 @@ theme:
   name: 'material'
   custom_dir: 'theme'
   palette:
-    scheme: slate
+    # scheme: slate
     primary: blue grey
-    accent: cyan
+    accent: light blue
   logo: 'images/logo.svg'
+
+plugins:
+    - search
+    - pdf-export
+
 
 markdown_extensions:
   - admonition
@@ -74,9 +79,10 @@ markdown_extensions:
   - toc
 
 extra_css:
-  - stylesheets/dark_theme.css
+  # - stylesheets/dark_theme.css
   - stylesheets/codehilite.css
   - stylesheets/mermaid.css
+  - stylesheets/site.css
 
 extra_javascript:
   - https://unpkg.com/mermaid@7.0.9/dist/mermaid.min.js

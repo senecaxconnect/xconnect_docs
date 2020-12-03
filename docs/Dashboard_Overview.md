@@ -11,6 +11,7 @@ cloud costs, we take care of that for you!
           B -->|MQTT - Port 1883|C(Gateway)
           C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure);
           style D fill:#04acec
+          linkStyle default stroke-width:2px,fill:none,stroke:black;
 ```
 
 ## Gaining Access

@@ -68,7 +68,8 @@ Ethernet port on the PC that can be used for configuration.
             b1(Gateway NIC 1<br>192.168.1.200/24)
             b1---b2
             b2(Gateway NIC 2<br>10.252.13.5/24)-->a1
-            c1(Agent NIC<br>192.168.1.5/24)
+            c1(Agent NIC<br>192.168.1.5/24);
+            linkStyle default stroke-width:2px,fill:none,stroke:black;
     ```
     
 6. Click ‘Save’ to finalize the network interface update

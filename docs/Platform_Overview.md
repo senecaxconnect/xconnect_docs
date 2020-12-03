@@ -45,6 +45,7 @@ setup and configuration.
           B --> A
           B -->|MQTT - Port 1883|C(Gateway)
           C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure);
+          linkStyle default stroke-width:2px,fill:none,stroke:black;
 ```
 
 For greenfield projects where servers and gateways are being 
@@ -75,6 +76,7 @@ environment.
           B --> A
           B -->|MQTT - Port 1883|C(Gateway)
           C -->|SSL - Port 443|E(xConnect Cloud Management- Azure);
+          linkStyle default stroke-width:2px,fill:none,stroke:black;
 ```
 
 This is a required component for any server that you would like to be monitored by the xConnect Platform. 
@@ -98,6 +100,7 @@ Additional technical detail can be found here: [xConnect Agent Detail](/xconnect
           B -->|MQTT - Port 1883|C(Gateway)
           C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure);
           style C fill:#04acec
+          linkStyle default stroke-width:2px,fill:none,stroke:black;
 ```
 
 This is a required component of the xConnect Remote Management Platform. This physical or
@@ -124,6 +127,7 @@ Additional technical detail can be found here: [xConnect Secure Gateway Detail](
           B -->|MQTT - Port 1883|C(Gateway)
           C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure);
           style D fill:#04acec
+          linkStyle default stroke-width:2px,fill:none,stroke:black;
 ```
 
 The Web Dashboard is hosted by Seneca via Microsoft Azure and is included in the cost of

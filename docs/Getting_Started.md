@@ -10,6 +10,7 @@ Please follow the steps below in the same order of operations as described:
           A(Prerequisites) --> B(Gateway Setup)
           B -->C(Agent Setup)
           C -->D(Dashboard Setup);
+          linkStyle default stroke-width:2px,fill:none,stroke:black;
 ```
 
 1. Confirm Prerequisites
