@@ -1,6 +1,45 @@
 # xConnect Release Notes
 [TOC]
 
+# Release 2020.12.0: December 17th, 2020
+
+## Enhancements
+- Remote Command improvements:
+    - Filtering has been added to the remote command execution history grid, which will allow you to filter by device name: 
+    
+    ![RemoteCommand](images/command_history_search.png "Remote Command Search")
+    
+    - On the Remote Command history grid, the device names are now links that will take you to the device-specific dashboard:
+    
+    ![RemoteCommand](images/command_history_deviceName.png "Remote Command Device link")
+    
+    - You can now export the entire execution history of a command as a CSV: 
+    
+    ![RemoteCommand](images/command_history_export.png "Remote Command Export")
+    
+- Reporting is now available for all power users and can be accessed by the settings menu: 
+
+![Reporting](images/reporting_menu.png "Reporting menu")
+
+- Latest device telemetry report is now available for use:
+    - You can access this by going to the Reporting page. 
+    - Click on the "Telemetry" link in the list.
+    
+    ![Reporting](images/reporting_telemetry.png "Reporting: telemetry")
+    
+    - This will open a modal enabling you to choose 10 or less telemetry points that will be included in the report.
+    The report is a list of all active devices that are filtered by the desired device type. 
+    
+    ![Reporting](images/reporting_telemetry_filter.png "Reporting: telemetry")
+    
+    Once your desired settings are selected, click the "CSV" button. This will generate the report as a comma separated file and can be opened in your preferred editor.
+    
+## Bug Fixes
+- Sizing fix for the "Add Customer" modal when assigning a new gateway.
+- All remote command buttons on dashboards are now hidden for end user roles. Power users can still access them.
+- Copy/paste dashboard URLs are now working correctly.
+
+
 # Release 16.0: December 1st, 2020
 
 ## Enhancements
