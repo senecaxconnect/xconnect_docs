@@ -16,7 +16,7 @@
         <meta name="author" content="Seneca">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.4">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
     
     
       
@@ -24,10 +24,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.358818c7.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.19753c6b.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.f0267088.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
         
           
           
@@ -63,6 +63,12 @@
 <meta name='apple-mobile-web-app-capable' content='yes'>
 <meta name='mobile-web-app-capable' content='yes'>
 <link rel="manifest" href="/manifest.json">
+<style type="text/css">
+    .mermaid {
+        text-align: left;
+        font-size: 10pt;
+    }
+</style>
 
   </head>
   
@@ -125,7 +131,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -210,8 +216,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" >
     <label class="md-nav__link" for="nav-1">
       Platform
       <span class="md-nav__icon md-icon"></span>
@@ -284,8 +289,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
     <label class="md-nav__link" for="nav-2">
       Getting Started
       <span class="md-nav__icon md-icon"></span>
@@ -317,8 +321,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" >
     <label class="md-nav__link" for="nav-2-2">
       Step 1 - Gateway Setup
       <span class="md-nav__icon md-icon"></span>
@@ -396,8 +399,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
     <label class="md-nav__link" for="nav-3">
       Usage Guide
       <span class="md-nav__icon md-icon"></span>
@@ -453,8 +455,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4" >
     <label class="md-nav__link" for="nav-3-4">
       Management
       <span class="md-nav__icon md-icon"></span>
@@ -592,8 +593,7 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
     <label class="md-nav__link" for="nav-4">
       Additional Documentation
       <span class="md-nav__icon md-icon"></span>
@@ -692,37 +692,87 @@
 <div class="toc">
 <ul>
 <li><a href="#xconnect-release-notes">xConnect Release Notes</a></li>
+<li><a href="#release-2020120-december-17th-2020">Release 2020.12.0: December 17<sup>th</sup>, 2020</a><ul>
+<li><a href="#enhancements">Enhancements</a></li>
+<li><a href="#bug-fixes">Bug Fixes</a></li>
+</ul>
+</li>
 <li><a href="#release-160-december-1st-2020">Release 16.0: December 1<sup>st</sup>, 2020</a><ul>
-<li><a href="#enhancements">Enhancements</a><ul>
+<li><a href="#enhancements_1">Enhancements</a><ul>
 <li><a href="#how-to-edit-your-command">How to edit your command:</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="#release-150-october-15th-2020">Release 15.0: October 15<sup>th</sup>, 2020</a><ul>
-<li><a href="#enhancements_1">Enhancements</a></li>
-<li><a href="#bug-fixes">Bug Fixes</a></li>
-</ul>
-</li>
-<li><a href="#release-140-september-7th-2020">Release 14.0: September 7<sup>th</sup>, 2020</a><ul>
 <li><a href="#enhancements_2">Enhancements</a></li>
 <li><a href="#bug-fixes_1">Bug Fixes</a></li>
 </ul>
 </li>
-<li><a href="#release-131-july-16th-2020">Release 13.1: July 16<sup>th</sup>, 2020</a><ul>
+<li><a href="#release-140-september-7th-2020">Release 14.0: September 7<sup>th</sup>, 2020</a><ul>
 <li><a href="#enhancements_3">Enhancements</a></li>
 <li><a href="#bug-fixes_2">Bug Fixes</a></li>
 </ul>
 </li>
-<li><a href="#release-13-june-23rd-2020">Release 13: June 23<sup>rd</sup>, 2020</a><ul>
+<li><a href="#release-131-july-16th-2020">Release 13.1: July 16<sup>th</sup>, 2020</a><ul>
 <li><a href="#enhancements_4">Enhancements</a></li>
 <li><a href="#bug-fixes_3">Bug Fixes</a></li>
 </ul>
 </li>
+<li><a href="#release-13-june-23rd-2020">Release 13: June 23<sup>rd</sup>, 2020</a><ul>
+<li><a href="#enhancements_5">Enhancements</a></li>
+<li><a href="#bug-fixes_4">Bug Fixes</a></li>
+</ul>
+</li>
 </ul>
 </div>
-<h1 id="release-160-december-1st-2020">Release 16.0: December 1<sup>st</sup>, 2020</h1>
+<h1 id="release-2020120-december-17th-2020">Release 2020.12.0: December 17<sup>th</sup>, 2020</h1>
 <h2 id="enhancements">Enhancements</h2>
+<ul>
+<li>
+<p>Remote Command improvements:</p>
+<ul>
+<li>Filtering has been added to the remote command execution history grid, which will allow you to filter by device name: </li>
+</ul>
+<p><img alt="RemoteCommand" src="../images/command_history_search.png" title="Remote Command Search" /></p>
+<ul>
+<li>On the Remote Command history grid, the device names are now links that will take you to the device-specific dashboard:</li>
+</ul>
+<p><img alt="RemoteCommand" src="../images/command_history_deviceName.png" title="Remote Command Device link" /></p>
+<ul>
+<li>You can now export the entire execution history of a command as a CSV: </li>
+</ul>
+<p><img alt="RemoteCommand" src="../images/command_history_export.png" title="Remote Command Export" /></p>
+</li>
+<li>
+<p>Reporting is now available for all power users and can be accessed by the settings menu: </p>
+</li>
+</ul>
+<p><img alt="Reporting" src="../images/reporting_menu.png" title="Reporting menu" /></p>
+<ul>
+<li>
+<p>Latest device telemetry report is now available for use:</p>
+<ul>
+<li>You can access this by going to the Reporting page. </li>
+<li>Click on the "Telemetry" link in the list.</li>
+</ul>
+<p><img alt="Reporting" src="../images/reporting_telemetry.png" title="Reporting: telemetry" /></p>
+<ul>
+<li>This will open a modal enabling you to choose 10 or less telemetry points that will be included in the report.
+The report is a list of all active devices that are filtered by the desired device type. </li>
+</ul>
+<p><img alt="Reporting" src="../images/reporting_telemetry_filter.png" title="Reporting: telemetry" /></p>
+<p>Once your desired settings are selected, click the "CSV" button. This will generate the report as a comma separated file and can be opened in your preferred editor.</p>
+</li>
+</ul>
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+<li>Sizing fix for the "Add Customer" modal when assigning a new gateway.</li>
+<li>All remote command buttons on dashboards are now hidden for end user roles. Power users can still access them.</li>
+<li>Copy/paste dashboard URLs are now working correctly.</li>
+</ul>
+<h1 id="release-160-december-1st-2020">Release 16.0: December 1<sup>st</sup>, 2020</h1>
+<h2 id="enhancements_1">Enhancements</h2>
 <ul>
 <li>New user experience for Server and Media Player Dashboards</li>
 </ul>
@@ -752,7 +802,7 @@ If the menu is clickable, you can edit the command by clicking the "Edit Reboot 
  - Fix for defining OR criteria on remote command query definitions. 
     - You may now define two or more OR criteria and retrieve your desired devices correctly.</p>
 <h1 id="release-150-october-15th-2020">Release 15.0: October 15<sup>th</sup>, 2020</h1>
-<h2 id="enhancements_1">Enhancements</h2>
+<h2 id="enhancements_2">Enhancements</h2>
 <ul>
 <li>
 <p>Enhanced Device Selection with Query Builder</p>
@@ -806,13 +856,13 @@ You can perform a search on any dashboard and it will provide you a complete lis
 <p><img alt="Event Feed" src="../images/event_feed_settings.png" title="Gear" /></p>
 </li>
 </ul>
-<h2 id="bug-fixes">Bug Fixes</h2>
+<h2 id="bug-fixes_1">Bug Fixes</h2>
 <ul>
 <li>Name of the device is now driven by the hostname sent via the agent.</li>
 <li>Clicking on the bookmark tab preserves your current location on the site.</li>
 </ul>
 <h1 id="release-140-september-7th-2020">Release 14.0: September 7<sup>th</sup>, 2020</h1>
-<h2 id="enhancements_2">Enhancements</h2>
+<h2 id="enhancements_3">Enhancements</h2>
 <ul>
 <li>
 <p>Remote Command Execution Status Support</p>
@@ -836,13 +886,13 @@ You can perform a search on any dashboard and it will provide you a complete lis
 </ul>
 </li>
 </ul>
-<h2 id="bug-fixes_1">Bug Fixes</h2>
+<h2 id="bug-fixes_2">Bug Fixes</h2>
 <ul>
 <li>Unlocking a user from Manage Users will now clear out prior bad log in attempts.</li>
 <li>Remote Commands will now fire automatically if assigned to an event.</li>
 </ul>
 <h1 id="release-131-july-16th-2020">Release 13.1: July 16<sup>th</sup>, 2020</h1>
-<h2 id="enhancements_3">Enhancements</h2>
+<h2 id="enhancements_4">Enhancements</h2>
 <ul>
 <li>Alert Summary E-mail Support</li>
 <li>We've added the ability to group your e-mail alerts together within a standard summary e-mail template. </li>
@@ -858,12 +908,12 @@ You can perform a search on any dashboard and it will provide you a complete lis
 <ul>
 <li>Once enabled, you will no longer receive individual e-mail alerts based on your event configurations. A summarized e-mail will be sent that lists the impacted devices and the criteria of the event.</li>
 </ul>
-<h2 id="bug-fixes_2">Bug Fixes</h2>
+<h2 id="bug-fixes_3">Bug Fixes</h2>
 <ul>
 <li>Newly added devices will now automatically be applied with e-mail alerts, remote commands, or third party connectors based on the enabled Global Event Configurations.</li>
 </ul>
 <h1 id="release-13-june-23rd-2020">Release 13: June 23<sup>rd</sup>, 2020</h1>
-<h2 id="enhancements_4">Enhancements</h2>
+<h2 id="enhancements_5">Enhancements</h2>
 <ul>
 <li>Event Feed alterations to the navigation links.</li>
 <li>Modified the way the event feed links navigate a user to the appropriate device dashboard and event log listing.</li>
@@ -887,7 +937,7 @@ You can perform a search on any dashboard and it will provide you a complete lis
 <ul>
 <li>User preferences now preserves your selections for expanding or collapsing panels on your dashboards. </li>
 </ul>
-<h2 id="bug-fixes_3">Bug Fixes</h2>
+<h2 id="bug-fixes_4">Bug Fixes</h2>
 <ul>
 <li>Event logs now include custom outage duration notices instead of default 60 minute outage windows. </li>
 </ul>
@@ -947,8 +997,8 @@ You can perform a search on any dashboard and it will provide you a complete lis
       
     </div>
     
-      <script src="../assets/javascripts/vendor.7e0ee788.min.js"></script>
-      <script src="../assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
