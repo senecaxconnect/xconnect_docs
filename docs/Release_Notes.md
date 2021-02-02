@@ -1,6 +1,19 @@
 # xConnect Release Notes
 [TOC]
 
+# Release 2021.02.0: February 6th, 2021
+
+## Enhancements
+- Virtual Gateway Onboarding Wizard
+
+- Automated Device Cleanup
+
+- Device Health Added to Telemetry Report
+
+## Bug Fixes
+
+- Redundant click when searching for an end user
+
 # Release 2020.12.0: December 17th, 2020
 
 ## Enhancements

@@ -24,6 +24,7 @@ documentation related to the xConnect Platform.
 - [Quick Start Guide](/xconnect_docs/Getting_Started)
 - [Gateway Setup - Turnkey Appliance](/xconnect_docs/Gateway_Turnkey)
 - [Gateway Setup - Virtual/Software/Docker](/xconnect_docs/Gateway_Docker)
+- [Genetec Integration Setup](/xconnect_docs/Setup_GenetecIntegration)
 
 ##Technical Documentation
 - [Agent](/xconnect_docs/Agent_Overview)
