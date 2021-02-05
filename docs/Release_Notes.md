@@ -4,15 +4,70 @@
 # Release 2021.02.0: February 6th, 2021
 
 ## Enhancements
-- Virtual Gateway Onboarding Wizard
+- Virtual Gateway Onboarding Wizard<br />
+We have added the ability to create virtual gateways within your xConnect instance! Customers with the cloud gateway subscription 
+will now have the option of generating one or many virtual gateways that will act as a centralized gateway for all of your devices. 
+    - Upon logging in to a **new** account with no gateways or devices, the onboarding wizard will automatically appear
+    
+    - At any time, you can open the onboarding wizard by clicking the icon in the header: 
+    
+    ![onboarding](images/onboarding_header_icon.png "Onboarding header")
+    
+    - The initial step of the onboarding wizard will enable you to begin onboarding a new Virtual Gateway or will take you to the physical gateway setup documentation.
+    
+    ![onboarding](images/onboarding_step01.png "Onboarding step 1")
+    
+    The Virtual Gateway option will be enabled if you have 1 or more available licenses to your account. These licenses can be purchased through your account representative. 
+    
+    - Clicking the Virtual Gateway icon will take you to step 2 of the wizard, you must enter a unique name for your gateway and choose a customer. 
+    
+    ![onboarding](images/onboarding_step02.png "Onboarding step 2")
+    
+    - Once you have chosen the customer and entered a unique gateway, click the "Next" button. The backend processes will begiin allocating your new Virtual Gateway
+    
+    ![onboarding](images/onboarding_step02_Processing.png "Onboarding step 2")
+    
+    During this time, xConnect is communicating with our cloud-based Docker API instance to spin up a new virtual gateway. If any errors occur you will see it displayed in this window. 
+    
+    - Upon the gateway progress bar hitting 100%, you will be able to access your virtual gateway via the normal xConnect Manage Gateways interface
+    
+     ![onboarding](images/onboarding_step02_FinishedProcessing.png "Onboarding step 2")
+     
+    - Once successfully completed, the following message will appear and include the specific URL that you will use on your local agent installations:
+    
+    ![onboarding](images/onboarding_step03.png "Onboarding step 2")
+    
+    Use the listed GATEWAY ADDRESS on your local xConnect agents to point them to the Virtual Gateway 
+    
+    Configure your local xConnect agents:
+    
+    - On your local xConnect agent instance, go to http://localhost:8886/settings and enter the gateway address in the settings page: 
+    
+    ![onboarding](images/xc_agent_settings.png "Onboarding step 2")
+    
 
 - Automated Device Cleanup
+   - We have added an automated device clean up for any devices that have never submitted telemetry and were created over 60 minutes ago. 
+   These devices will automatically be removed from your dashboards and side navigation with no manual intervention. Once the device receives telemetry,
+   they will reappear on your xConnect web portal. 
 
 - Device Health Added to Telemetry Report
+   - The custom telemetry report now includes the latest health of your devices. 
+   ![reporting](images/report_telemetry.png "Telemetry Export")
+
+- Custom Event Configurations Enhanced Filter
+   - Disabled custom event configurations will now be hidden from the list. You can show the disabled by clicking the checkbox on the header:
+   ![eventConfig](images/eventconfig_showdisabled.png "Event config")
+   
 
 ## Bug Fixes
 
 - Redundant click when searching for an end user
+
+
+- Updating custom events with associated alerts
+  - We have added a preventative measure that disallows you from making changes to a custom event configuration if it has active alerts associated with it.
+  As part of a future patch release, we will re-enable this functionality. 
 
 # Release 2020.12.0: December 17th, 2020
 
