@@ -828,6 +828,8 @@
                 
                 <h1 id="genetec-xconnect-integration">Genetec - xConnect Integration</h1>
 <h2 id="preliminary-setup">Preliminary Setup</h2>
+<p><span style="color: red;">NOTE: You MUST contact Genetec and request that you have the xConnect integration added to your license. <br />
+Product Part #: GSC-1SDK-SENECA-xConnect</span></p>
 <h3 id="sdk-role-creation-and-authentication">SDK Role Creation and Authentication</h3>
 <ol>
 <li>
@@ -835,26 +837,28 @@
 </li>
 <li>
 <p>Go to System &gt; Roles:</p>
+<p><img alt="image.png" src="../images/genetec03.png" /></p>
+</li>
+<li>
+<p>In order to use the web-based REST API, you must create a "Web-Based SDK" role in Genetec via the Configuration Tool. This will allow you to define the port, streaming port, and the base URI of the integration: </p>
+<p><img alt="image.png" src="../images/genetec04.png" /></p>
+</li>
+<li>
+<p>In the Roles management screen, go to the Web SDK role, click on "Resources", this will allow you to define which directory server(s) and archiver(s) will be accessible via the Web SDK.</p>
+<p><img alt="image.png" src="../images/genetec01.png" /></p>
 </li>
 </ol>
-<p><img alt="image.png" src="../images/genetec03.png" /></p>
-<ol>
-<li>In order to use the web-based REST API, you must create a "Web-Based SDK" role in Genetec via the Configuration Tool. This will allow you to define the port, streaming port, and the base URI of the integration: </li>
-</ol>
-<p><img alt="image.png" src="../images/genetec04.png" /></p>
-<ol>
-<li>In the Roles management screen, go to the Web SDK role, click on "Resources", this will allow you to define which directory server(s) and archiver(s) will be accessible via the Web SDK.</li>
-</ol>
-<p><img alt="image.png" src="../images/genetec01.png" /></p>
 <p>NOTE: The "Base URI" field will define the prefix for the URL, based on the config above, the API can be accessed by going to <a href="http://localhost:4590/WebSdk/">http://localhost:4590/WebSdk/</a><endpoint></p>
 <ol>
-<li>Once the role is created, define a user for accessing the SDK. Ensure that the user has the role: </li>
-</ol>
+<li>
+<p>Once the role is created, define a user for accessing the SDK. Ensure that the user has the role: </p>
 <p><img alt="image.png" src="../images/genetec05.png" /></p>
-<ol>
-<li>You can now access the SDK by going to the URL, with BASIC AUTHENTICATION enabled. Use the following for user/pass:
+</li>
+<li>
+<p>You can now access the SDK by going to the URL, with BASIC AUTHENTICATION enabled. Use the following for user/pass:
 Username should be the following format:
-username;applicationId</li>
+username;applicationId</p>
+</li>
 </ol>
 <p>Our xConnect application Id is: <strong>zn3n4f25mfJnxZZtKwpdF27BkdfKlGQsyNlTHtz25Gqxkn71d0JNy1A1PSR281nr</strong></p>
 <p>password would be the same as the user you setup in Genetec.</p>
@@ -871,10 +875,8 @@ username;applicationId</li>
 </li>
 <li>
 <p>Choose "Genetec" as your desired VMS integration, enter the URL for your genetec host (should be <a href="http://localhost:4590/WebSdk">http://localhost:4590/WebSdk</a> <strong>if using default Base URI and port #</strong>)</p>
-</li>
-</ol>
 <p><img alt="image.png" src="../images/genetec02.png" /></p>
-<ol>
+</li>
 <li>
 <p>Enter the username and password. Username will be the login username followed by a semicolon and the app id. (i.e. sdkUser;zn3n4f25mfJnxZZtKwpdF27BkdfKlGQsyNlTHtz25Gqxkn71d0JNy1A1PSR281nr)</p>
 </li>
