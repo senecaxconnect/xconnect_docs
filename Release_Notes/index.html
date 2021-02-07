@@ -692,42 +692,124 @@
 <div class="toc">
 <ul>
 <li><a href="#xconnect-release-notes">xConnect Release Notes</a></li>
-<li><a href="#release-2020120-december-17th-2020">Release 2020.12.0: December 17<sup>th</sup>, 2020</a><ul>
+<li><a href="#release-2021020-february-6th-2021">Release 2021.02.0: February 6<sup>th</sup>, 2021</a><ul>
 <li><a href="#enhancements">Enhancements</a></li>
 <li><a href="#bug-fixes">Bug Fixes</a></li>
 </ul>
 </li>
+<li><a href="#release-2020120-december-17th-2020">Release 2020.12.0: December 17<sup>th</sup>, 2020</a><ul>
+<li><a href="#enhancements_1">Enhancements</a></li>
+<li><a href="#bug-fixes_1">Bug Fixes</a></li>
+</ul>
+</li>
 <li><a href="#release-160-december-1st-2020">Release 16.0: December 1<sup>st</sup>, 2020</a><ul>
-<li><a href="#enhancements_1">Enhancements</a><ul>
+<li><a href="#enhancements_2">Enhancements</a><ul>
 <li><a href="#how-to-edit-your-command">How to edit your command:</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="#release-150-october-15th-2020">Release 15.0: October 15<sup>th</sup>, 2020</a><ul>
-<li><a href="#enhancements_2">Enhancements</a></li>
-<li><a href="#bug-fixes_1">Bug Fixes</a></li>
-</ul>
-</li>
-<li><a href="#release-140-september-7th-2020">Release 14.0: September 7<sup>th</sup>, 2020</a><ul>
 <li><a href="#enhancements_3">Enhancements</a></li>
 <li><a href="#bug-fixes_2">Bug Fixes</a></li>
 </ul>
 </li>
-<li><a href="#release-131-july-16th-2020">Release 13.1: July 16<sup>th</sup>, 2020</a><ul>
+<li><a href="#release-140-september-7th-2020">Release 14.0: September 7<sup>th</sup>, 2020</a><ul>
 <li><a href="#enhancements_4">Enhancements</a></li>
 <li><a href="#bug-fixes_3">Bug Fixes</a></li>
 </ul>
 </li>
-<li><a href="#release-13-june-23rd-2020">Release 13: June 23<sup>rd</sup>, 2020</a><ul>
+<li><a href="#release-131-july-16th-2020">Release 13.1: July 16<sup>th</sup>, 2020</a><ul>
 <li><a href="#enhancements_5">Enhancements</a></li>
 <li><a href="#bug-fixes_4">Bug Fixes</a></li>
 </ul>
 </li>
+<li><a href="#release-13-june-23rd-2020">Release 13: June 23<sup>rd</sup>, 2020</a><ul>
+<li><a href="#enhancements_6">Enhancements</a></li>
+<li><a href="#bug-fixes_5">Bug Fixes</a></li>
+</ul>
+</li>
 </ul>
 </div>
-<h1 id="release-2020120-december-17th-2020">Release 2020.12.0: December 17<sup>th</sup>, 2020</h1>
+<h1 id="release-2021020-february-6th-2021">Release 2021.02.0: February 6<sup>th</sup>, 2021</h1>
 <h2 id="enhancements">Enhancements</h2>
+<ul>
+<li>
+<p>Virtual Gateway Onboarding Wizard<br />
+We have added the ability to create virtual gateways within your xConnect instance! Customers with the cloud gateway subscription 
+will now have the option of generating one or many virtual gateways that will act as a centralized gateway for all of your devices. </p>
+<ul>
+<li>
+<p>Upon logging in to a <strong>new</strong> account with no gateways or devices, the onboarding wizard will automatically appear</p>
+</li>
+<li>
+<p>At any time, you can open the onboarding wizard by clicking the icon in the header: </p>
+</li>
+</ul>
+<p><img alt="onboarding" src="../images/onboarding_header_icon.png" title="Onboarding header" /></p>
+<ul>
+<li>The initial step of the onboarding wizard will enable you to begin onboarding a new Virtual Gateway or will take you to the physical gateway setup documentation.</li>
+</ul>
+<p><img alt="onboarding" src="../images/onboarding_step01.png" title="Onboarding step 1" /></p>
+<p>The Virtual Gateway option will be enabled if you have 1 or more available licenses to your account. These licenses can be purchased through your account representative. </p>
+<ul>
+<li>Clicking the Virtual Gateway icon will take you to step 2 of the wizard, you must enter a unique name for your gateway and choose a customer. </li>
+</ul>
+<p><img alt="onboarding" src="../images/onboarding_step02.png" title="Onboarding step 2" /></p>
+<ul>
+<li>Once you have chosen the customer and entered a unique gateway, click the "Next" button. The backend processes will begiin allocating your new Virtual Gateway</li>
+</ul>
+<p><img alt="onboarding" src="../images/onboarding_step02_Processing.png" title="Onboarding step 2" /></p>
+<p>During this time, xConnect is communicating with our cloud-based Docker API instance to spin up a new virtual gateway. If any errors occur you will see it displayed in this window. </p>
+<ul>
+<li>Upon the gateway progress bar hitting 100%, you will be able to access your virtual gateway via the normal xConnect Manage Gateways interface</li>
+</ul>
+<p><img alt="onboarding" src="../images/onboarding_step02_FinishedProcessing.png" title="Onboarding step 2" /></p>
+<ul>
+<li>Once successfully completed, the following message will appear and include the specific URL that you will use on your local agent installations:</li>
+</ul>
+<p><img alt="onboarding" src="../images/onboarding_step03.png" title="Onboarding step 2" /></p>
+<p>Use the listed GATEWAY ADDRESS on your local xConnect agents to point them to the Virtual Gateway </p>
+<p>Configure your local xConnect agents:</p>
+<ul>
+<li>On your local xConnect agent instance, go to <a href="http://localhost:8886/settings">http://localhost:8886/settings</a> and enter the gateway address in the settings page: </li>
+</ul>
+<p><img alt="onboarding" src="../images/xc_agent_settings.png" title="Onboarding step 2" /></p>
+</li>
+<li>
+<p>Automated Device Cleanup</p>
+</li>
+<li>
+<p>We have added an automated device clean up for any devices that have never submitted telemetry and were created over 60 minutes ago. 
+   These devices will automatically be removed from your dashboards and side navigation with no manual intervention. Once the device receives telemetry,
+   they will reappear on your xConnect web portal. </p>
+</li>
+<li>
+<p>Device Health Added to Telemetry Report</p>
+</li>
+<li>
+<p>The custom telemetry report now includes the latest health of your devices. 
+   <img alt="reporting" src="../images/report_telemetry.png" title="Telemetry Export" /></p>
+</li>
+<li>
+<p>Custom Event Configurations Enhanced Filter</p>
+</li>
+<li>Disabled custom event configurations will now be hidden from the list. You can show the disabled by clicking the checkbox on the header:
+   <img alt="eventConfig" src="../images/eventconfig_showdisabled.png" title="Event config" /></li>
+</ul>
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+<li>
+<p>Redundant click when searching for an end user</p>
+</li>
+<li>
+<p>Updating custom events with associated alerts</p>
+</li>
+<li>We have added a preventative measure that disallows you from making changes to a custom event configuration if it has active alerts associated with it.
+  As part of a future patch release, we will re-enable this functionality. </li>
+</ul>
+<h1 id="release-2020120-december-17th-2020">Release 2020.12.0: December 17<sup>th</sup>, 2020</h1>
+<h2 id="enhancements_1">Enhancements</h2>
 <ul>
 <li>
 <p>Remote Command improvements:</p>
@@ -765,14 +847,14 @@ The report is a list of all active devices that are filtered by the desired devi
 <p>Once your desired settings are selected, click the "CSV" button. This will generate the report as a comma separated file and can be opened in your preferred editor.</p>
 </li>
 </ul>
-<h2 id="bug-fixes">Bug Fixes</h2>
+<h2 id="bug-fixes_1">Bug Fixes</h2>
 <ul>
 <li>Sizing fix for the "Add Customer" modal when assigning a new gateway.</li>
 <li>All remote command buttons on dashboards are now hidden for end user roles. Power users can still access them.</li>
 <li>Copy/paste dashboard URLs are now working correctly.</li>
 </ul>
 <h1 id="release-160-december-1st-2020">Release 16.0: December 1<sup>st</sup>, 2020</h1>
-<h2 id="enhancements_1">Enhancements</h2>
+<h2 id="enhancements_2">Enhancements</h2>
 <ul>
 <li>New user experience for Server and Media Player Dashboards</li>
 </ul>
@@ -802,7 +884,7 @@ If the menu is clickable, you can edit the command by clicking the "Edit Reboot 
  - Fix for defining OR criteria on remote command query definitions. 
     - You may now define two or more OR criteria and retrieve your desired devices correctly.</p>
 <h1 id="release-150-october-15th-2020">Release 15.0: October 15<sup>th</sup>, 2020</h1>
-<h2 id="enhancements_2">Enhancements</h2>
+<h2 id="enhancements_3">Enhancements</h2>
 <ul>
 <li>
 <p>Enhanced Device Selection with Query Builder</p>
@@ -856,13 +938,13 @@ You can perform a search on any dashboard and it will provide you a complete lis
 <p><img alt="Event Feed" src="../images/event_feed_settings.png" title="Gear" /></p>
 </li>
 </ul>
-<h2 id="bug-fixes_1">Bug Fixes</h2>
+<h2 id="bug-fixes_2">Bug Fixes</h2>
 <ul>
 <li>Name of the device is now driven by the hostname sent via the agent.</li>
 <li>Clicking on the bookmark tab preserves your current location on the site.</li>
 </ul>
 <h1 id="release-140-september-7th-2020">Release 14.0: September 7<sup>th</sup>, 2020</h1>
-<h2 id="enhancements_3">Enhancements</h2>
+<h2 id="enhancements_4">Enhancements</h2>
 <ul>
 <li>
 <p>Remote Command Execution Status Support</p>
@@ -886,13 +968,13 @@ You can perform a search on any dashboard and it will provide you a complete lis
 </ul>
 </li>
 </ul>
-<h2 id="bug-fixes_2">Bug Fixes</h2>
+<h2 id="bug-fixes_3">Bug Fixes</h2>
 <ul>
 <li>Unlocking a user from Manage Users will now clear out prior bad log in attempts.</li>
 <li>Remote Commands will now fire automatically if assigned to an event.</li>
 </ul>
 <h1 id="release-131-july-16th-2020">Release 13.1: July 16<sup>th</sup>, 2020</h1>
-<h2 id="enhancements_4">Enhancements</h2>
+<h2 id="enhancements_5">Enhancements</h2>
 <ul>
 <li>Alert Summary E-mail Support</li>
 <li>We've added the ability to group your e-mail alerts together within a standard summary e-mail template. </li>
@@ -908,12 +990,12 @@ You can perform a search on any dashboard and it will provide you a complete lis
 <ul>
 <li>Once enabled, you will no longer receive individual e-mail alerts based on your event configurations. A summarized e-mail will be sent that lists the impacted devices and the criteria of the event.</li>
 </ul>
-<h2 id="bug-fixes_3">Bug Fixes</h2>
+<h2 id="bug-fixes_4">Bug Fixes</h2>
 <ul>
 <li>Newly added devices will now automatically be applied with e-mail alerts, remote commands, or third party connectors based on the enabled Global Event Configurations.</li>
 </ul>
 <h1 id="release-13-june-23rd-2020">Release 13: June 23<sup>rd</sup>, 2020</h1>
-<h2 id="enhancements_5">Enhancements</h2>
+<h2 id="enhancements_6">Enhancements</h2>
 <ul>
 <li>Event Feed alterations to the navigation links.</li>
 <li>Modified the way the event feed links navigate a user to the appropriate device dashboard and event log listing.</li>
@@ -937,7 +1019,7 @@ You can perform a search on any dashboard and it will provide you a complete lis
 <ul>
 <li>User preferences now preserves your selections for expanding or collapsing panels on your dashboards. </li>
 </ul>
-<h2 id="bug-fixes_4">Bug Fixes</h2>
+<h2 id="bug-fixes_5">Bug Fixes</h2>
 <ul>
 <li>Event logs now include custom outage duration notices instead of default 60 minute outage windows. </li>
 </ul>
