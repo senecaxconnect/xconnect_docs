@@ -1,25 +1,28 @@
 # Genetec - xConnect Integration
 ## Preliminary Setup
+<span style="color: red;">NOTE: You MUST contact Genetec and request that you have the xConnect integration added to your license. <br />
+Product Part #: GSC-1SDK-SENECA-xConnect</span>
+
 ### SDK Role Creation and Authentication
 1. Open the Genetec Config Tool on the server where Genetec has been installed. 
 
 2. Go to System > Roles:
 
-![image.png](images/genetec03.png)
+    ![image.png](images/genetec03.png)
 
 3. In order to use the web-based REST API, you must create a "Web-Based SDK" role in Genetec via the Configuration Tool. This will allow you to define the port, streaming port, and the base URI of the integration: 
 
-![image.png](images/genetec04.png)
+    ![image.png](images/genetec04.png)
 
 4. In the Roles management screen, go to the Web SDK role, click on "Resources", this will allow you to define which directory server(s) and archiver(s) will be accessible via the Web SDK.
 
-![image.png](images/genetec01.png)
+    ![image.png](images/genetec01.png)
 
 NOTE: The "Base URI" field will define the prefix for the URL, based on the config above, the API can be accessed by going to http://localhost:4590/WebSdk/<endpoint>
 
 5. Once the role is created, define a user for accessing the SDK. Ensure that the user has the role: 
 
-![image.png](images/genetec05.png)
+    ![image.png](images/genetec05.png)
 
 6. You can now access the SDK by going to the URL, with BASIC AUTHENTICATION enabled. Use the following for user/pass:
 Username should be the following format:
@@ -40,7 +43,7 @@ As of agent version 4069+ the Genetec integration submits telemetry to the xConn
 
 3. Choose "Genetec" as your desired VMS integration, enter the URL for your genetec host (should be http://localhost:4590/WebSdk **if using default Base URI and port #**)
 
-![image.png](images/genetec02.png)
+    ![image.png](images/genetec02.png)
 
 4. Enter the username and password. Username will be the login username followed by a semicolon and the app id. (i.e. sdkUser;zn3n4f25mfJnxZZtKwpdF27BkdfKlGQsyNlTHtz25Gqxkn71d0JNy1A1PSR281nr)
 
