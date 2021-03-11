@@ -1,5 +1,20 @@
 # xConnect Release Notes
 [TOC]
+# Minor Release 2021.02.4: March 10th, 2021
+## Enhancements
+- Enable or disable the ability to batch execute a remote command<br />
+
+There is a new control on the remote command edit form that will allow you to enable or disable the ability to execute the remote command on many devices.
+
+![enhancement](images/rc_enable_batch.png)
+
+
+If the command execution is disabled, you will not be able to hit the "play" icon on the remote command grid: 
+
+
+![enhancement](images/rc_disabled_command_batch.png)
+
+Checking the checkbox control will allow you (or any other power user) to perform a batch execution on the command to the associated devices.
 
 # Release 2021.02.0: February 6th, 2021
 
