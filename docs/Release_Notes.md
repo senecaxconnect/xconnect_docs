@@ -1,5 +1,17 @@
 # xConnect Release Notes
 [TOC]
+# Minor Release 2021.02.5: March 25th, 2021
+## Enhancements
+- Added query operator to Remote Commands and Custom Event Configurations
+
+There is a new operator that will allow you to pull devices based on a comma-separated list of values. 
+The functionality is currently available in the Remote Commands and Custom Event Configuration editors. 
+
+![enhancement](images/rc_inoperator.png)
+
+By choosing the "IN" operator, you can specify one or more values to search. In the example above, I am searching for devices with the names "SERVER123", "SERVER456", or "SERVER768"
+The result would be 3 servers that match those names.
+
 # Minor Release 2021.02.4: March 10th, 2021
 ## Enhancements
 - Enable or disable the ability to batch execute a remote command<br />
