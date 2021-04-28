@@ -10,7 +10,7 @@
       
       
       
-        <link rel="canonical" href="https://senecaxconnect.github.io/xconnect_docs/Gateway_Overview/">
+        <link rel="canonical" href="https://senecaxconnect.github.io/xconnect_docs/Auth_AzureAD/">
       
       
         <meta name="author" content="Seneca">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Gateway - xConnect Documentation</title>
+        <title>Azure-Based Authentication - xConnect Documentation</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#gateway" class="md-skip">
+        <a href="#azure-based-active-directory-authentication" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Gateway
+              Azure-Based Authentication
             
           </span>
         </div>
@@ -213,12 +213,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" >
     <label class="md-nav__link" for="nav-1">
       Platform
       <span class="md-nav__icon md-icon"></span>
@@ -259,131 +257,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Gateway
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../Gateway_Overview/" class="md-nav__link">
       Gateway
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#physical-turnkey-gateway" class="md-nav__link">
-    Physical (Turnkey) Gateway
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#virtual-machine-gateway-option" class="md-nav__link">
-    Virtual Machine Gateway Option
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-container" class="md-nav__link">
-    Docker Container
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#secure-gateway-services" class="md-nav__link">
-    Secure Gateway Services
-  </a>
-  
-    <nav class="md-nav" aria-label="Secure Gateway Services">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#arrow-connect-gateway-engine" class="md-nav__link">
-    Arrow Connect Gateway Engine
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gateway-configuration-manager" class="md-nav__link">
-    Gateway Configuration Manager
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#remote-desktop-gateway" class="md-nav__link">
-    Remote Desktop Gateway
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#secure-tunnel-service" class="md-nav__link">
-    Secure Tunnel Service
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#network-requirements" class="md-nav__link">
-    Network Requirements
-  </a>
-  
-    <nav class="md-nav" aria-label="Network Requirements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#agent-gateway-access-requirement" class="md-nav__link">
-    Agent --&gt; Gateway Access Requirement
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gateway-cloud-access-requirement" class="md-nav__link">
-    Gateway --&gt; Cloud Access Requirement
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -712,10 +590,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     <label class="md-nav__link" for="nav-4">
       Additional Documentation
       <span class="md-nav__icon md-icon"></span>
@@ -744,11 +624,69 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Auth_AzureAD/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Azure-Based Authentication
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       Azure-Based Authentication
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-setup-azure-ad-integration" class="md-nav__link">
+    How to setup Azure AD integration
+  </a>
+  
+    <nav class="md-nav" aria-label="How to setup Azure AD integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#current-limitations" class="md-nav__link">
+    Current limitations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-process" class="md-nav__link">
+    Setup process
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -817,85 +755,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#physical-turnkey-gateway" class="md-nav__link">
-    Physical (Turnkey) Gateway
+  <a href="#how-to-setup-azure-ad-integration" class="md-nav__link">
+    How to setup Azure AD integration
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#virtual-machine-gateway-option" class="md-nav__link">
-    Virtual Machine Gateway Option
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-container" class="md-nav__link">
-    Docker Container
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#secure-gateway-services" class="md-nav__link">
-    Secure Gateway Services
-  </a>
-  
-    <nav class="md-nav" aria-label="Secure Gateway Services">
+    <nav class="md-nav" aria-label="How to setup Azure AD integration">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#arrow-connect-gateway-engine" class="md-nav__link">
-    Arrow Connect Gateway Engine
+  <a href="#current-limitations" class="md-nav__link">
+    Current limitations
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#gateway-configuration-manager" class="md-nav__link">
-    Gateway Configuration Manager
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#remote-desktop-gateway" class="md-nav__link">
-    Remote Desktop Gateway
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#secure-tunnel-service" class="md-nav__link">
-    Secure Tunnel Service
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#network-requirements" class="md-nav__link">
-    Network Requirements
-  </a>
-  
-    <nav class="md-nav" aria-label="Network Requirements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#agent-gateway-access-requirement" class="md-nav__link">
-    Agent --&gt; Gateway Access Requirement
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gateway-cloud-access-requirement" class="md-nav__link">
-    Gateway --&gt; Cloud Access Requirement
+  <a href="#setup-process" class="md-nav__link">
+    Setup process
   </a>
   
 </li>
@@ -914,190 +790,52 @@
             
           
           <div class="md-content">
-            <article class="md-content__inner md-typeset"><a class="md-content__button md-icon" download href="Gateway_Overview.pdf" title="PDF Export"><svg style="height: 1.2rem; width: 1.2rem;" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm76.45 211.36l-96.42 95.7c-6.65 6.61-17.39 6.61-24.04 0l-96.42-95.7C73.42 337.29 80.54 320 94.82 320H160v-80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v80h65.18c14.28 0 21.4 17.29 11.27 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"></path></svg></a>
+            <article class="md-content__inner md-typeset"><a class="md-content__button md-icon" download href="Auth_AzureAD.pdf" title="PDF Export"><svg style="height: 1.2rem; width: 1.2rem;" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm76.45 211.36l-96.42 95.7c-6.65 6.61-17.39 6.61-24.04 0l-96.42-95.7C73.42 337.29 80.54 320 94.82 320H160v-80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v80h65.18c14.28 0 21.4 17.29 11.27 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"></path></svg></a>
               
                 
-                  <a href="https://github.com/senecaxconnect/xconnect_docs/edit/master/docs/Gateway_Overview.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/senecaxconnect/xconnect_docs/edit/master/docs/Auth_AzureAD.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="gateway">Gateway</h1>
-<p>This is a required component of the xConnect Remote Management Platform. This physical or
-virtual gateway is responsible for being the encrypted tunnel between the Server Agents and the
-Web Client Dashboard hosted in our cloud.</p>
-<div class="mermaid">      graph LR
-          A(Edge Devices) --&gt; B(Agent)
-          B --&gt; A
-          B --&gt;|MQTT - Port 1883|C(Gateway)
-          C --&gt;|SSL - Port 443|D(xConnect Cloud Dashboard - Azure);
-          style C fill:#04acec
-          linkStyle default stroke-width:2px,fill:none,stroke:black;</div>
-<p>There are three installation options for this Secure Gateway:</p>
+                <h1 id="azure-based-active-directory-authentication">Azure-Based Active Directory Authentication</h1>
+<p>xConnect supports Azure-based Active Directory integration that will enable you to leverage your AD instance for managing permissions within xConnect.
+The integration is very beneficial for larger xConnect implementations that have many users accessing the tool. The AD integration requires the following in order to be activated with your xConnect tenant:</p>
 <ul>
-<li>Physical (Turnkey)</li>
-<li>Virtual Machine</li>
-<li>Docker Container</li>
+<li>Azure AD Tenant ID</li>
+<li>Custom subdomain for accessing xConnect and our Asset Management portal (i.e. tenant.senecaxconnect.com, tenant-assetmgmt.senecaxconnect.com)</li>
+<li>Creation of xconnect-specific AD groups that users can be assigned.</li>
+<li>Approval and consent of our xConnect in your Azure Portal</li>
 </ul>
-<h2 id="physical-turnkey-gateway">Physical (Turnkey) Gateway</h2>
-<p>The physical gateway option greatly reduces setup time. This is a physical hardware device
-provided by Arrow that has our hardened system image and most configuration details already
-pre-configured from our factory.</p>
-<p>The physical gateway highlighted in this guide is an ultra-small form factor embedded PC
-provided by Arrow. The specifications of this physical gateway are:</p>
-<table>
-<thead>
-<tr>
-<th><strong>SYSTEM</strong></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Manufacturer</td>
-<td>Seneca®</td>
-</tr>
-<tr>
-<td>Operating System</td>
-<td>Ubuntu Linux 16.04 LTS Server</td>
-</tr>
-<tr>
-<td>Memory</td>
-<td>8GB DDR3L 1600MHz</td>
-</tr>
-<tr>
-<td>Processor</td>
-<td>Intel® Celeron® N3060 1.6-2.48Ghz 2MB Cache</td>
-</tr>
-<tr>
-<td>USB</td>
-<td>4x USB3.0 (Front), 1x USB2.0 (Front), 2x Micro USB 2.0 (Side)</td>
-</tr>
-<tr>
-<td>Physical Security</td>
-<td>1x Kensington Lock</td>
-</tr>
-<tr>
-<td>Warranty</td>
-<td>3 and 5 Year Warranty Options Available</td>
-</tr>
-<tr>
-<td><strong>MECHANICALS</strong></td>
-<td></td>
-</tr>
-<tr>
-<td>Thermals</td>
-<td>0ºC to 35ºC / 32ºF to 95ºF</td>
-</tr>
-<tr>
-<td>Power Draw</td>
-<td>15W</td>
-</tr>
-<tr>
-<td>Cooling</td>
-<td>Aluminum Extrusion Chassis Heatsink</td>
-</tr>
-<tr>
-<td>Mounting</td>
-<td>VESA/Wall Mountable, Brackets included, Rack shelf available for purchase</td>
-</tr>
-<tr>
-<td>Dimensions (w x h x d)</td>
-<td>7.5 x 1.75 x 4.25 inches / 191 x 46 x 108 millimeters</td>
-</tr>
-<tr>
-<td>Weight</td>
-<td>3 lbs. / 1.4 kg</td>
-</tr>
-</tbody>
-</table>
-<p>Onboarding/Installation instructions are available in the <a href="/xconnect_docs/Getting_Started">Getting Started</a> chapter. </p>
-<h2 id="virtual-machine-gateway-option">Virtual Machine Gateway Option</h2>
-<p>The virtual gateway option is available when using existing infrastructure to host the Secure
-Gateway is desired.</p>
-<p>A Hyper-V Virtual Disk or VMWare OVA can be provided upon request and needs to be imported into the
- appropriate hypervisor. </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It is recommended to have 2 virtual switches attached to the VM. 1 Virtual Switch with connectivity
-to your internal LAN assets, and 1 Virtual Switch with Internet connectivity.</p>
-</div>
-<p>Professional Services are available to assist in importing and configuration of the virtual Secure
-Gateway.</p>
-<p>Onboarding/Installation instructions are available in the "Getting Started" chapter. </p>
-<h2 id="docker-container">Docker Container</h2>
-<p>We now support deploying a "bare minimum" Gateway image via Docker. This option allows you to have 
-an xConnect Secure Gateway deployed in minutes, granted you can supply a machine that Docker can be installed on.</p>
-<p>As of this writing, you can use any Linux OS of your choosing to deploy the xConnect Gateway software with Docker.</p>
-<p>Container installation instruction files are available on our github page:
-<a href="https://github.com/senecaxconnect/xconnect_gateway_docker">https://github.com/senecaxconnect/xconnect_gateway_docker</a></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Docker for Windows will not be officially supported until WSL2 is publicly available. However,
-you could install a Linux OS within a Hyper-V VM on Windows and it would be fully supported.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Certain features (Remote Desktop Pass-through and Seneca Remote Support Services) will <strong>NOT</strong> be available 
-(without Seneca consultation) when using the Docker gateway:</p>
-</div>
-<p>Installation instructions are also available in the "Getting Started" chapter. </p>
-<h2 id="secure-gateway-services">Secure Gateway Services</h2>
-<p>The xConnect Secure Gateway is a device, or virtual machine, that runs a customized and
-hardened Ubuntu Server system image. Within this image are several key services:</p>
-<h4 id="arrow-connect-gateway-engine">Arrow Connect Gateway Engine</h4>
-<p>This service is the main data consumption and transmission engine responsible for
-ingesting telemetry from all Server Agents and transmitting telemetry to Arrow Connect
-IoT. Arrow Connect IoT provides telemetry to the Web Client Dashboard through secure
-APIs.</p>
-<h4 id="gateway-configuration-manager">Gateway Configuration Manager</h4>
-<p>This is a built-in local (or LAN accessible) web interface for configuration all relevant
-features to the xConnect Remote Management Platform.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Not available with Docker container</p>
-</div>
-<h4 id="remote-desktop-gateway">Remote Desktop Gateway</h4>
-<p>This is a service that provides client-less remote desktop connections from the Web
-Client Dashboard through to the Server Agent system. At time of this publication, RDP is
-the only protocol supported.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Not available with Docker container</p>
-</div>
-<h4 id="secure-tunnel-service">Secure Tunnel Service</h4>
-<p>This service provides secure HTTP and TCP tunnels to and from the Web Client
-Dashboard and the private network being managed. All connections are encrypted web
-sockets through port 443 (HTTPS).</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Not available with Docker container</p>
-</div>
-<h2 id="network-requirements">Network Requirements</h2>
-<p>The xConnect Secure Gateway requires very minimal network configuration or firewall rules to
-be fully functional. Some common industry standard ports that are required to be open are:</p>
-<h3 id="agent-gateway-access-requirement">Agent &rarr; Gateway Access Requirement</h3>
-<p>This is typically on your LAN so access rules are rarely required unless running on a hardened network.</p>
-<p>In the case of internal LAN traffic being managed, verify the following access is granted between 
-the hosts (Agents) and the Gateway asset
-- Port 8080 (TCP/HTTP)
-- Port 1883 (TCP/MQTT)</p>
-<h3 id="gateway-cloud-access-requirement">Gateway &rarr; Cloud Access Requirement</h3>
-<p>Microsoft Azure access is bare minimum required:
-- Destination IPs will vary based on region and load-balancing so a hostname based rule is preferred.
-- A wildcard access rule for outbound traffic to <em>.senecaxconnect.com is the safest bet to future proof your firewall rules.
-- Outbound TCP traffic via **Port 443*</em> to <em>.senecaxconnect.com
-- Outbound TCP traffic via **Port 8883*</em> to <em>.senecaxconnect.com
-- **No inbound rules required*</em> </p>
-<p>Amazon EC2 access is optional but is highly recommend and required for the following features to function:
-- Seneca’s administrative interface to connect to your gateway to push updates
-- Server Agent OTA updates
-- General support/troubleshooting of your gateway
-- Secure Remote Desktop Passthrough
-- If you wish to opt-in to these features and enable our team to continually support your platform, 
-please whitelist <strong>Outbound TCP 443</strong> to ***.ngrok.io** and ***.ngrok.com**. 
-We cannot provide a reliable IP address list due to auto load balancing on the cluster, 
-they’re a moving target.</p>
+<h2 id="how-to-setup-azure-ad-integration">How to setup Azure AD integration</h2>
+<h3 id="current-limitations">Current limitations</h3>
+<p>Prior to requesting Azure AD integration, please note that as of April, 2021 xConnect currently supports the following: 
+ - Only full members of the Active Directory subscription are supported. Guests are not currently supported at this time: </p>
+<p><img alt="ad" src="../images/azure_fullmember.png" /></p>
+<p>In the example above, the dev four and dev three accounts are not supported for xConnect integration, while test five and six are. </p>
+<ul>
+<li>xConnect end user accounts with customer-specific dashboard visibility are not supported. Only end user types with "Overview" dashboard access can be integrated with AD.</li>
+</ul>
+<h3 id="setup-process">Setup process</h3>
+<p>1. Send an e-mail to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#115;&#101;&#110;&#101;&#99;&#97;&#120;&#99;&#111;&#110;&#110;&#101;&#99;&#116;&#46;&#99;&#111;&#109;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#64;&#115;&#101;&#110;&#101;&#99;&#97;&#120;&#99;&#111;&#110;&#110;&#101;&#99;&#116;&#46;&#99;&#111;&#109;</a> with the subject "Azure AD Request". Include the following information: 
+ - Company name that has been used for your xConnect subscription
+ - Preferred subdomain for accessing xConnect. Must not have any special characters. Example: (abccompany.senecaxconnect.com)
+ - Do you require access to the asset management portal (<a href="https://www.assetmgmt.senecaxconnect.com">https://www.assetmgmt.senecaxconnect.com</a>)
+ - Your Azure AD Tenant ID
+    - This can be found by logging in to your Azure Portal and going to "Azure Active Directory":
+    <img alt="ad" src="../images/ad_tenantID.png" /></p>
+<p>2. Create the following groups in your Azure Active Directory instance: 
+ - xconnect-power-user
+ - xconnect-admin-user
+ - xconnect-end-user
+ - xconnect-asset-management</p>
+<p><img alt="ad" src="../images/ad_groups.png" /></p>
+<p>3. Assign your users to the appropriate groups. Please note that a user can only belong to 1 of the power, end, or admin user groups and the asset management account. Example: </p>
+<p>User A assigned xconnect-power-user, xconnect-asset-management &larr; <span style="color:#00FF0E;">Correct</span></p>
+<p>User B assigned xconnect-end-user, xconnect-admin-user &larr; <span style="color:#FF0000;">Incorrect</span></p>
+<p>4. Log in to your Azure portal and go to Azure Active Directory. Register for the "xConnect" Application via App Registrations.
+ - Ensure that an admin provides consent to access your AD group information, otherwise users will not be able to log in to xConnect</p>
+<p>5. Once you have received notification from our support team that your subdomains have been created and are ready for use, you may begin using your AD integration. </p>
                 
               
               
@@ -1116,7 +854,7 @@ they’re a moving target.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../Agent_Overview/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Agent_API/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1125,19 +863,19 @@ they’re a moving target.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Server Agent
+                Agent API
               </div>
             </div>
           </a>
         
         
-          <a href="../Dashboard_Overview/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Setup_GenetecIntegration/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Web Dashboard
+                Genetec Integration
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
