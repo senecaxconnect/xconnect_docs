@@ -1,5 +1,22 @@
 # xConnect Release Notes
 [TOC]
+# Release 2021.04.0: April 26th, 2021
+## Enhancements
+- Manual remote command executions are now tracked by the user who initiated the command: 
+
+![enhancement](images/enhancement_executed_by.png)
+
+- Remote commands now supports up to 25,000 characters
+
+- Support for Azure-based Active Directory authentication method. For more information, please see [Azure Authentication docs](/xconnect_docs/Auth_AzureAD)
+
+## Bug Fixes
+- Ability to search the "Serial" field using the "IN" operator within the remote commands page:
+
+![bugfix](images/serial_in_fix.png)
+
+
+
 # Minor Release 2021.02.5: March 25th, 2021
 ## Enhancements
 - Added query operator to Remote Commands and Custom Event Configurations

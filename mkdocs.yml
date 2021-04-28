@@ -35,6 +35,7 @@ nav:
       - Event Logs: Usage_EventLogs.md
   - Additional Documentation:
       - Agent API: Agent_API.md
+      - Azure-Based Authentication: Auth_AzureAD.md
       - Genetec Integration: Setup_GenetecIntegration.md
   - Support: Support.md
   - Release Notes: Release_Notes.md
