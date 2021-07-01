@@ -1,5 +1,29 @@
 # xConnect Release Notes
 [TOC]
+# Release 2021.06.0: June 30th, 2021
+## Enhancements
+- Custom event configurations will now show a complete list of impacted devices:
+
+![custom_event](images/custom_event_num_devices.png)
+  Upon clicking the link, a modal will appear listing all impacted devices
+
+![custom_event](images/custom_event_num_devices_modal.png)
+
+## Bug Fixes
+- Upon disabling a custom event configuration, any outstanding instances of the event will recover: 
+
+![custom_event](images/log_recovery_disable.png)
+
+# Release 2021.05.0: May 25th, 2021
+## Enhancements
+- Significant performance improvement on reporting latest health. Removal of direct queries on database backend, replaced with caching solution.
+- Removal of nested arrays within the remote command and event objects. Improved associations between the commands, events and impacted devices.
+
+## Bug fixes
+- Fixed erroneous characters found in "IN" query criteria (impacts Remote Commands and Custom Event Configurations)
+- Ensure that the login page always renders correctly.
+- Gateway modal will now show the correct labeling when a gateway is offline or online.
+
 # Release 2021.04.0: April 26th, 2021
 ## Enhancements
 - Manual remote command executions are now tracked by the user who initiated the command: 
