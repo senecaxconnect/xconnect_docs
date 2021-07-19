@@ -1,0 +1,1228 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="xConnect Documentation">
+      
+      
+      
+        <link rel="canonical" href="https://senecaxconnect.github.io/xconnect_docs/API_RequestSigning/">
+      
+      
+        <meta name="author" content="Seneca">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
+    
+    
+      
+        <title>Cloud-Based API Request Signing - xConnect Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.19753c6b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../stylesheets/codehilite.css">
+    
+      <link rel="stylesheet" href="../stylesheets/mermaid.css">
+    
+      <link rel="stylesheet" href="../stylesheets/site.css">
+    
+    
+      
+    
+    
+<meta name="theme-color" content="#808080">
+
+<link rel='icon' href='/assets/images/favicon.ico'>
+
+<meta name='apple-mobile-web-app-capable' content='yes'>
+<meta name='mobile-web-app-capable' content='yes'>
+<link rel="manifest" href="/manifest.json">
+<style type="text/css">
+    .mermaid {
+        text-align: left;
+        font-size: 10pt;
+    }
+</style>
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#step-1-create-a-canonical-request-for-signing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://senecaxconnect.github.io/xconnect_docs" title="xConnect Documentation" class="md-header-nav__button md-logo" aria-label="xConnect Documentation">
+      
+  <img src="../images/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            xConnect Documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Cloud-Based API Request Signing
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/senecaxconnect/xconnect_docs/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    senecaxconnect/xconnect_docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://senecaxconnect.github.io/xconnect_docs" title="xConnect Documentation" class="md-nav__button md-logo" aria-label="xConnect Documentation">
+      
+  <img src="../images/logo.svg" alt="logo">
+
+    </a>
+    xConnect Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/senecaxconnect/xconnect_docs/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    senecaxconnect/xconnect_docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" >
+    <label class="md-nav__link" for="nav-1">
+      Platform
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Platform" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        Platform
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Platform_Overview/" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Agent_Overview/" class="md-nav__link">
+      Server Agent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Gateway_Overview/" class="md-nav__link">
+      Gateway
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Dashboard_Overview/" class="md-nav__link">
+      Web Dashboard
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    <label class="md-nav__link" for="nav-2">
+      Getting Started
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Getting Started
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Getting_Started/" class="md-nav__link">
+      Quick Start Guide
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-2" type="checkbox" id="nav-2-2" >
+    <label class="md-nav__link" for="nav-2-2">
+      Step 1 - Gateway Setup
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Step 1 - Gateway Setup" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-2">
+        <span class="md-nav__icon md-icon"></span>
+        Step 1 - Gateway Setup
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Gateway_TurnKey/" class="md-nav__link">
+      Turnkey Appliance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Gateway_Docker/" class="md-nav__link">
+      Virtual/Software/Docker
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Agent_Install/" class="md-nav__link">
+      Step 2 - Install Agent
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Dashboard_Setup/" class="md-nav__link">
+      Step 3 - Web Dashboard
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    <label class="md-nav__link" for="nav-3">
+      Usage Guide
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Usage Guide" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Usage Guide
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Usage_Dashboards/" class="md-nav__link">
+      Dashboards
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Usage_Bookmarks/" class="md-nav__link">
+      Bookmarks
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Usage_Roles/" class="md-nav__link">
+      User Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4" >
+    <label class="md-nav__link" for="nav-3-4">
+      Management
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Management" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        <span class="md-nav__icon md-icon"></span>
+        Management
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Usage_ManageCustomers/" class="md-nav__link">
+      Customers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Usage_ManageUsers/" class="md-nav__link">
+      Users
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Usage_ManageGateways/" class="md-nav__link">
+      Gateways
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Usage_ManageDevices/" class="md-nav__link">
+      Devices
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Usage_ManageEventConfigurations/" class="md-nav__link">
+      Event Configurations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Usage_ManageEmailProfiles/" class="md-nav__link">
+      Email Profiles
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Usage_ManageRemoteCommands/" class="md-nav__link">
+      Remote Commands
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Usage_ManageConnectors/" class="md-nav__link">
+      3rd Party Connectors
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Usage_EventLogs/" class="md-nav__link">
+      Event Logs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    <label class="md-nav__link" for="nav-4">
+      Additional Documentation
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Additional Documentation" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Additional Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Agent_API/" class="md-nav__link">
+      Agent API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Auth_AzureAD/" class="md-nav__link">
+      Azure-Based Authentication
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Setup_GenetecIntegration/" class="md-nav__link">
+      Genetec Integration
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    <label class="md-nav__link" for="nav-5">
+      Developer Documentation
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Developer Documentation" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Developer Documentation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Cloud-Based API Request Signing
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Cloud-Based API Request Signing
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-create-a-canonical-request-for-signing" class="md-nav__link">
+    Step 1: Create a Canonical Request for signing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-create-the-signing-key" class="md-nav__link">
+    Step 3: Create the signing key
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-create-the-final-signature" class="md-nav__link">
+    Step 4: Create the final signature
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-add-required-headers-to-request-and-submit" class="md-nav__link">
+    Step 5: Add required headers to request and submit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-api-request-example" class="md-nav__link">
+    Complete API Request Example
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Support/" class="md-nav__link">
+      Support
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Release_Notes/" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-create-a-canonical-request-for-signing" class="md-nav__link">
+    Step 1: Create a Canonical Request for signing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-create-the-signing-key" class="md-nav__link">
+    Step 3: Create the signing key
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-create-the-final-signature" class="md-nav__link">
+    Step 4: Create the final signature
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-add-required-headers-to-request-and-submit" class="md-nav__link">
+    Step 5: Add required headers to request and submit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-api-request-example" class="md-nav__link">
+    Complete API Request Example
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset"><a class="md-content__button md-icon" download href="API_RequestSigning.pdf" title="PDF Export"><svg style="height: 1.2rem; width: 1.2rem;" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm76.45 211.36l-96.42 95.7c-6.65 6.61-17.39 6.61-24.04 0l-96.42-95.7C73.42 337.29 80.54 320 94.82 320H160v-80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v80h65.18c14.28 0 21.4 17.29 11.27 27.36zM377 105L279.1 7c-4.5-4.5-10.6-7-17-7H256v128h128v-6.1c0-6.3-2.5-12.4-7-16.9z"></path></svg></a>
+              
+                
+                  <a href="https://github.com/senecaxconnect/xconnect_docs/edit/master/docs/API_RequestSigning.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>Cloud-Based API Request Signing</h1>
+                
+                <div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following applies to the xConnect and Asset Management APIs</p>
+<p><a href="https://assetmgmt-api.senecaxconnect.com">https://assetmgmt-api.senecaxconnect.com</a></p>
+<p><a href="https://api.senecaxconnect.com">https://api.senecaxconnect.com</a></p>
+</div>
+<p>All HTTP API requests into the xConnect Platform must be signed by the client application and validated by the Asset Management/xConnect API Platform to ensure they come from authenticated clients. 
+There are 2 important pieces of information - <strong>apiKey</strong> and <strong>secretKey</strong> that can be obtained from the cloud portal and embedded into the client application for signing requests. 
+It's recommended that these keys are stored encrypted on the client side.</p>
+<p>For example in this document, we use the following keys</p>
+<p><strong>apiKey</strong></p>
+<p><code>5501f50fdc62aee5d04dbd6a58b68b781ee2aaade8ad1eb24b1e4e77cb282ae2</code></p>
+<p><strong>secretKey</strong></p>
+<p><code>ARAzUzRzekFwRTNACBQYUx89LlZyImhKFVloHUVMDw8EGRxxSCckFgdFPysAAWJCLDgMdkstZzw3GGVqNHxXcno5Iz54LRBSKy0TaCBwNndkfQNdD38KAA==</code></p>
+<p>The client application needs to process the API request details using 5 steps explained below. 
+The input parameters include such information as the URL, HTTP method, query string, JSON payload, HTTP headers, the security keys, etc. 
+The computation outcome is a signature value which is included in the HTTP header.</p>
+<h2 id="step-1-create-a-canonical-request-for-signing">Step 1: Create a Canonical Request for signing</h2>
+<p>The first step is to build a string representation of your request in a pre-defined format.</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Java</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nx">canonicalRequest</span> <span class="o">=</span>
+    <span class="nx">httpRequestMethod</span> <span class="o">+</span> <span class="s1">&#39;\n&#39;</span>  <span class="o">+</span>
+    <span class="nx">canonicalURI</span> <span class="o">+</span> <span class="s1">&#39;\n&#39;</span> <span class="o">+</span>
+    <span class="nx">canonicalQueryString</span> <span class="o">+</span> <span class="s1">&#39;\n&#39;</span> <span class="o">+</span>
+    <span class="nx">hexEncode</span><span class="p">(</span><span class="nx">hash</span><span class="p">(</span><span class="nx">payload</span><span class="p">));</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Python</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="c1">#  url_query_params may be blank based on the endpoint being used. Example:</span>
+<span class="c1">#  url_query_params = &#39;_page=&#39; + urllib.parse.quote(PAGE_TO_RETRIEVE) + &#39;&amp;&#39; + &#39;_size=&#39; + urllib.parse.quote(NUM_ITEMS_ON_EACH_PAGE)</span>
+<span class="k">if</span> <span class="n">url_query_params</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+    <span class="n">canonicalRequest</span> <span class="o">=</span> <span class="n">httpRequestMethod</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">canonicalURI</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">query_params_to_encrypt</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">hexEncode</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">canonicalRequest</span> <span class="o">=</span> <span class="n">httpRequestMethod</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">canonicalURI</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">hexEncode</span>
+</code></pre></div>
+</div>
+</div>
+<p><strong>httpRequestMethod</strong></p>
+<p>Put one of the following methods in a line by itself - GET, POST, PUT, PATCH</p>
+<p>POST</p>
+<p><strong>canonicalURI</strong></p>
+<p>The canonical URI is the URI-encoded version of the absolute path component of the URI, which is everything in the URI from the HTTP host to the question mark character ("?") that begins the query string parameters (if any).</p>
+<div class="highlight"><pre><span></span><code>/api/v1/kronos/gateways
+</code></pre></div>
+<p><strong>canonicalQueryString</strong></p>
+<ul>
+<li>Create each line containing a name/value pair in the format name=value. Name field is converted to lowercase and URL-encoded.</li>
+<li>Sort all the lines in ascending order</li>
+</ul>
+<p>Example QueryString:</p>
+<p>lastName=Doe&amp;firstName=Jane&amp;Age=30</p>
+<div class="highlight"><pre><span></span><code>age=30
+firstname=Jane
+lastname=Doe
+</code></pre></div>
+<p><strong>hexEncode(hash(payload))</strong></p>
+<ol>
+<li>The payload (if any) is most likely in JSON format. If there's no payload, use an empty string</li>
+<li>Hash the payload content with SHA-256</li>
+<li>Hex-encode the hash value</li>
+<li>Convert the hex-encoded value to lowercase</li>
+</ol>
+<p>Example of an empty payload:
+<div class="highlight"><pre><span></span><code>e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+</code></pre></div></p>
+<p>Combining all of the results above produces the following string:</p>
+<div class="highlight"><pre><span></span><code>POST
+/api/v1/kronos/gateways
+age=30
+firstname=Jane
+lastname=Doe
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+</code></pre></div>
+<p>Finally, hash this computed canonical request, hex-encode and lowercase it. This is the result of step 1.</p>
+<div class="highlight"><pre><span></span><code>5a2d3589ffb15fab720069fbd26fd8e8311a1c7047e5899608faff450df6d7dc
+</code></pre></div>
+<div class="tabbed-set" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Java</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nx">stringtoSign</span> <span class="o">=</span>
+     <span class="nx">hashedCanonicalRequest</span> <span class="o">+</span> <span class="s1">&#39;\n&#39;</span> <span class="o">+</span>
+     <span class="nx">apiKey</span> <span class="o">+</span> <span class="s1">&#39;\n&#39;</span> <span class="o">+</span>
+     <span class="nx">requestTimestamp</span> <span class="o">+</span> <span class="s1">&#39;\n&#39;</span> <span class="o">+</span>
+     <span class="nx">apiversion</span><span class="p">;</span>
+</code></pre></div>
+</div>
+</div>
+<p><strong>hashedCanonicalRequest</strong></p>
+<p>This is the result of step 1</p>
+<p><code>5a2d3589ffb15fab720069fbd26fd8e8311a1c7047e5899608faff450df6d7dc</code></p>
+<p><strong>apiKey</strong></p>
+<p>Provided apiKey from Konexios Portal</p>
+<p><code>5501f50fdc62aee5d04dbd6a58b68b781ee2aaade8ad1eb24b1e4e77cb282ae2</code></p>
+<p><strong>requestTimestamp</strong></p>
+<p>Current UTC time in ISO-8601 format - YYYY-MM-DDThh<img alt="🇲🇲" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f1f2-1f1f2.svg" title=":mm:" />s.sssZ</p>
+<p><code>2016-04-12T14:28:36.218Z</code></p>
+<p><strong>apiVersion</strong></p>
+<p>Version is 1</p>
+<p><code>1</code></p>
+<p>Combining all of the results above produces the following string. This is the result of step 2.</p>
+<div class="highlight"><pre><span></span><code>5a2d3589ffb15fab720069fbd26fd8e8311a1c7047e5899608faff450df6d7dc
+5501f50fdc62aee5d04dbd6a58b68b781ee2aaade8ad1eb24b1e4e77cb282ae2
+2016-04-12T14:28:36.218Z
+1
+</code></pre></div>
+<h2 id="step-3-create-the-signing-key">Step 3: Create the signing key</h2>
+<p>In this step we're going to use the HMAC-SHA256 algorithm a few times to generate the signing key. In the pseudocode, it'll be shown as hmacSha256(key, data). Note the order of the input parameters because if you're using some third-party library for this function, the order of the input parameters might be reversed. The output of this function is in binary, hence note the hex-encode function being used below</p>
+<div class="tabbed-set" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Java</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nx">signingKey</span> <span class="o">=</span> <span class="nx">secretKey</span><span class="p">;</span>
+<span class="nx">signingKey</span> <span class="o">=</span> <span class="nx">hexEncode</span><span class="p">(</span><span class="nx">hmacSha256</span><span class="p">(</span><span class="nx">apiKey</span><span class="p">,</span> <span class="nx">signingKey</span><span class="p">));</span>
+<span class="nx">signingKey</span> <span class="o">=</span> <span class="nx">hexEncode</span><span class="p">(</span><span class="nx">hmacSha256</span><span class="p">(</span><span class="nx">requestTimestamp</span><span class="p">,</span> <span class="nx">signingKey</span><span class="p">));</span>
+<span class="nx">signingKey</span> <span class="o">=</span> <span class="nx">hexEncode</span><span class="p">(</span><span class="nx">hmacSha256</span><span class="p">(</span><span class="nx">apiVersion</span><span class="p">,</span> <span class="nx">signingKey</span><span class="p">));</span>
+</code></pre></div>
+</div>
+</div>
+<p><strong>secretKey</strong></p>
+<p>Provided secretKey from Kronos portal</p>
+<p><strong>apiKey</strong></p>
+<p>Provided apiKey from Arrow Connect portal</p>
+<p><strong>requestTimestamp</strong></p>
+<p>Must be the same value as in step 2</p>
+<p><strong>apiVersion</strong></p>
+<p>Must be the same value as in step 2</p>
+<p>For the example in this guide, here's the output of this step. This is the result of step 3</p>
+<div class="highlight"><pre><span></span><code>signingKey =
+ARAzUzRzekFwRTNACBQYUx89LlZyImhKFVloHUVMDw8EGRxxSCckFgdFPysAAWJCLDgMdkstZzw3GGVqNHxXcno5Iz54LRBSKy0TaCBwNndkfQNdD38KAA==
+signingKey = 3c6e85f6a719e5b8bd77fde0cbdbe19d947f38451afbc8ef6e49a083d86a9c54
+signingKey = 3223bf9bc2d2180046cc40c2e1ed6f9d08261a6c4a394b23c5311e83633a8ef7
+signingKey = d0d1518fc5290c22f1444d46d9c08dd03cc33c6fdad8bbcd57be65b1e2b0b493
+</code></pre></div>
+<h2 id="step-4-create-the-final-signature">Step 4: Create the final signature</h2>
+<p>The signature is computed by signing the result from step 2 and step 3</p>
+<div class="tabbed-set" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Java</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="nx">signature</span> <span class="o">=</span> <span class="nx">hexEncode</span><span class="p">(</span><span class="nx">hmacSha256</span><span class="p">(</span><span class="nx">signingKey</span><span class="p">,</span> <span class="nx">stringToSign</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+<p><strong>signingKey</strong></p>
+<p>Result of step 3</p>
+<p><strong>stringToSign</strong></p>
+<p>Result of step 2</p>
+<p>Result of step 4 is below</p>
+<p><code>28c3ab6cc82294b61e9b2855b428090e474fd1e066c4da63f9715bd2204df553</code></p>
+<h2 id="step-5-add-required-headers-to-request-and-submit">Step 5: Add required headers to request and submit</h2>
+<table>
+<thead>
+<tr>
+<th>x-arrow-apikey</th>
+<th>Provided apiKey</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x-arrow-date</td>
+<td>requestTimestamp from step 2</td>
+</tr>
+<tr>
+<td>x-arrow-version</td>
+<td>apiVersion from step 2</td>
+</tr>
+<tr>
+<td>x-arrow-signature</td>
+<td>final signature from step 4</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>x-arrow-apikey: 5501f50fdc62aee5d04dbd6a58b68b781ee2aaade8ad1eb24b1e4e77cb282ae2
+x-arrow-date: 2016-04-12T14:28:36.218Z
+x-arrow-version: 1
+x-arrow-signature: 28c3ab6cc82294b61e9b2855b428090e474fd1e066c4da63f9715bd2204df553
+</code></pre></div>
+<h2 id="complete-api-request-example">Complete API Request Example</h2>
+<div class="tabbed-set" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">Python</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="kn">import</span> <span class="nn">datetime</span>
+<span class="kn">import</span> <span class="nn">hashlib</span>
+<span class="kn">import</span> <span class="nn">hmac</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">urllib.parse</span>
+
+<span class="nb">dir</span><span class="p">(</span><span class="n">hashlib</span><span class="p">)</span>
+
+<span class="c1"># Base URL and api method URI here:</span>
+<span class="n">base_url</span> <span class="o">=</span> <span class="s1">&#39;https://assetmgmt-api.senecaxconnect.com&#39;</span>
+<span class="n">api_method_uri</span> <span class="o">=</span> <span class="s1">&#39;/api/v1/kronos/telemetries/devices/</span><span class="si">{deviceHid}</span><span class="s1">/latest&#39;</span>
+
+<span class="c1"># Put API key and Secret Keys (RAW) here:</span>
+<span class="c1"># Contact support@senecaxconnect.com for this information.</span>
+<span class="n">application_hid</span> <span class="o">=</span> <span class="s2">&quot;your_applicationhid_goes_here&quot;</span>
+<span class="n">apiKey</span> <span class="o">=</span> <span class="s1">&#39;api_key_goes_here&#39;</span>
+<span class="n">secretKey</span> <span class="o">=</span> <span class="s1">&#39;secret_key_goes_here&#39;</span>
+<span class="n">device_hid</span> <span class="o">=</span> <span class="s1">&#39;device_hid_goes_here&#39;</span>
+
+<span class="n">api_method_uri</span> <span class="o">=</span> <span class="n">api_method_uri</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">deviceHid</span><span class="o">=</span><span class="n">device_hid</span><span class="p">)</span>
+
+<span class="c1"># *************************STEP-1 Create a Canonical Request for signing***********</span>
+<span class="n">httpRequestMethod</span> <span class="o">=</span> <span class="s1">&#39;GET&#39;</span>
+
+<span class="c1"># Telemetry pull by application hid</span>
+<span class="n">canonicalURI</span> <span class="o">=</span> <span class="n">api_method_uri</span>
+
+<span class="c1"># Example on how to handle the from/to timestamps for API calls</span>
+<span class="c1"># from_timestamp_raw = datetime.datetime.now() - datetime.timedelta(hours=HOURS_TO_RETRIEVE)</span>
+<span class="c1"># to_timestamp_raw = datetime.datetime.now()</span>
+<span class="c1"># from_timestamp = from_timestamp_raw.strftime(&#39;%Y-%m-%dT%H:%M:%S.%fZ&#39;)</span>
+<span class="c1"># to_timestamp = to_timestamp_raw.strftime(&#39;%Y-%m-%dT%H:%M:%S.%fZ&#39;)</span>
+
+<span class="c1"># Paging variables go here.</span>
+<span class="n">PAGE_TO_RETRIEVE</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
+<span class="n">NUM_ITEMS_ON_EACH_PAGE</span> <span class="o">=</span> <span class="s1">&#39;150&#39;</span>
+
+<span class="c1"># Example: URL Query params with timestamp ranges</span>
+<span class="c1"># url_query_params = &#39;_page=&#39; + urllib.parse.quote(PAGE_TO_RETRIEVE) + &#39;&amp;&#39; + &#39;_size=&#39; + urllib.parse.quote(NUM_ITEMS_ON_EACH_PAGE) + &#39;&amp;&#39; + &#39;fromTimestamp=&#39; + urllib.parse.quote(from_timestamp) + &quot;&amp;&quot; + &#39;toTimestamp=&#39; + urllib.parse.quote(to_timestamp)</span>
+<span class="c1"># query_params_to_encrypt = &#39;_page=&#39; + PAGE_TO_RETRIEVE + &#39;\n&#39; + &#39;_size=&#39; + NUM_ITEMS_ON_EACH_PAGE + &#39;\n&#39; + &#39;fromtimestamp=&#39; + from_timestamp + &#39;\n&#39; + &#39;totimestamp=&#39; + to_timestamp</span>
+
+<span class="c1"># URL query params with paging only</span>
+<span class="n">url_query_params</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="n">query_params_to_encrypt</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="c1"># url_query_params = &#39;_page=&#39; + urllib.parse.quote(PAGE_TO_RETRIEVE) + &#39;&amp;&#39; + &#39;_size=&#39; + urllib.parse.quote(NUM_ITEMS_ON_EACH_PAGE)</span>
+<span class="c1"># query_params_to_encrypt = &#39;_page=&#39; + PAGE_TO_RETRIEVE + &#39;\n&#39; + &#39;_size=&#39; + NUM_ITEMS_ON_EACH_PAGE</span>
+
+<span class="c1"># use this to handle any body payloads coming in</span>
+<span class="n">body_payload</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+<span class="c1"># print(canonicalQueryString)</span>
+<span class="c1"># ************* REQUEST VALUES *************</span>
+
+<span class="n">hexEncode</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">body_payload</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">url_query_params</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>
+    <span class="n">canonicalRequest</span> <span class="o">=</span> <span class="n">httpRequestMethod</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">canonicalURI</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">query_params_to_encrypt</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">hexEncode</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">canonicalRequest</span> <span class="o">=</span> <span class="n">httpRequestMethod</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">canonicalURI</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">hexEncode</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">canonicalRequest</span><span class="p">)</span>
+
+<span class="c1"># ********************STEP-2  Create the string to sign*********************************</span>
+<span class="n">hashedCanonicalRequest</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">canonicalRequest</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+<span class="c1"># Set the current timestamp of the request, API version should be set to 1</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span>
+<span class="n">requestTimestamp</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">T%H:%M:%S.</span><span class="si">%f</span><span class="s1">Z&#39;</span><span class="p">)</span>
+<span class="n">apiVersion</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span>
+
+<span class="c1"># Step-2</span>
+<span class="n">stringToSign</span> <span class="o">=</span> <span class="n">hashedCanonicalRequest</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">apiKey</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">requestTimestamp</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">apiVersion</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">stringToSign</span><span class="p">)</span>
+
+<span class="c1"># ************STEP-3  Create the signing key**********************</span>
+
+<span class="k">def</span> <span class="nf">sign</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">hmac</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">msg</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">),</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+<span class="c1"># Create the signing key using the function defined above.</span>
+<span class="n">signingKey</span> <span class="o">=</span> <span class="n">secretKey</span>
+<span class="n">signingKey</span> <span class="o">=</span> <span class="n">sign</span><span class="p">(</span><span class="n">apiKey</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">),</span> <span class="n">signingKey</span><span class="p">)</span>
+<span class="n">signingKey</span> <span class="o">=</span> <span class="n">sign</span><span class="p">(</span><span class="n">requestTimestamp</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">),</span> <span class="n">signingKey</span><span class="p">)</span>
+<span class="n">signingKey</span> <span class="o">=</span> <span class="n">sign</span><span class="p">(</span><span class="n">apiVersion</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">),</span> <span class="n">signingKey</span><span class="p">)</span>
+
+<span class="c1"># ************STEP-4  Create the final signature*******************************</span>
+<span class="c1"># Sign the string_to_sign using the signing_key</span>
+<span class="n">signature</span> <span class="o">=</span> <span class="n">sign</span><span class="p">(</span><span class="n">signingKey</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">),</span> <span class="n">stringToSign</span><span class="p">)</span>
+
+
+<span class="c1"># Make the GET call for this API function</span>
+<span class="c1"># Example with application HID</span>
+<span class="c1"># url = base_url + api_method_uri + application_hid + &quot;?&quot; + url_query_params</span>
+<span class="n">url</span> <span class="o">=</span> <span class="n">base_url</span> <span class="o">+</span> <span class="n">api_method_uri</span> <span class="o">+</span> <span class="s2">&quot;?&quot;</span> <span class="o">+</span> <span class="n">url_query_params</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Content-type&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Accept&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;x-arrow-apikey&#39;</span><span class="p">:</span> <span class="n">apiKey</span><span class="p">,</span>
+    <span class="s1">&#39;x-arrow-date&#39;</span><span class="p">:</span> <span class="n">requestTimestamp</span><span class="p">,</span>
+    <span class="s1">&#39;x-arrow-version&#39;</span><span class="p">:</span> <span class="n">apiVersion</span><span class="p">,</span>
+    <span class="s1">&#39;x-arrow-signature&#39;</span><span class="p">:</span> <span class="n">signature</span>
+<span class="p">}</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">r</span> <span class="ow">and</span> <span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">:</span>
+    <span class="c1"># format the content as dictionary objects</span>
+    <span class="n">returnedData</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="n">returnedData</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;No telemetry data returned.&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;There was no data returned from the API.&#39;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../Setup_GenetecIntegration/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Genetec Integration
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../Support/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Support
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 <a href="https://www.senecadata.com"> - Seneca Data Distributors, Inc</a>
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://unpkg.com/mermaid@7.0.9/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
