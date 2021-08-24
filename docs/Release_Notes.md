@@ -1,9 +1,11 @@
 # xConnect Release Notes
 [TOC]
+
 # Release 2021.08.0: August 23rd, 2021
 ## Enhancements
 - Native remote desktop functionality (BETA)
-   - We are now supporting native remote desktop within the xConnect portal for a subset of BETA customers. 
+    
+    - We are now supporting native remote desktop within the xConnect portal for a subset of BETA customers. 
   This requires an enhanced agent to establish the connection to your monitored device. 
     
 ![rdp](images/2021080_rdp.png)
@@ -11,7 +13,8 @@
   - Note: This is not yet available to all xConnect customers. For more information, please contact your account manager. 
 
 - Improvements for batch remote command payloads
-   - In an effort to reduce heavy traffic to the virtualized gateways, 
+
+    - In an effort to reduce heavy traffic to the virtualized gateways, 
      we've reduced the amount of payloads sent when a batch command is run via the remote commands section.
      
 ## Bug Fixes

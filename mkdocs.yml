@@ -40,7 +40,6 @@ nav:
   - Support: Support.md
   - Release Notes: Release_Notes.md
 
-
 theme:
   name: 'material'
   custom_dir: 'theme'
@@ -52,8 +51,6 @@ theme:
 
 plugins:
     - search
-    - pdf-export
-
 
 markdown_extensions:
   - admonition
