@@ -1039,7 +1039,65 @@ x-arrow-version: 1
 x-arrow-signature: 28c3ab6cc82294b61e9b2855b428090e474fd1e066c4da63f9715bd2204df553
 </code></pre></div>
 <h1 id="complete-api-request-example">Complete API Request Example</h1>
-<div class="tabbed-set" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Python</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Java</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code> <span class="n">String</span> <span class="n">API_KEY</span> <span class="o">=</span> <span class="s">&quot;Your_Raw_API_key&quot;</span><span class="p">;</span>
+ <span class="n">String</span> <span class="n">SECRET_KEY</span> <span class="o">=</span> <span class="s">&quot;Your_Raw_Secret_key&quot;</span><span class="p">;</span>
+ <span class="n">String</span> <span class="n">apiMethodUri</span> <span class="o">=</span> <span class="s">&quot;/api/v1/kronos/devices&quot;</span><span class="p">;</span>
+ <span class="n">String</span> <span class="n">timestamp</span> <span class="o">=</span> <span class="n">Instant</span><span class="p">.</span><span class="na">now</span><span class="p">().</span><span class="na">toString</span><span class="p">();</span>
+ <span class="n">String</span> <span class="n">httpRequestMethod</span> <span class="o">=</span> <span class="s">&quot;GET&quot;</span><span class="p">;</span>
+ <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">uriParameters</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+ <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">uriParametersMap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+ <span class="n">String</span> <span class="n">signature</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
+
+ <span class="k">try</span> <span class="p">{</span>
+        <span class="c1">// region Specify query parameters here</span>
+        <span class="n">uriParametersMap</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;_page&quot;</span><span class="p">,</span> <span class="s">&quot;0&quot;</span><span class="p">);</span>
+        <span class="n">uriParametersMap</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;_size&quot;</span><span class="p">,</span> <span class="s">&quot;100&quot;</span><span class="p">);</span>
+        <span class="c1">// endregion</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">entry</span> <span class="p">:</span> <span class="n">uriParametersMap</span><span class="p">.</span><span class="na">entrySet</span><span class="p">())</span> <span class="p">{</span>
+            <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="n">entry</span><span class="p">.</span><span class="na">getKey</span><span class="p">();</span>
+            <span class="n">String</span> <span class="n">value</span> <span class="o">=</span> <span class="n">entry</span><span class="p">.</span><span class="na">getValue</span><span class="p">();</span>
+            <span class="k">try</span> <span class="p">{</span>
+                <span class="n">uriParameters</span><span class="p">.</span><span class="na">add</span><span class="p">(</span>
+                        <span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;%s=%s&quot;</span><span class="p">,</span> <span class="n">URLEncoder</span><span class="p">.</span><span class="na">encode</span><span class="p">(</span><span class="n">name</span><span class="p">.</span><span class="na">toLowerCase</span><span class="p">(),</span> <span class="n">StandardCharsets</span><span class="p">.</span><span class="na">UTF_8</span><span class="p">.</span><span class="na">toString</span><span class="p">()),</span>
+                                <span class="n">AcsUtils</span><span class="p">.</span><span class="na">trimToEmpty</span><span class="p">(</span><span class="n">value</span><span class="p">)));</span>
+            <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// ignore</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="c1">// region Create canonical request</span>
+        <span class="n">StringBuilder</span> <span class="n">builder</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="p">();</span>
+        <span class="n">builder</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">httpRequestMethod</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="sc">&#39;\n&#39;</span><span class="p">);</span>
+        <span class="n">builder</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">apiMethodUri</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="sc">&#39;\n&#39;</span><span class="p">);</span>
+
+        <span class="c1">// append parameters</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">uriParameters</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">uriParameters</span><span class="p">);</span>
+            <span class="n">uriParameters</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">p</span> <span class="o">-&gt;</span> <span class="n">builder</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">p</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="sc">&#39;\n&#39;</span><span class="p">));</span>
+        <span class="p">}</span>
+
+        <span class="n">builder</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">sha256Hex</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">));</span>
+        <span class="n">String</span> <span class="n">canonicalRequest</span> <span class="o">=</span> <span class="n">builder</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
+        <span class="c1">// endregion</span>
+
+        <span class="c1">// region Sign the string</span>
+        <span class="n">StringBuilder</span> <span class="n">stringToSign</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="p">();</span>
+        <span class="n">stringToSign</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">sha256Hex</span><span class="p">(</span><span class="n">canonicalRequest</span><span class="p">)).</span><span class="na">append</span><span class="p">(</span><span class="sc">&#39;\n&#39;</span><span class="p">);</span>
+        <span class="n">stringToSign</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">API_KEY</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="sc">&#39;\n&#39;</span><span class="p">);</span>
+        <span class="n">stringToSign</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">timestamp</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="sc">&#39;\n&#39;</span><span class="p">);</span>
+        <span class="n">stringToSign</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&quot;1&quot;</span><span class="p">);</span>
+
+        <span class="n">signature</span> <span class="o">=</span> <span class="n">hmacSha256Hex</span><span class="p">(</span>
+                <span class="n">hmacSha256Hex</span><span class="p">(</span><span class="s">&quot;1&quot;</span><span class="p">,</span>
+                        <span class="n">hmacSha256Hex</span><span class="p">(</span><span class="n">timestamp</span><span class="p">,</span> <span class="n">hmacSha256Hex</span><span class="p">(</span><span class="n">API_KEY</span><span class="p">,</span> <span class="n">SECRET_KEY</span><span class="p">))),</span>
+                <span class="n">stringToSign</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">}</span>
+</code></pre></div>
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Python</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="c1"># -*- coding: utf-8 -*-</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
 <span class="kn">import</span> <span class="nn">hashlib</span>
