@@ -309,6 +309,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#arrow-hosted-gateway-container" class="md-nav__link">
+    Arrow-hosted Gateway Container
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#physical-turnkey-gateway" class="md-nav__link">
     Physical (Turnkey) Gateway
   </a>
@@ -323,50 +330,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#docker-container" class="md-nav__link">
-    Docker Container
+  <a href="#self-hosted-docker-container" class="md-nav__link">
+    Self-hosted Docker Container
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#secure-gateway-services" class="md-nav__link">
-    Secure Gateway Services
-  </a>
-  
-    <nav class="md-nav" aria-label="Secure Gateway Services">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#arrow-connect-gateway-engine" class="md-nav__link">
-    Arrow Connect Gateway Engine
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gateway-configuration-manager" class="md-nav__link">
-    Gateway Configuration Manager
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#remote-desktop-gateway" class="md-nav__link">
-    Remote Desktop Gateway
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#secure-tunnel-service" class="md-nav__link">
-    Secure Tunnel Service
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -905,6 +871,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#arrow-hosted-gateway-container" class="md-nav__link">
+    Arrow-hosted Gateway Container
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#physical-turnkey-gateway" class="md-nav__link">
     Physical (Turnkey) Gateway
   </a>
@@ -919,50 +892,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#docker-container" class="md-nav__link">
-    Docker Container
+  <a href="#self-hosted-docker-container" class="md-nav__link">
+    Self-hosted Docker Container
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#secure-gateway-services" class="md-nav__link">
-    Secure Gateway Services
-  </a>
-  
-    <nav class="md-nav" aria-label="Secure Gateway Services">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#arrow-connect-gateway-engine" class="md-nav__link">
-    Arrow Connect Gateway Engine
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gateway-configuration-manager" class="md-nav__link">
-    Gateway Configuration Manager
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#remote-desktop-gateway" class="md-nav__link">
-    Remote Desktop Gateway
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#secure-tunnel-service" class="md-nav__link">
-    Secure Tunnel Service
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1021,12 +953,20 @@ Web Client Dashboard hosted in our cloud.</p>
           C --&gt;|SSL - Port 443|D(xConnect Cloud Dashboard - Azure);
           style C fill:#04acec
           linkStyle default stroke-width:2px,fill:none,stroke:black;</div>
-<p>There are three installation options for this Secure Gateway:</p>
-<ul>
-<li>Physical (Turnkey)</li>
-<li>Virtual Machine</li>
-<li>Docker Container</li>
-</ul>
+<p>There are 4 installation options for this Secure Gateway:
+- Arrow-hosted Gateway Container (also referred to as vBridge or Virtual Gateway)
+- Physical (Turnkey)
+- Virtual Machine
+- Self-hosted Docker Container</p>
+<h2 id="arrow-hosted-gateway-container">Arrow-hosted Gateway Container</h2>
+<p>Arrow offers a fully hosted version of the Secure Gateway software. To have this enabled in your subscription, please contact your Account Manager to understand subscription requirements.</p>
+<p>Once your subscription has been enabled with this capability, adding a new gateway is as simple as a click of a few buttons:</p>
+<p>1) Once logged in, find the "Magic Wand" icon in the top-right menu of your Cloud Dashboard
+2) Select 'Virtual Gateway'
+3) Name your new gateway and assign it to a customer
+4) <strong>IMPORTANT-</strong> Once the gateway has been created, take note of the gateway address. It is recommended to copy this gateway address and store it for later use
+5) On your agent device(s), paste the gateway address into the 'Gateway Address' field in your agent settings
+6) Hit <code>Save</code>  </p>
 <h2 id="physical-turnkey-gateway">Physical (Turnkey) Gateway</h2>
 <p>The physical gateway option greatly reduces setup time. This is a physical hardware device
 provided by Arrow that has our hardened system image and most configuration details already
@@ -1047,7 +987,7 @@ provided by Arrow. The specifications of this physical gateway are:</p>
 </tr>
 <tr>
 <td>Operating System</td>
-<td>Ubuntu Linux 16.04 LTS Server</td>
+<td>Ubuntu Linux 18.04 LTS Server</td>
 </tr>
 <tr>
 <td>Memory</td>
@@ -1110,57 +1050,21 @@ Gateway is desired.</p>
 <p>It is recommended to have 2 virtual switches attached to the VM. 1 Virtual Switch with connectivity
 to your internal LAN assets, and 1 Virtual Switch with Internet connectivity.</p>
 </div>
-<p>Professional Services are available to assist in importing and configuration of the virtual Secure
-Gateway.</p>
+<p>Professional Services are available to assist configuration of the virtual Secure
+Gateway on your virtual machines.</p>
 <p>Onboarding/Installation instructions are available in the "Getting Started" chapter. </p>
-<h2 id="docker-container">Docker Container</h2>
-<p>We now support deploying a "bare minimum" Gateway image via Docker. This option allows you to have 
+<h2 id="self-hosted-docker-container">Self-hosted Docker Container</h2>
+<p>We now support deploying an xConnect Gateway image via Docker. This option allows you to have 
 an xConnect Secure Gateway deployed in minutes, granted you can supply a machine that Docker can be installed on.</p>
-<p>As of this writing, you can use any Linux OS of your choosing to deploy the xConnect Gateway software with Docker.</p>
+<p>You can use any Linux OS that supports the native Docker engine can be used to deploy the xConnect Gateway container. Other container engines and orchestration tools, like podman and kubernetes, are not currently supported. </p>
 <p>Container installation instruction files are available on our github page:
 <a href="https://github.com/senecaxconnect/xconnect_gateway_docker">https://github.com/senecaxconnect/xconnect_gateway_docker</a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Docker for Windows will not be officially supported until WSL2 is publicly available. However,
-you could install a Linux OS within a Hyper-V VM on Windows and it would be fully supported.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Certain features (Remote Desktop Pass-through and Seneca Remote Support Services) will <strong>NOT</strong> be available 
-(without Seneca consultation) when using the Docker gateway:</p>
+<p>Docker for Windows is not officially supported, even through WSL. However,
+you could install a Docker-supported Linux OS within a Hyper-V VM on Windows and it would be fully supported.</p>
 </div>
 <p>Installation instructions are also available in the "Getting Started" chapter. </p>
-<h2 id="secure-gateway-services">Secure Gateway Services</h2>
-<p>The xConnect Secure Gateway is a device, or virtual machine, that runs a customized and
-hardened Ubuntu Server system image. Within this image are several key services:</p>
-<h4 id="arrow-connect-gateway-engine">Arrow Connect Gateway Engine</h4>
-<p>This service is the main data consumption and transmission engine responsible for
-ingesting telemetry from all Server Agents and transmitting telemetry to Arrow Connect
-IoT. Arrow Connect IoT provides telemetry to the Web Client Dashboard through secure
-APIs.</p>
-<h4 id="gateway-configuration-manager">Gateway Configuration Manager</h4>
-<p>This is a built-in local (or LAN accessible) web interface for configuration all relevant
-features to the xConnect Remote Management Platform.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Not available with Docker container</p>
-</div>
-<h4 id="remote-desktop-gateway">Remote Desktop Gateway</h4>
-<p>This is a service that provides client-less remote desktop connections from the Web
-Client Dashboard through to the Server Agent system. At time of this publication, RDP is
-the only protocol supported.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Not available with Docker container</p>
-</div>
-<h4 id="secure-tunnel-service">Secure Tunnel Service</h4>
-<p>This service provides secure HTTP and TCP tunnels to and from the Web Client
-Dashboard and the private network being managed. All connections are encrypted web
-sockets through port 443 (HTTPS).</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Not available with Docker container</p>
-</div>
 <h2 id="network-requirements">Network Requirements</h2>
 <p>The xConnect Secure Gateway requires very minimal network configuration or firewall rules to
 be fully functional. Some common industry standard ports that are required to be open are:</p>
