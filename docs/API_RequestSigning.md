@@ -113,7 +113,7 @@ This is the result of step 1
 
 apiKey
 
-Provided apiKey from Konexios Portal
+Provided apiKey from xConnect team (support@senecaxconnect.com)
 
 ```5501f50fdc62aee5d04dbd6a58b68b781ee2aaade8ad1eb24b1e4e77cb282ae2```
 

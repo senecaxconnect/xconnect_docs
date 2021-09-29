@@ -14,12 +14,24 @@ Web Client Dashboard hosted in our cloud.
           linkStyle default stroke-width:2px,fill:none,stroke:black;
 ```
 
-There are three installation options for this Secure Gateway:
-
+There are 4 installation options for this Secure Gateway:
+- Arrow-hosted Gateway Container (also referred to as vBridge or Virtual Gateway)
 - Physical (Turnkey)
 - Virtual Machine
-- Docker Container
+- Self-hosted Docker Container
 
+
+## Arrow-hosted Gateway Container
+Arrow offers a fully hosted version of the Secure Gateway software. To have this enabled in your subscription, please contact your Account Manager to understand subscription requirements.
+
+Once your subscription has been enabled with this capability, adding a new gateway is as simple as a click of a few buttons:
+
+1. Once logged in, find the "Magic Wand" icon in the top-right menu of your Cloud Dashboard
+2. Select 'Virtual Gateway'
+3. Name your new gateway and assign it to a customer
+4. **IMPORTANT-** Once the gateway has been created, take note of the gateway address. It is recommended to copy this gateway address and store it for later use
+5. On your agent device(s), paste the gateway address into the 'Gateway Address' field in your agent settings
+6. Hit `Save`  
 ## Physical (Turnkey) Gateway 
 The physical gateway option greatly reduces setup time. This is a physical hardware device
 provided by Arrow that has our hardened system image and most configuration details already
@@ -31,7 +43,7 @@ provided by Arrow. The specifications of this physical gateway are:
 | **SYSTEM**              |                                                                           |
 |-------------------------|---------------------------------------------------------------------------|
 | Manufacturer            | Seneca®                                                                   |
-| Operating System        | Ubuntu Linux 16.04 LTS Server                                             |
+| Operating System        | Ubuntu Linux 18.04 LTS Server                                             |
 | Memory                  | 8GB DDR3L 1600MHz                                                         |
 | Processor               | Intel® Celeron® N3060 1.6-2.48Ghz 2MB Cache                               |
 | USB                     | 4x USB3.0 (Front), 1x USB2.0 (Front), 2x Micro USB 2.0 (Side)             |
@@ -58,63 +70,26 @@ A Hyper-V Virtual Disk or VMWare OVA can be provided upon request and needs to b
     It is recommended to have 2 virtual switches attached to the VM. 1 Virtual Switch with connectivity
     to your internal LAN assets, and 1 Virtual Switch with Internet connectivity.
 
-Professional Services are available to assist in importing and configuration of the virtual Secure
-Gateway.
+Professional Services are available to assist configuration of the virtual Secure
+Gateway on your virtual machines.
 
 Onboarding/Installation instructions are available in the "Getting Started" chapter. 
 
-## Docker Container
+## Self-hosted Docker Container
 
-We now support deploying a "bare minimum" Gateway image via Docker. This option allows you to have 
+We now support deploying an xConnect Gateway image via Docker. This option allows you to have 
 an xConnect Secure Gateway deployed in minutes, granted you can supply a machine that Docker can be installed on.
 
-As of this writing, you can use any Linux OS of your choosing to deploy the xConnect Gateway software with Docker.
+You can use any Linux OS that supports the native Docker engine can be used to deploy the xConnect Gateway container. Other container engines and orchestration tools, like podman and kubernetes, are not currently supported. 
 
 Container installation instruction files are available on our github page:
 <https://github.com/senecaxconnect/xconnect_gateway_docker>
 
 !!! note
-    Docker for Windows will not be officially supported until WSL2 is publicly available. However,
-    you could install a Linux OS within a Hyper-V VM on Windows and it would be fully supported.
-
-!!! note
-    Certain features (Remote Desktop Pass-through and Seneca Remote Support Services) will **NOT** be available 
-    (without Seneca consultation) when using the Docker gateway:
+    Docker for Windows is not officially supported, even through WSL. However,
+    you could install a Docker-supported Linux OS within a Hyper-V VM on Windows and it would be fully supported.
 
 Installation instructions are also available in the "Getting Started" chapter. 
-
-## Secure Gateway Services
-The xConnect Secure Gateway is a device, or virtual machine, that runs a customized and
-hardened Ubuntu Server system image. Within this image are several key services:
-
-#### Arrow Connect Gateway Engine
-This service is the main data consumption and transmission engine responsible for
-ingesting telemetry from all Server Agents and transmitting telemetry to Arrow Connect
-IoT. Arrow Connect IoT provides telemetry to the Web Client Dashboard through secure
-APIs.
-
-#### Gateway Configuration Manager
-This is a built-in local (or LAN accessible) web interface for configuration all relevant
-features to the xConnect Remote Management Platform.
-
-!!! note
-    Not available with Docker container
-
-#### Remote Desktop Gateway
-This is a service that provides client-less remote desktop connections from the Web
-Client Dashboard through to the Server Agent system. At time of this publication, RDP is
-the only protocol supported.
-
-!!! note
-    Not available with Docker container
-
-#### Secure Tunnel Service
-This service provides secure HTTP and TCP tunnels to and from the Web Client
-Dashboard and the private network being managed. All connections are encrypted web
-sockets through port 443 (HTTPS).
-
-!!! note
-    Not available with Docker container
 
 ## Network Requirements
 The xConnect Secure Gateway requires very minimal network configuration or firewall rules to
