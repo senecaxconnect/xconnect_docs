@@ -15,14 +15,16 @@ nav:
   - Getting Started:
       - Quick Start Guide: Getting_Started.md
       - Step 1 - Gateway Setup:
-          - Turnkey Appliance: Gateway_TurnKey.md
-          - Virtual/Software/Docker: Gateway_Docker.md
+          - Virtual Gateway: Gateway_Virtual.md
+          - Physical/Turnkey Appliance: Gateway_TurnKey.md
+          - Self-Hosted Docker Container: Gateway_Docker.md
       - Step 2 - Install Agent: Agent_Install.md
       - Step 3 - Web Dashboard: Dashboard_Setup.md
-  - Usage Guide:
+  - Dashboard Usage Guide:
       - Dashboards: Usage_Dashboards.md
       - Bookmarks: Usage_Bookmarks.md
       - User Types: Usage_Roles.md
+      - Navigation: Usage_SideNav.md
       - Management:
           - Customers: Usage_ManageCustomers.md
           - Users: Usage_ManageUsers.md
@@ -34,6 +36,7 @@ nav:
           - 3rd Party Connectors: Usage_ManageConnectors.md
       - Event Logs: Usage_EventLogs.md
   - Additional Documentation:
+      - Network Requirements: Network_Requirements.md
       - Agent API: Agent_API.md
       - Azure-Based Authentication: Auth_AzureAD.md
       - Genetec Integration: Setup_GenetecIntegration.md

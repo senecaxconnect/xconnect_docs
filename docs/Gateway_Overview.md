@@ -8,8 +8,8 @@ Web Client Dashboard hosted in our cloud.
       graph LR
           A(Edge Devices) --> B(Agent)
           B --> A
-          B -->|MQTT - Port 1883|C(Gateway)
-          C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure);
+          B -->|MQTT(1883)|C(Gateway)
+          C -->|TLS(443)/MQTT(8883)|D(xConnect Cloud Dashboard - Azure);
           style C fill:#04acec
           linkStyle default stroke-width:2px,fill:none,stroke:black;
 ```
@@ -22,16 +22,10 @@ There are 4 installation options for this Secure Gateway:
 
 
 ## Arrow-hosted Gateway Container
-Arrow offers a fully hosted version of the Secure Gateway software. To have this enabled in your subscription, please contact your Account Manager to understand subscription requirements.
+Arrow offers a fully hosted version of the Secure Gateway software dedicated to your instance. To have this enabled in your subscription, please contact your Account Manager to understand subscription requirements.
 
-Once your subscription has been enabled with this capability, adding a new gateway is as simple as a click of a few buttons:
-
-1. Once logged in, find the "Magic Wand" icon in the top-right menu of your Cloud Dashboard
-2. Select 'Virtual Gateway'
-3. Name your new gateway and assign it to a customer
-4. **IMPORTANT-** Once the gateway has been created, take note of the gateway address. It is recommended to copy this gateway address and store it for later use
-5. On your agent device(s), paste the gateway address into the 'Gateway Address' field in your agent settings
-6. Hit `Save`  
+Once your subscription has been enabled with this capability, adding a new gateway is as simple as a click of a few buttons.
+ 
 ## Physical (Turnkey) Gateway 
 The physical gateway option greatly reduces setup time. This is a physical hardware device
 provided by Arrow that has our hardened system image and most configuration details already
@@ -49,7 +43,7 @@ provided by Arrow. The specifications of this physical gateway are:
 | USB                     | 4x USB3.0 (Front), 1x USB2.0 (Front), 2x Micro USB 2.0 (Side)             |
 | Physical Security       | 1x Kensington Lock                                                        |
 | Warranty                | 3 and 5 Year Warranty Options Available                                   |
-| **MECHANICALS**             |                                                                           |
+| **MECHANICALS**         |                                                                           |
 | Thermals                | 0ºC to 35ºC / 32ºF to 95ºF                                                |
 | Power Draw              | 15W                                                                       |
 | Cooling                 | Aluminum Extrusion Chassis Heatsink                                       |
@@ -60,8 +54,8 @@ provided by Arrow. The specifications of this physical gateway are:
 Onboarding/Installation instructions are available in the [Getting Started](/xconnect_docs/Getting_Started) chapter. 
 
 ## Virtual Machine Gateway Option
-The virtual gateway option is available when using existing infrastructure to host the Secure
-Gateway is desired.
+The virtual gateway option is available when it is desired to use existing infrastructure to host the Secure
+Gateway.
 
 A Hyper-V Virtual Disk or VMWare OVA can be provided upon request and needs to be imported into the
  appropriate hypervisor. 
@@ -91,33 +85,3 @@ Container installation instruction files are available on our github page:
 
 Installation instructions are also available in the "Getting Started" chapter. 
 
-## Network Requirements
-The xConnect Secure Gateway requires very minimal network configuration or firewall rules to
-be fully functional. Some common industry standard ports that are required to be open are:
-
-### Agent --> Gateway Access Requirement
-This is typically on your LAN so access rules are rarely required unless running on a hardened network.
-
-In the case of internal LAN traffic being managed, verify the following access is granted between 
-the hosts (Agents) and the Gateway asset
-- Port 8080 (TCP/HTTP)
-- Port 1883 (TCP/MQTT)
-
-### Gateway --> Cloud Access Requirement
-
-Microsoft Azure access is bare minimum required:
-- Destination IPs will vary based on region and load-balancing so a hostname based rule is preferred.
-- A wildcard access rule for outbound traffic to *.senecaxconnect.com is the safest bet to future proof your firewall rules.
-- Outbound TCP traffic via **Port 443** to *.senecaxconnect.com
-- Outbound TCP traffic via **Port 8883** to *.senecaxconnect.com
-- **No inbound rules required** 
-                                                                            
-Amazon EC2 access is optional but is highly recommend and required for the following features to function:
-- Seneca’s administrative interface to connect to your gateway to push updates
-- Server Agent OTA updates
-- General support/troubleshooting of your gateway
-- Secure Remote Desktop Passthrough
-- If you wish to opt-in to these features and enable our team to continually support your platform, 
-please whitelist **Outbound TCP 443** to ***.ngrok.io** and ***.ngrok.com**. 
-We cannot provide a reliable IP address list due to auto load balancing on the cluster, 
-they’re a moving target.

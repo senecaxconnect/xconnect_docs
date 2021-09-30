@@ -27,26 +27,22 @@ Please follow the steps below in the same order of operations as described:
 Confirm the following before continuing your xConnect installation and configuration:
 
 
-* Network Access has been configured or confirmed:
-
-    | Source          |   Destination |   Port | Protocol  |
-    |-----------------|---------------|--------|-----------|
-    | Agent System(s) | Gateway       |  1883  | MQTT (TCP)|
-    | Agent System(s) | Gateway       |  8080  | HTTP (TCP)|
-    | Gateway         | Internet      |  443   | SSL  (TCP)|
-    | Gateway         | Internet      |  8883  | RabbitMQ (TCP)|
-
+* Network Access has been configured or confirmed against [xConnect Network Requirements](/xconnect_docs/Network_Requirements)
 * You've received credentials for the xConnect Web Dashboard ([senecaxconnect.com](http://senecaxconnect.com))
-* Have a PC that can be used to complete IP address changes to gateway (if desired)
+* Have a PC that can be used to complete IP address changes to gateway (only required if using Seneca-provided Physical Gateway)
     
 
 ## Gateway Setup
 
-If you purchased a turnkey gateway appliance from Seneca, complete the setup steps here:
+### xConnect Guardian Virtual Gateway (Arrow-Hosted)
+
+[Virtual Gateway Setup](/xconnect_docs/Gateway_Virtual)
+
+### Physical/Turnkey Gateway (Seneca-provided)
 
 [Turnkey Gateway Setup](/xconnect_docs/Gateway_TurnKey)
 
-If you are setting up a virtual machine gateway, complete the setup steps here:
+###Virtual Machine Gateway (Self-Hosted)
 
 [Docker Gateway Setup](/xconnect_docs/Gateway_Docker)
 
@@ -55,7 +51,7 @@ If you are setting up a virtual machine gateway, complete the setup steps here:
 It is recommended to always download the latest version of the Agent. This is available from our 
 download repository here:
 
-[Download repository](https://downloads.senecaxconnect.com)
+[Download repository](https://download.senecaxconnect.com/files/Agent/xConnect_Server_Agent(Latest).zip)
 
 ## Dashboard Setup
 
