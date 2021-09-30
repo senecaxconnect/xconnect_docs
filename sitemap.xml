@@ -41,11 +41,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://senecaxconnect.github.io/xconnect_docs/Data_Flow/</loc>
-         <lastmod>2021-09-30</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://senecaxconnect.github.io/xconnect_docs/Gateway_Docker/</loc>
          <lastmod>2021-09-30</lastmod>
          <changefreq>daily</changefreq>
@@ -61,12 +56,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://senecaxconnect.github.io/xconnect_docs/Gateway_Virtual/</loc>
+         <lastmod>2021-09-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://senecaxconnect.github.io/xconnect_docs/Getting_Started/</loc>
          <lastmod>2021-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://senecaxconnect.github.io/xconnect_docs/Network_Security/</loc>
+         <loc>https://senecaxconnect.github.io/xconnect_docs/Network_Requirements/</loc>
          <lastmod>2021-09-30</lastmod>
          <changefreq>daily</changefreq>
     </url>

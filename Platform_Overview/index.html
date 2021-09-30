@@ -417,8 +417,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Gateway_Virtual/" class="md-nav__link">
+        Virtual Gateway
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Gateway_TurnKey/" class="md-nav__link">
-        Turnkey Appliance
+        Physical/Turnkey Appliance
       </a>
     </li>
   
@@ -430,7 +442,7 @@
   
     <li class="md-nav__item">
       <a href="../Gateway_Docker/" class="md-nav__link">
-        Virtual/Software/Docker
+        Self-Hosted Docker Container
       </a>
     </li>
   
@@ -486,13 +498,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       <label class="md-nav__link" for="__nav_3">
-        Usage Guide
+        Dashboard Usage Guide
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Usage Guide" data-md-level="1">
+      <nav class="md-nav" aria-label="Dashboard Usage Guide" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Usage Guide
+          Dashboard Usage Guide
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -536,18 +548,30 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../Usage_SideNav/" class="md-nav__link">
+        Navigation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
       
-      <label class="md-nav__link" for="__nav_3_4">
+      <label class="md-nav__link" for="__nav_3_5">
         Management
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Management" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_4">
+        <label class="md-nav__title" for="__nav_3_5">
           <span class="md-nav__icon md-icon"></span>
           Management
         </label>
@@ -696,6 +720,18 @@
           Additional Documentation
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Network_Requirements/" class="md-nav__link">
+        Network Requirements
+      </a>
+    </li>
+  
+
           
             
   
@@ -882,23 +918,23 @@
 <ul>
 <li>Temperatures, fan speeds, power supplies</li>
 <li>RAID controllers, physical, logical and virtual storage</li>
-<li>System utilizations</li>
+<li>System utilization</li>
 <li>Application monitoring</li>
-<li>Network bandwidth analysis</li>
-<li>Application Log Analysis</li>
+<li>Network health</li>
+<li>Application health</li>
 </ul>
 <h2 id="manage">Manage</h2>
 <ul>
 <li>Client-less remote desktop</li>
 <li>Secure tunneling to private networks</li>
-<li>Access to Out of Band Management (iLO, iDRAC, ASMB [Seneca])</li>
-<li>Remote command and execution</li>
+<li>Access to Out of Band Management (iLO, iDRAC, Generic IPMI)</li>
+<li>Remote command execution</li>
 <li>Designed for Service Providers managing multiple sites</li>
 </ul>
 <h2 id="act">Act</h2>
 <ul>
-<li>Automatic Remote Command Execution</li>
-<li>Mobile Push Notification</li>
+<li>Automatic Remote Command Execution (Self-heal)</li>
+<li>Mobile Push Notification via 3<sup>rd</sup> Party Connector</li>
 <li>3<sup>rd</sup> Party API Posting</li>
 <li>Email notifications</li>
 </ul>
@@ -913,22 +949,22 @@ setup and configuration. </p>
 <div class="mermaid">      graph LR
           A(Edge Devices) --&gt; B(Agent)
           B --&gt; A
-          B --&gt;|MQTT - Port 1883|C(Gateway)
-          C --&gt;|SSL - Port 443|D(xConnect Cloud Dashboard - Azure);
+          B --&gt;C(Gateway)
+          C --&gt;D(xConnect Cloud Dashboard - Azure);
           linkStyle default stroke-width:2px,fill:none,stroke:black;</div>
-<p>For greenfield projects where servers and gateways are being 
-manufactured by Seneca, this setup and configuration is greatly simplified by Seneca pre-configuring and
+<p>For greenfield projects where servers and gateways have been 
+manufactured by Seneca, this setup and configuration can be simplified by Seneca pre-configuring and
 pre-installing a majority of this installation.</p>
 <p>We will explain how to install the xConnect Agent on existing servers, and how to
 configure it once installed. If purchasing a new server from Seneca, the installation process is not
 necessary, and you can jump straight to the configuration step. 
-However, <strong>it is recommended to always grab the latest version from our <a href="https://downloads.senecaxconnect.com">download repository</a></strong></p>
-<p>Once the xConnect Agents are installed and configured, your next step is to configure
+However, <strong>it is recommended to always grab the latest version from our <a href="https://download.senecaxconnect.com/files/Agent/xConnect_Server_Agent(Latest).zip">download repository</a></strong></p>
+<p>Once the xConnect Agents has been installed, your next step is to configure
 your xConnect Secure Gateway. The Secure Gateway is responsible for providing a seamless
 encrypted tunnel between Agents and the xConnect Web Client Dashboard.</p>
-<p>The xConnect Agent resides locally on network servers discovering network devices and
-applications interfacing with a secure gateway device. The xConnect Gateway sends real-time
-data to the xConnect web interface, providing system and device information. In the event of an
+<p>The xConnect Agent resides locally on x86 compute devices discovering sensors and
+applications. The xConnect Gateway sends real-time
+data (telemetry) to the xConnect web interface, providing system and device information. In the event of an
 issue, xConnect can trigger a workflow to immediately notify or react to an issue in the
 environment.</p>
 <h2 id="xconnect-agent">xConnect Agent</h2>
@@ -936,22 +972,22 @@ environment.</p>
           A(Edge Devices) --&gt; B(Agent)
           style B fill:#04acec
           B --&gt; A
-          B --&gt;|MQTT - Port 1883|C(Gateway)
-          C --&gt;|SSL - Port 443|E(xConnect Cloud Management- Azure);
+          B --&gt;C(Gateway)
+          C --&gt;E(xConnect Cloud Management- Azure);
           linkStyle default stroke-width:2px,fill:none,stroke:black;</div>
-<p>This is a required component for any server that you would like to be monitored by the xConnect Platform. </p>
+<p>This is a required component for any compute device that you would like to be monitored by the xConnect Platform. </p>
 <p>This agent is responsible for collecting health information (also 
 called telemetry) as well as securely facilitating remote management features.</p>
-<p>The latest version of the Agent installation executable is available on our downloads repo 
+<p>The latest version of the Agent installer is available on our downloads repo 
 located at <a href="http://downloads.senecaxconnect.com">downloads.senecaxconnect.com</a>.</p>
-<p>The Agent consists of multiple components but are rolled into a single Windows Service, the xConnect Agent Core.</p>
+<p>The Agent consists of multiple components but are rolled into a single Service, the xConnect Agent Core.</p>
 <p>Additional technical detail can be found here: <a href="/xconnect_docs/Agent_Overview">xConnect Agent Detail</a> </p>
 <h2 id="xconnect-gateway">xConnect Gateway</h2>
 <div class="mermaid">      graph LR
           A(Edge Devices) --&gt; B(Agent)
           B --&gt; A
-          B --&gt;|MQTT - Port 1883|C(Gateway)
-          C --&gt;|SSL - Port 443|D(xConnect Cloud Dashboard - Azure);
+          B --&gt;C(Gateway)
+          C --&gt;D(xConnect Cloud Dashboard - Azure);
           style C fill:#04acec
           linkStyle default stroke-width:2px,fill:none,stroke:black;</div>
 <p>This is a required component of the xConnect Remote Management Platform. This physical or
@@ -959,10 +995,11 @@ virtual gateway is responsible for being the encrypted tunnel between the Agents
 Web Client Dashboard.</p>
 <p>There are multiple deployment options for this Secure Gateway:</p>
 <ul>
-<li><strong>Turnkey</strong>: This is a hardware appliance sold by Seneca and is pre-configured with </li>
-<li><strong>Virtual Machine</strong>: Virtual machines can be configured by Seneca to match the features and functionality of our Turnkey appliance 
+<li><strong>Arrow-hosted Gateway (also referred to as vBridge or Virtual Gateway)</strong>: This is a Secure Gateway that sits in our cloud and hosted by us. It is generally included in your subscription and can be setup with a few simple steps.</li>
+<li><strong>Physical (aka Turnkey)</strong>: This is a hardware appliance sold by Seneca and with the Secure Gateway software and configured with your subscription already</li>
+<li><strong>Self-hosted Virtual Machine</strong>: Virtual machines can be configured by Seneca to match the features and functionality of our Turnkey appliance 
 with the purchase of professional services. </li>
-<li><strong>Docker Container</strong>: This is a container image (available on Docker Hub) of the xConnect Gateway software that can 
+<li><strong>Self-hosted Docker Container</strong>: This is a container image (available on Docker Hub) of the xConnect Gateway software that can 
 onboard a gateway in minutes with minimal configuration. Some features (ie. Remote Desktop and Secure Tunneling) are not available
 without configuration help by Seneca.</li>
 </ul>
@@ -971,8 +1008,8 @@ without configuration help by Seneca.</li>
 <div class="mermaid">      graph LR
           A(Edge Devices) --&gt; B(Agent)
           B --&gt; A
-          B --&gt;|MQTT - Port 1883|C(Gateway)
-          C --&gt;|SSL - Port 443|D(xConnect Cloud Dashboard - Azure);
+          B --&gt;C(Gateway)
+          C --&gt;D(xConnect Cloud Dashboard - Azure);
           style D fill:#04acec
           linkStyle default stroke-width:2px,fill:none,stroke:black;</div>
 <p>The Web Dashboard is hosted by Seneca via Microsoft Azure and is included in the cost of

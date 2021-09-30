@@ -13,14 +13,14 @@
         <meta name="author" content="Seneca">
       
       
-        <link rel="canonical" href="https://senecaxconnect.github.io/xconnect_docs/Network_Security/">
+        <link rel="canonical" href="https://senecaxconnect.github.io/xconnect_docs/Network_Requirements/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
     
     
       
-        <title>Network Security - xConnect Documentation</title>
+        <title>Network Requirements - xConnect Documentation</title>
       
     
     
@@ -90,6 +90,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#network-requirements" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -115,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Network Security
+              Network Requirements
             
           </span>
         </div>
@@ -356,8 +361,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Gateway_Virtual/" class="md-nav__link">
+        Virtual Gateway
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Gateway_TurnKey/" class="md-nav__link">
-        Turnkey Appliance
+        Physical/Turnkey Appliance
       </a>
     </li>
   
@@ -369,7 +386,7 @@
   
     <li class="md-nav__item">
       <a href="../Gateway_Docker/" class="md-nav__link">
-        Virtual/Software/Docker
+        Self-Hosted Docker Container
       </a>
     </li>
   
@@ -425,13 +442,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       <label class="md-nav__link" for="__nav_3">
-        Usage Guide
+        Dashboard Usage Guide
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Usage Guide" data-md-level="1">
+      <nav class="md-nav" aria-label="Dashboard Usage Guide" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Usage Guide
+          Dashboard Usage Guide
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -475,18 +492,30 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../Usage_SideNav/" class="md-nav__link">
+        Navigation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
       
-      <label class="md-nav__link" for="__nav_3_4">
+      <label class="md-nav__link" for="__nav_3_5">
         Management
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Management" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_4">
+        <label class="md-nav__title" for="__nav_3_5">
           <span class="md-nav__icon md-icon"></span>
           Management
         </label>
@@ -618,12 +647,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       <label class="md-nav__link" for="__nav_4">
         Additional Documentation
@@ -635,6 +666,65 @@
           Additional Documentation
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Network Requirements
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Network Requirements
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#topology-1-internet-connected-agents" class="md-nav__link">
+    Topology #1 - Internet Connected Agents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topology-2-isolated-network-agents" class="md-nav__link">
+    Topology #2 - Isolated Network Agents
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
           
             
   
@@ -757,19 +847,146 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#topology-1-internet-connected-agents" class="md-nav__link">
+    Topology #1 - Internet Connected Agents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topology-2-isolated-network-agents" class="md-nav__link">
+    Topology #2 - Isolated Network Agents
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/senecaxconnect/xconnect_docs/edit/master/docs/Network_Security.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/senecaxconnect/xconnect_docs/edit/master/docs/Network_Requirements.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Network Security</h1>
-                
-                
+                <h1 id="network-requirements">Network Requirements</h1>
+<p>The xConnect Agent and Secure Gateway requires very minimal network configuration or firewall rules to
+be fully functional. </p>
+<p>Some common industry standard ports that may be required to be open as below based on your use case.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>All rules mentioned below are OUTBOUND only. No Inbound firewall rules required.</strong></p>
+</div>
+<h2 id="topology-1-internet-connected-agents">Topology #1 - Internet Connected Agents</h2>
+<p>This togology applies to:
+- Agents that have outbound access to *.senecaxconnect.com via protocols mentioned below
+- Agents connected to an Arrow Hosted Cloud Gateway (AKA vBridge or vGateway)
+<div class="mermaid">      graph LR
+            A(Agent) --&gt;|MQTT - Port Varies|B(Cloud Gateway)
+            A --&gt;|TLS - Port 443|B(Cloud Gateway);
+            style B fill:#04acec;
+            linkStyle default stroke-width:2px,fill:none,stroke:black;</div></p>
+<table>
+<thead>
+<tr>
+<th><strong>Destination Port</strong></th>
+<th><strong>Protocol</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Devices using this rule</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>443</td>
+<td>TLS</td>
+<td>API traffic to api.senecaxconnect.com</td>
+<td>Agent</td>
+</tr>
+<tr>
+<td>Varies *</td>
+<td>MQTT over TCP</td>
+<td>Telemetry/Remote Command handler to hosted gateway at gw.senecaxconnect.com</td>
+<td>Agent</td>
+</tr>
+</tbody>
+</table>
+<p><code>* This port is provided during gateway creation onboarding. If unsure which port is assigned to your gateway, contact support@senecaxconnect.com</code></p>
+<h2 id="topology-2-isolated-network-agents">Topology #2 - Isolated Network Agents</h2>
+<p>This topology applies to:
+- Agents have access to on-premise Gateway via port 1883 MQTT
+- On-premise gateway (physical or virtual machine) has outbound access to:
+  - mqtt.senecaxconnect.com (Telemetry Consumer)
+  - assetmgmt-api.senecaxconnect.com (Asset Management API)
+  - api.senecaxconnect.com (xConnect API)</p>
+<div class="mermaid">      graph LR
+            A(Agent) --&gt;|MQTT - 1833|B(On-Premise Gateway)
+            B --&gt;|TLS - Port 443|C(xConnect Cloud Platform);
+            B --&gt;|MQTT - Port 8883|C(xConnect Cloud Platform);
+            style C fill:#04acec;
+            linkStyle default stroke-width:2px,fill:none,stroke:black;</div>
+<table>
+<thead>
+<tr>
+<th><strong>Destination Port</strong></th>
+<th><strong>Protocol</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Devices using this rule</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1883</td>
+<td>MQTT over TCP</td>
+<td>Required for access to api.senecaxconnect.com</td>
+<td>Agent</td>
+</tr>
+<tr>
+<td>8883</td>
+<td>MQTT (SSL) over TCP</td>
+<td>Required for access to mqtt.senecaxconnect.com</td>
+<td>Gateway</td>
+</tr>
+<tr>
+<td>443</td>
+<td>TLS</td>
+<td>Required for access to assetmgmt-api.senecaxconnect.com</td>
+<td>Gateway</td>
+</tr>
+<tr>
+<td>443</td>
+<td>TLS</td>
+<td>Required for access to api.senecaxconnect.com</td>
+<td>Gateway</td>
+</tr>
+</tbody>
+</table>
                 
               
               
@@ -785,6 +1002,41 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../Usage_EventLogs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Event Logs" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Event Logs
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Agent_API/" class="md-footer__link md-footer__link--next" aria-label="Next: Agent API" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Agent API
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

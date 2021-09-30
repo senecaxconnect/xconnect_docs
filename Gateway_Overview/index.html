@@ -336,33 +336,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#network-requirements" class="md-nav__link">
-    Network Requirements
-  </a>
-  
-    <nav class="md-nav" aria-label="Network Requirements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#agent-gateway-access-requirement" class="md-nav__link">
-    Agent --&gt; Gateway Access Requirement
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gateway-cloud-access-requirement" class="md-nav__link">
-    Gateway --&gt; Cloud Access Requirement
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -451,8 +424,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Gateway_Virtual/" class="md-nav__link">
+        Virtual Gateway
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Gateway_TurnKey/" class="md-nav__link">
-        Turnkey Appliance
+        Physical/Turnkey Appliance
       </a>
     </li>
   
@@ -464,7 +449,7 @@
   
     <li class="md-nav__item">
       <a href="../Gateway_Docker/" class="md-nav__link">
-        Virtual/Software/Docker
+        Self-Hosted Docker Container
       </a>
     </li>
   
@@ -520,13 +505,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       <label class="md-nav__link" for="__nav_3">
-        Usage Guide
+        Dashboard Usage Guide
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Usage Guide" data-md-level="1">
+      <nav class="md-nav" aria-label="Dashboard Usage Guide" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Usage Guide
+          Dashboard Usage Guide
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -570,18 +555,30 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../Usage_SideNav/" class="md-nav__link">
+        Navigation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
       
-      <label class="md-nav__link" for="__nav_3_4">
+      <label class="md-nav__link" for="__nav_3_5">
         Management
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Management" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_4">
+        <label class="md-nav__title" for="__nav_3_5">
           <span class="md-nav__icon md-icon"></span>
           Management
         </label>
@@ -730,6 +727,18 @@
           Additional Documentation
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Network_Requirements/" class="md-nav__link">
+        Network Requirements
+      </a>
+    </li>
+  
+
           
             
   
@@ -898,33 +907,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#network-requirements" class="md-nav__link">
-    Network Requirements
-  </a>
-  
-    <nav class="md-nav" aria-label="Network Requirements">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#agent-gateway-access-requirement" class="md-nav__link">
-    Agent --&gt; Gateway Access Requirement
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gateway-cloud-access-requirement" class="md-nav__link">
-    Gateway --&gt; Cloud Access Requirement
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -949,8 +931,8 @@ Web Client Dashboard hosted in our cloud.</p>
 <div class="mermaid">      graph LR
           A(Edge Devices) --&gt; B(Agent)
           B --&gt; A
-          B --&gt;|MQTT - Port 1883|C(Gateway)
-          C --&gt;|SSL - Port 443|D(xConnect Cloud Dashboard - Azure);
+          B --&gt;|MQTT(1883)|C(Gateway)
+          C --&gt;|TLS(443)/MQTT(8883)|D(xConnect Cloud Dashboard - Azure);
           style C fill:#04acec
           linkStyle default stroke-width:2px,fill:none,stroke:black;</div>
 <p>There are 4 installation options for this Secure Gateway:
@@ -959,16 +941,8 @@ Web Client Dashboard hosted in our cloud.</p>
 - Virtual Machine
 - Self-hosted Docker Container</p>
 <h2 id="arrow-hosted-gateway-container">Arrow-hosted Gateway Container</h2>
-<p>Arrow offers a fully hosted version of the Secure Gateway software. To have this enabled in your subscription, please contact your Account Manager to understand subscription requirements.</p>
-<p>Once your subscription has been enabled with this capability, adding a new gateway is as simple as a click of a few buttons:</p>
-<ol>
-<li>Once logged in, find the "Magic Wand" icon in the top-right menu of your Cloud Dashboard</li>
-<li>Select 'Virtual Gateway'</li>
-<li>Name your new gateway and assign it to a customer</li>
-<li><strong>IMPORTANT-</strong> Once the gateway has been created, take note of the gateway address. It is recommended to copy this gateway address and store it for later use</li>
-<li>On your agent device(s), paste the gateway address into the 'Gateway Address' field in your agent settings</li>
-<li>Hit <code>Save</code>  </li>
-</ol>
+<p>Arrow offers a fully hosted version of the Secure Gateway software dedicated to your instance. To have this enabled in your subscription, please contact your Account Manager to understand subscription requirements.</p>
+<p>Once your subscription has been enabled with this capability, adding a new gateway is as simple as a click of a few buttons.</p>
 <h2 id="physical-turnkey-gateway">Physical (Turnkey) Gateway</h2>
 <p>The physical gateway option greatly reduces setup time. This is a physical hardware device
 provided by Arrow that has our hardened system image and most configuration details already
@@ -1043,8 +1017,8 @@ provided by Arrow. The specifications of this physical gateway are:</p>
 </table>
 <p>Onboarding/Installation instructions are available in the <a href="/xconnect_docs/Getting_Started">Getting Started</a> chapter. </p>
 <h2 id="virtual-machine-gateway-option">Virtual Machine Gateway Option</h2>
-<p>The virtual gateway option is available when using existing infrastructure to host the Secure
-Gateway is desired.</p>
+<p>The virtual gateway option is available when it is desired to use existing infrastructure to host the Secure
+Gateway.</p>
 <p>A Hyper-V Virtual Disk or VMWare OVA can be provided upon request and needs to be imported into the
  appropriate hypervisor. </p>
 <div class="admonition note">
@@ -1067,31 +1041,6 @@ an xConnect Secure Gateway deployed in minutes, granted you can supply a machine
 you could install a Docker-supported Linux OS within a Hyper-V VM on Windows and it would be fully supported.</p>
 </div>
 <p>Installation instructions are also available in the "Getting Started" chapter. </p>
-<h2 id="network-requirements">Network Requirements</h2>
-<p>The xConnect Secure Gateway requires very minimal network configuration or firewall rules to
-be fully functional. Some common industry standard ports that are required to be open are:</p>
-<h3 id="agent-gateway-access-requirement">Agent &rarr; Gateway Access Requirement</h3>
-<p>This is typically on your LAN so access rules are rarely required unless running on a hardened network.</p>
-<p>In the case of internal LAN traffic being managed, verify the following access is granted between 
-the hosts (Agents) and the Gateway asset
-- Port 8080 (TCP/HTTP)
-- Port 1883 (TCP/MQTT)</p>
-<h3 id="gateway-cloud-access-requirement">Gateway &rarr; Cloud Access Requirement</h3>
-<p>Microsoft Azure access is bare minimum required:
-- Destination IPs will vary based on region and load-balancing so a hostname based rule is preferred.
-- A wildcard access rule for outbound traffic to <em>.senecaxconnect.com is the safest bet to future proof your firewall rules.
-- Outbound TCP traffic via **Port 443*</em> to <em>.senecaxconnect.com
-- Outbound TCP traffic via **Port 8883*</em> to <em>.senecaxconnect.com
-- **No inbound rules required*</em> </p>
-<p>Amazon EC2 access is optional but is highly recommend and required for the following features to function:
-- Seneca’s administrative interface to connect to your gateway to push updates
-- Server Agent OTA updates
-- General support/troubleshooting of your gateway
-- Secure Remote Desktop Passthrough
-- If you wish to opt-in to these features and enable our team to continually support your platform, 
-please whitelist <strong>Outbound TCP 443</strong> to ***.ngrok.io** and ***.ngrok.com**. 
-We cannot provide a reliable IP address list due to auto load balancing on the cluster, 
-they’re a moving target.</p>
                 
               
               

@@ -374,6 +374,33 @@
     Gateway Setup
   </a>
   
+    <nav class="md-nav" aria-label="Gateway Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xconnect-guardian-virtual-gateway-arrow-hosted" class="md-nav__link">
+    xConnect Guardian Virtual Gateway (Arrow-Hosted)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physicalturnkey-gateway-seneca-provided" class="md-nav__link">
+    Physical/Turnkey Gateway (Seneca-provided)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-machine-gateway-self-hosted" class="md-nav__link">
+    Virtual Machine Gateway (Self-Hosted)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -424,8 +451,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Gateway_Virtual/" class="md-nav__link">
+        Virtual Gateway
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Gateway_TurnKey/" class="md-nav__link">
-        Turnkey Appliance
+        Physical/Turnkey Appliance
       </a>
     </li>
   
@@ -437,7 +476,7 @@
   
     <li class="md-nav__item">
       <a href="../Gateway_Docker/" class="md-nav__link">
-        Virtual/Software/Docker
+        Self-Hosted Docker Container
       </a>
     </li>
   
@@ -493,13 +532,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       <label class="md-nav__link" for="__nav_3">
-        Usage Guide
+        Dashboard Usage Guide
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Usage Guide" data-md-level="1">
+      <nav class="md-nav" aria-label="Dashboard Usage Guide" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Usage Guide
+          Dashboard Usage Guide
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -543,18 +582,30 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../Usage_SideNav/" class="md-nav__link">
+        Navigation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
       
-      <label class="md-nav__link" for="__nav_3_4">
+      <label class="md-nav__link" for="__nav_3_5">
         Management
         <span class="md-nav__icon md-icon"></span>
       </label>
       <nav class="md-nav" aria-label="Management" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_4">
+        <label class="md-nav__title" for="__nav_3_5">
           <span class="md-nav__icon md-icon"></span>
           Management
         </label>
@@ -709,6 +760,18 @@
   
   
     <li class="md-nav__item">
+      <a href="../Network_Requirements/" class="md-nav__link">
+        Network Requirements
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Agent_API/" class="md-nav__link">
         Agent API
       </a>
@@ -855,6 +918,33 @@
     Gateway Setup
   </a>
   
+    <nav class="md-nav" aria-label="Gateway Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xconnect-guardian-virtual-gateway-arrow-hosted" class="md-nav__link">
+    xConnect Guardian Virtual Gateway (Arrow-Hosted)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physicalturnkey-gateway-seneca-provided" class="md-nav__link">
+    Physical/Turnkey Gateway (Seneca-provided)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-machine-gateway-self-hosted" class="md-nav__link">
+    Virtual Machine Gateway (Self-Hosted)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -911,59 +1001,21 @@ for each step of the installation process and can be found within this guide or 
 </div>
 <p>Confirm the following before continuing your xConnect installation and configuration:</p>
 <ul>
-<li>
-<p>Network Access has been configured or confirmed:</p>
-<table>
-<thead>
-<tr>
-<th>Source</th>
-<th>Destination</th>
-<th>Port</th>
-<th>Protocol</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Agent System(s)</td>
-<td>Gateway</td>
-<td>1883</td>
-<td>MQTT (TCP)</td>
-</tr>
-<tr>
-<td>Agent System(s)</td>
-<td>Gateway</td>
-<td>8080</td>
-<td>HTTP (TCP)</td>
-</tr>
-<tr>
-<td>Gateway</td>
-<td>Internet</td>
-<td>443</td>
-<td>SSL  (TCP)</td>
-</tr>
-<tr>
-<td>Gateway</td>
-<td>Internet</td>
-<td>8883</td>
-<td>RabbitMQ (TCP)</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li>
-<p>You've received credentials for the xConnect Web Dashboard (<a href="http://senecaxconnect.com">senecaxconnect.com</a>)</p>
-</li>
-<li>Have a PC that can be used to complete IP address changes to gateway (if desired)</li>
+<li>Network Access has been configured or confirmed against <a href="/xconnect_docs/Network_Requirements">xConnect Network Requirements</a></li>
+<li>You've received credentials for the xConnect Web Dashboard (<a href="http://senecaxconnect.com">senecaxconnect.com</a>)</li>
+<li>Have a PC that can be used to complete IP address changes to gateway (only required if using Seneca-provided Physical Gateway)</li>
 </ul>
 <h2 id="gateway-setup">Gateway Setup</h2>
-<p>If you purchased a turnkey gateway appliance from Seneca, complete the setup steps here:</p>
+<h3 id="xconnect-guardian-virtual-gateway-arrow-hosted">xConnect Guardian Virtual Gateway (Arrow-Hosted)</h3>
+<p><a href="/xconnect_docs/Gateway_Virtual">Virtual Gateway Setup</a></p>
+<h3 id="physicalturnkey-gateway-seneca-provided">Physical/Turnkey Gateway (Seneca-provided)</h3>
 <p><a href="/xconnect_docs/Gateway_TurnKey">Turnkey Gateway Setup</a></p>
-<p>If you are setting up a virtual machine gateway, complete the setup steps here:</p>
+<h3 id="virtual-machine-gateway-self-hosted">Virtual Machine Gateway (Self-Hosted)</h3>
 <p><a href="/xconnect_docs/Gateway_Docker">Docker Gateway Setup</a></p>
 <h2 id="agent-setup">Agent Setup</h2>
 <p>It is recommended to always download the latest version of the Agent. This is available from our 
 download repository here:</p>
-<p><a href="https://downloads.senecaxconnect.com">Download repository</a></p>
+<p><a href="https://download.senecaxconnect.com/files/Agent/xConnect_Server_Agent(Latest).zip">Download repository</a></p>
 <h2 id="dashboard-setup">Dashboard Setup</h2>
 <p>Once the gateway and agent(s) are installed and configured, you can login to your xConnect
 Dashboard instance here:</p>
@@ -1003,13 +1055,13 @@ Dashboard instance here:</p>
       
       
         
-        <a href="../Gateway_TurnKey/" class="md-footer__link md-footer__link--next" aria-label="Next: Turnkey Appliance" rel="next">
+        <a href="../Gateway_Virtual/" class="md-footer__link md-footer__link--next" aria-label="Next: Virtual Gateway" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Turnkey Appliance
+              Virtual Gateway
             </div>
           </div>
           <div class="md-footer__button md-icon">
