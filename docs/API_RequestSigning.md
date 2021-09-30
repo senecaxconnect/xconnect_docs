@@ -208,6 +208,97 @@ x-arrow-signature: 28c3ab6cc82294b61e9b2855b428090e474fd1e066c4da63f9715bd2204df
 
 # Complete API Request Example
 
+!!! note
+    **The Java example simply generates the signed token. You must use the signature within a tool such as Postman to perform the full request.
+    
+
+=== "Java"
+    ```java
+     
+     public void generateSignedRequestToken() {
+     
+         String API_KEY = "Your_Raw_API_key";
+         String SECRET_KEY = "Your_Raw_Secret_key";
+         String apiMethodUri = "/api/v1/kronos/devices";
+         String timestamp = Instant.now().toString();
+         String httpRequestMethod = "GET";
+         List<String> uriParameters = new ArrayList<>();
+         HashMap<String, String> uriParametersMap = new HashMap<>();
+         String signature = "";
+    
+         try {
+                // region Specify query parameters here
+                uriParametersMap.put("_page", "0");
+                uriParametersMap.put("_size", "100");
+                // endregion
+    
+                for (Map.Entry<String, String> entry : uriParametersMap.entrySet()) {
+                    String name = entry.getKey();
+                    String value = entry.getValue();
+                    try {
+                        uriParameters.add(
+                                String.format("%s=%s", URLEncoder.encode(name.toLowerCase(), StandardCharsets.UTF_8.toString()),
+                                        AcsUtils.trimToEmpty(value)));
+                    } catch (Exception e) {
+                        // ignore
+                    }
+                }
+    
+                // region Create canonical request
+                StringBuilder builder = new StringBuilder();
+                builder.append(httpRequestMethod).append('\n');
+                builder.append(apiMethodUri).append('\n');
+    
+                // append parameters
+                if (uriParameters.size() > 0) {
+                    Collections.sort(uriParameters);
+                    uriParameters.forEach(p -> builder.append(p).append('\n'));
+                }
+    
+                builder.append(sha256Hex(""));
+                String canonicalRequest = builder.toString();
+                // endregion
+    
+                // region Sign the string
+                StringBuilder stringToSign = new StringBuilder();
+                stringToSign.append(sha256Hex(canonicalRequest)).append('\n');
+                stringToSign.append(API_KEY).append('\n');
+                stringToSign.append(timestamp).append('\n');
+                stringToSign.append("1");
+    
+                signature = hmacSha256Hex(
+                        hmacSha256Hex("1",
+                                hmacSha256Hex(timestamp, hmacSha256Hex(API_KEY, SECRET_KEY))),
+                        stringToSign.toString());
+            } catch (Exception e) {
+            }
+         System.out.print("Signed auth token = " + signature);
+    }
+    
+     public static String hmacSha256Hex(String key, String data) {
+        try {
+            SecretKeySpec signingKey = new SecretKeySpec(key.getBytes(StandardCharsets.UTF_8), "HmacSha256");
+            Mac mac = Mac.getInstance("HmacSha256");
+            mac.init(signingKey);
+            return printHex(mac.doFinal(data.getBytes(StandardCharsets.UTF_8)));
+        } catch (Exception e) {
+            throw new AcsRuntimeException("error while calculating: " + "HmacSha256", e);
+        }
+    }
+
+    public static String sha256Hex(String data) {
+        try {
+            return printHex(MessageDigest.getInstance("SHA-256").digest(data.getBytes(StandardCharsets.UTF_8)));
+        } catch (Exception e) {
+            throw new AcsRuntimeException("error while calculating: " + "SHA-256", e);
+        }
+    }
+
+    public static String printHex(byte[] data) {
+        return DatatypeConverter.printHexBinary(data).toLowerCase();
+    }
+    ```
+
 === "Python"
     ```python
     
