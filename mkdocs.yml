@@ -7,6 +7,7 @@ repo_name: 'senecaxconnect/xconnect_docs'
 repo_url: 'https://github.com/senecaxconnect/xconnect_docs'
 
 nav:
+  - Home: index.md
   - Platform:
       - Overview: Platform_Overview.md
       - Server Agent: Agent_Overview.md
