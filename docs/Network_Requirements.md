@@ -48,7 +48,7 @@ This topology applies to:
 
 | **Destination Port**    | **Protocol** | **Description**|**Devices using this rule**                |
 |-------------------------|--------------|----------------|-------------------------------------------|
-| 1883 | MQTT over TCP | Required for access to api.senecaxconnect.com | Agent|
+| 1883 | MQTT over TCP | For submitting telemetry and listening to remote actions  | Agent|
 | 8883| MQTT (SSL) over TCP | Required for access to mqtt.senecaxconnect.com | Gateway|
 | 443 | TLS | Required for access to assetmgmt-api.senecaxconnect.com | Gateway|
 | 443 | TLS | Required for access to api.senecaxconnect.com | Gateway|
