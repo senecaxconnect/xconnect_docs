@@ -8,8 +8,8 @@ Web Client Dashboard hosted in our cloud.
       graph LR
           A(Edge Devices) --> B(Agent)
           B --> A
-          B -->|MQTT(1883)|C(Gateway)
-          C -->|TLS(443)/MQTT(8883)|D(xConnect Cloud Dashboard - Azure);
+          B -->|MQTT|C(Gateway)
+          C -->|SSL|D(xConnect Cloud Dashboard - Azure);
           style C fill:#04acec
           linkStyle default stroke-width:2px,fill:none,stroke:black;
 ```

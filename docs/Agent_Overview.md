@@ -10,8 +10,8 @@ called telemetry) as well as securely facilitating remote management features.
       graph LR
           A(Edge Devices) --> B(Agent)
           B --> A
-          B -->|MQTT - Port 1883|C(Gateway)
-          C -->|SSL - Port 443|D(xConnect Cloud Dashboard - Azure);
+          B -->|MQTT|C(Gateway)
+          C -->|SSL|D(xConnect Cloud Dashboard - Azure);
           style B fill:#04acec
           linkStyle default stroke-width:2px,fill:none,stroke:black;
 ```
