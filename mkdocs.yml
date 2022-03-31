@@ -13,6 +13,7 @@ nav:
       - Server Agent: Agent_Overview.md
       - Gateway: Gateway_Overview.md
       - Web Dashboard: Dashboard_Overview.md
+      - Network Requirements: Network_Requirements.md
   - Getting Started:
       - Quick Start Guide: Getting_Started.md
       - Step 1 - Gateway Setup:
@@ -38,11 +39,14 @@ nav:
       - Event Logs: Usage_EventLogs.md
   - Additional Documentation:
       - Network Requirements: Network_Requirements.md
-      - Agent API: Agent_API.md
-      - Azure-Based Authentication: Auth_AzureAD.md
-      - Genetec Integration: Setup_GenetecIntegration.md
+
   - Developer Documentation:
-      - API Request Signing: API_RequestSigning.md
+      - Agent:
+        - Agent API: Agent_API.md
+      - Platform:
+        - Azure-Based Authentication: Auth_AzureAD.md
+        - Genetec Integration: Setup_GenetecIntegration.md
+        - API Request Signing: API_RequestSigning.md
   - Support: Support.md
   - Release Notes: Release_Notes.md
 
@@ -50,7 +54,7 @@ theme:
   name: 'material'
   custom_dir: 'theme'
   palette:
-    # scheme: slate
+    scheme: slate
     primary: blue grey
     accent: light blue
   logo: 'images/logo.svg'
@@ -93,4 +97,4 @@ extra_css:
 extra_javascript:
   - https://unpkg.com/mermaid@7.0.9/dist/mermaid.min.js
   #- https://unpkg.com/mermaid@8.4.5/dist/mermaid.min.js
-copyright: Copyright &copy; 2020 <a href="https://www.senecadata.com"> - Seneca Data Distributors, Inc</a>
+copyright: Copyright &copy; 2022 <a href="https://www.senecadata.com"> - Seneca Data Distributors, Inc</a>

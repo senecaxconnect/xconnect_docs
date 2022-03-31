@@ -44,7 +44,9 @@ Used to collect the latest sensor data from all xConnect Agent sensor points
     "DashboardEnabled": null,
     "GaugeEnabled": null
   },
-  ... repeated list of arrays for all sensors
+  {
+    "...": "..."
+  }
 ]
 ```
 

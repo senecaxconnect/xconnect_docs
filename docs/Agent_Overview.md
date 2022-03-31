@@ -13,7 +13,7 @@ called telemetry) as well as securely facilitating remote management features.
           B -->|MQTT|C(Gateway)
           C -->|SSL|D(xConnect Cloud Dashboard - Azure);
           style B fill:#04acec
-          linkStyle default stroke-width:2px,fill:none,stroke:black;
+          linkStyle default stroke-width:2px,fill:#2e303e,stroke:black;
 ```
 
 ## Download
