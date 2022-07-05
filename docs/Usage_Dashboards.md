@@ -22,20 +22,32 @@ One of the primary pieces of functionality that the client web portal features i
 dashboards that leverage the telemetry information being transmitted from your servers and
 devices. These dashboards include 4 different levels:
 
-1) **Overview Dashboard:** Provides a complete view of all gateways, servers and monitored devices. Ensures that you know exactly what's happening throughout your monitored infrastructure. Includes the following panels: 
-   - Account Overview: Provides a breakdown of all device types and their health. Each type will be represented by a circular chart. 
+1) **Overview Dashboard:** Provides a complete view of all gateways, servers and monitored devices. Ensures that you know exactly what's happening throughout your monitored infrastructure. Includes the following panels:
+
+   - Device Health: Provides a breakdown of all device types and their health. Each type will be represented by a colored panel, which indicates its health and a count of how many assets are identified as a particular type:
    
    ![Side Navigation](images/widget_account_overview.png "Account Overview")
    
    For guidance on how health is defined, please see topic [Defining Health](#defining-health)
 
+   Upon clicking the displayed number of devices, a detail modal will appear giving you a complete list of all devices/gateways in that particular health status: 
+
+   ![Side Navigation](images/detail_modal_list.png "Health detail modal")
+
+   The table includes a list of any events that have occurred on the particular device(s). There may be more than 1 line item per device if there are multiple events occurring.
+
+  - Device Health (Geo View Mode):  Map that shows the location of multiple customers. For more information on defining a customer's location, please see [Navigation/Side Menu](#)
+
+   ![Side Navigation](images/device_health_geo_view.png "Geoview")
+
+   Upon clicking the geoview icon, the panel will display a map with the locations of each customer: 
+
+   ![Side Navigation](images/device_health_customer_geoview.png "Geoview")
+
   - Event Feed: Provides a list of events that have been thrown over the last 36 hours.
   
   ![Side Navigation](images/widget_event_feed.png "Event Feed")
-  
-  - Resources: Provides a list of helpful documentation and downloads.
-  
-  ![Side Navigation](images/widget_resources.png "Event Feed")
+
    
 2) **Customer Dashboard:** Provides a view of all monitored devices that are being reported from a specific gateway.
     
@@ -47,7 +59,7 @@ devices. These dashboards include 4 different levels:
   
   - Event Feed: Provides a list of events that have been thrown over the last 36 hours.
   
-  ![Side Navigation](images/widget_event_feed_customer.png "Event Feed")
+  ![Side Navigation](images/widget_event_feed.png "Event Feed")
   
   - Geo-View: Map that shows the location of a customer's gateways. For more information on defining a gateway's location, please see [Navigation/Side Menu](#)
   
@@ -57,29 +69,26 @@ devices. These dashboards include 4 different levels:
    The Geo-View map is driven by the location of the particular servers. 
    
 4) **Server/Device Dashboard:** The Server/Device specific dashboard provides a detailed view of a server/device's telemetry and events. 
-   - Actions / Management Panel (Server only): Provides CPU, Network Utilization and RAM Utilization information, along with management operations such as remote desktop and remote command execution. 
+   - Actions / Management Panel: Provides CPU, and RAM Utilization information, along with management operations such as remote desktop and remote command execution. 
    
-   ![Side Navigation](images/widget_management.png "Management")
+   ![Side Navigation](images/device_specific_primary_panel.png "Device Specific")
 
-   - Device/Camera Information: Provides detailed information about the device/server. 
+   - Device Information: Provides detailed information about the device/server. 
    
    ![Side Navigation](images/widget_device_info.png "Device info")
    
-   - System Health (Server Only): Provides the latest telemetry that applies to the system health. Any telemetry key that is prefixed with "System_" from the xConnect agent is provided within this panel. 
+   - Telemetry Information: This panel provides a categorized view of telemetry being submitted to the platform by the device. Each category can be expanded and features a detailed view of the latest values reported by the xConnect agent.
    
-   ![Side Navigation](images/widget_system_health.png "System health")
-   
-   - Storage Health (Server Only): Provides the latest telemetry information that applies to the storage health. Any telemetry key that is prefixed with "Storage_" from the xConnect agent is provided within this panel.
-   
-   ![Side Navigation](images/widget_storage_health.png "Storage health")
-   
-   - Event Feed: Provides a list of events that have been thrown over the last 36 hours.
-  
-  ![Side Navigation](images/widget_event_feed_device.png "Event Feed")
+   ![Side Navigation](images/telemetry_panel.png "Telemetry info")
 
-   - Camera/Device Telemetry (Non-server only) : Provides a list of latest telemetry for a specific device.
-   
-  ![Side Navigation](images/widget_camera-telemetry.png "Event Feed")
+   The panel will include the number of events that have occurred on a particular piece of telemetry, and highlight the specific item that is currently in violation of a threshold: 
+
+   ![Side Navigation](images/telemetry_info_violation.png "Telemetry info")
+
+  - Event Feed: Provides a list of events that have been thrown over the last 36 hours.
+  
+  ![Side Navigation](images/widget_event_feed.png "Event Feed")
+
 
 # Defining Health
 Health is determined by a combination of predefined and custom event configurations. The severity of the event has a direct impact on how the health is determined. 
@@ -91,6 +100,8 @@ Users have control over _most_ of the built-in/predefined events that are part o
 
 - If a monitored device has thrown an event that has a severity of WARNING, then it is considered to be in a **WARNING** state.
 
+- If a monitored device has not submitted telemetry to the platform for over 60 minutes, then it is considered to be in an **OFFLINE** state.
+
 - Lastly, if the monitored device has thrown an INFORMATIONAL event, or there were no events thrown within the last 36 hours, then that is considered to be in **GOOD** health
 
 ## Predefined Events
@@ -98,7 +109,7 @@ There are several events that are built into the platform that are meant to cove
 1. **Gateway Heartbeat:** The gateway heartbeat is driven from the xConnect gateway software and is meant to provide a signal of whether or not the gateway can successfully communicate with the core platform. 
 At a minimum, the gateway must be able to communicate with the platform within 5 minutes. If this is exceeded, the event is considered to be critical to the gateway.
  
-2. **Telemetry Received:** xConnect expects that all monitored devices will send telemetry within 60 minutes. If there is no telemetry sent for a device beyond 60 minutes, a warning event will be thrown. 
+2. **Telemetry Received:** xConnect expects that all monitored devices will send telemetry within 60 minutes. If there is no telemetry sent for a device beyond 60 minutes, an offline event will be thrown. 
 
 3. **Recoveries:** All events that are thrown (custom or predefined) will receive a RECOVERY event when they go back to normal operating standards.
 
@@ -116,8 +127,8 @@ Example: Throw an error severity event if GATEWAYABC:Server-XYZ has RAM Utilizat
 3\. **Outage Events** An outage event is when there is no received telemetry for a device over a specified amount of time. These alerts/events apply to an entire category of monitored assets (i.e. Servers, IP Devices, Cameras, etc...) This is meant to act as an alerting mechanism from the xConnect platform. 
 
 ### Additional Notes:
-By default, xConnect will consider any telemetry outage beyond 60 minutes as a warning event, which will cause your 
-device to be flagged as "bad" health. The Outage Event configurations are meant as the alerting mechanism of these occurrences. 
+By default, xConnect will consider any telemetry outage beyond 60 minutes as an offline event, which will cause your 
+device to be flagged as "offline" health. The Outage Event configurations are meant as the alerting mechanism of these occurrences. 
 The alerting mechanism is separate from the built-in telemetry received events.
 
 Example: An e-mail should be sent when any server has not sent telemetry for 60 minutes. 

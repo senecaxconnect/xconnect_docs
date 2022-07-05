@@ -3,7 +3,7 @@ Bookmarks are a marker that can be placed on any customer, gateway, server or de
 This can be completely customized and managed by the **power user**. Bookmarks are visible across **all** users of the account, **end users** cannot remove or add bookmarks.
 
 ## Accessing Bookmarks
-You can access bookmarks by clicking the bookmark icon on the left-side menu:
+You can access bookmarks by clicking the bookmark icon on the header menu:
 
 ![Side Navigation](images/menu_bookmarks.png "Bookmarks")
 
