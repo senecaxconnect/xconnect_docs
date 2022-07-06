@@ -4,7 +4,7 @@ All events that have been fired on a monitored device can be viewed via the Even
 ## Accessing Event Logs 
 1\. Log in as a power user
 
-2\. Click on the settings tab on the left-side menu 
+2\. Click on the settings icon on the header menu
 
 ![Side Navigation](images/menu_settings.png "")
 

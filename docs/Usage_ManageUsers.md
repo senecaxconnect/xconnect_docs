@@ -6,7 +6,7 @@ End users can be associated with a specific customer which will show that custom
 
 1\. Log in as a power user
 
-2\. Click on the settings gear on the header menu 
+2\. Click on the settings icon on the header menu
 
 ![Side Navigation](images/menu_settings.png "Account Overview")
 

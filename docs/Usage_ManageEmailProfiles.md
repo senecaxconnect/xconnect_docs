@@ -4,7 +4,7 @@ E-mail profiles are similar to mailing lists for a particular event, which suppo
 ## Accessing E-mail Profiles
 1\. Log in as a power user
 
-2\. Click on the settings tab on the left-side menu 
+2\. Click the settings icon on the header menu
 
 ![Side Navigation](images/menu_settings.png "")
 
@@ -23,7 +23,7 @@ E-mail profiles are similar to mailing lists for a particular event, which suppo
 E-mail templates define the content for the e-mails that are sent to the defined profile.
 
 ## Accessing E-mail Templates
-E-mail templates can be accessed by clicking the "New Email Profile" button, and clicking the "Settings" link:
+E-mail templates can be accessed by clicking the "New Email Profile" button, and clicking the "Templates" link:
 
 ![Side Navigation](images/settings_profile_template.png "")
 

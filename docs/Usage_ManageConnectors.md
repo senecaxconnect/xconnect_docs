@@ -4,7 +4,7 @@ xConnect supports calls to 3rd party external RESTful APIs. Click [here](https:/
 ## Accessing 3rd Party Connectors
 1\. Log in as a power user
 
-2\. Click on the settings tab on the left-side menu 
+2\. Click on the settings icon on the header menu
 
 ![Side Navigation](images/menu_settings.png "")
 

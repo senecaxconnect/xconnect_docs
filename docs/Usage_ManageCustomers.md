@@ -31,7 +31,7 @@ You can disable a customer by performing the following steps:
 
 1\. Log in as a power user
 
-2\. Click on the settings tab on the left-side menu 
+2\. Click on the settings icon on the header menu
 
 ![Side Navigation](images/menu_settings.png "Account Overview")
 

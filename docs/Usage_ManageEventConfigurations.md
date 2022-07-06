@@ -16,7 +16,7 @@ Example: Throw an error severity event if GATEWAYABC:Server-XYZ has RAM Utilizat
 ## Accessing Event Configurations
 1\. Log in as a power user
 
-2\. Click on the settings tab on the left-side menu 
+2\. Click on the settings icon on the header menu
 
 ![Side Navigation](images/menu_settings.png "")
 
@@ -78,13 +78,17 @@ Example: Alert via e-mail when any server has not sent telemetry in 30 minutes.
 
 ![Side Navigation](images/events_outages.png "")
 
+2\. Click on one of the alert mechanisms in the right column, choose one or more alerts to enable on your outage configuration. Upon selecting an alert, default values will appear for the configuration: 
+
+![Side Navigation](images/outage_config_data.png "")
+
 2\. Double click on either the No Telemetry or Expiration cells. The No Telemetry (Minutes) column defines how many minutes you would
 like to wait until a no telemetry event is detected. The Expiration field is how long it will take before another notification/action is executed. 
 Example: Detect when there is no telemetry for 60 minutes and alert me every 24 hours. 
 
 ![Side Navigation](images/events_outages_grid.png "")
 
-Once the outage is fully defined, you can [apply an alert](#applying-an-alert).
+Once the outage is fully defined, your alert will fire appropriately.
 
 ## Applying an alert
 An E-mail, Remote Command, or 3rd Party Connector can be applied to any event configuration by leveraging the action column in the grids.
