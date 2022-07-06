@@ -6,17 +6,17 @@ Any customers added will appear in the left-side menu:
 ![Side Navigation](images/menu_customers.png "Account Overview")
 
 **Note:**
-Only power users will be able to access the functionality listed below.
+Only power users and limited power users will be able to access the functionality listed below.
 If you are an end user, you will not be able to see the settings menu. 
 
 ## Adding or Updating a Customer
-1\. Log in as a power user
+1\. Log in as a power or limited power user
 
-2\. Click on the settings tab on the left-side menu 
+2\. Click on the settings icon on the header menu
 
 ![Side Navigation](images/menu_settings.png "Account Overview")
 
-3\. By default, the manage customers page will appear. If not, you can access it by clicking on "Manage Customers"
+3\. Click on the "Manage Customers" item on the right-side settings menu.
 
 4\. If you are adding a new customer, click on the "New Customer" button. If you are updating an existing customer, click on the customer's name. 
 
@@ -24,12 +24,9 @@ If you are an end user, you will not be able to see the settings menu.
 
 ![Side Navigation](images/customer_entry.png "Customer Entry")
 
-**Note:**
-You do not need to change any of the URLs for the images. 
-These features are currently deprecated and will be removed in a future release. 
-
 ## Disabling and Reactivating a Customer
 Disabling a customer will remove them from appearing in the side menu, and will remove the associated gateways from the monitoring dashboards.
+Prior to disabling a customer, you **must** disable any associated gateways. Failure to do so will produce an error message indicating that you cannot disable the customer(s) with the associated gateways. 
 You can disable a customer by performing the following steps:
 
 1\. Log in as a power user

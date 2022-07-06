@@ -1,6 +1,12 @@
 # xConnect Release Notes
 [TOC]
 
+# Release 2022.07.0: July 7th, 2022
+## Enhancements
+
+
+## Bug Fixes
+
 # Release 2021.08.0: August 23rd, 2021
 ## Enhancements
 - Native remote desktop functionality (BETA)

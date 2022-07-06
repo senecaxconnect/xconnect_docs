@@ -12,15 +12,6 @@ The device management page allows you to modify, disable, or remove any IP Devic
 
 ![Side Navigation](images/settings_manage_devices.png "")
 
-## Updating a Device Name
-In order to update a device name, click on the name of the device via the grid on the Manage Devices page:
-
-![Side Navigation](images/settings_devices_name.png "")
-
-Once you have clicked the name, a modal will appear enabling you to enter a different name for the device. This will impact what's displayed in the navigation menu and event logs.
-
-![Side Navigation](images/device_manage_name.png "")
-
 ### Exporting list of devices
 You can export your complete list of devices to CSV by clicking the export button 
 
