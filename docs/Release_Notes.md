@@ -3,9 +3,70 @@
 
 # Release 2022.07.0: July 7th, 2022
 ## Enhancements
+- New dashboard and template
 
+  - You will notice a new look and feel for the overall site and newly designed dashboards. The new template leverages modern UI elements and promotes further visibility of your monitored devices and infrastructure.
 
-## Bug Fixes
+![dashboard](images/2022070_dashboard.png)
+
+  - Support for new light and dark themes: 
+
+![dashboard](images/2022070_light_dark_theme.png)
+
+  - Dashboard mobile support
+
+    - Users can now view their dashboards on a mobile device such as an iPhone 12.
+
+![dashboard](images/2022070_mobile_dashboard.png)
+
+- Device detail modal is now accessible on all dashboards.
+
+  - Additional device detail information is accessible via all dashboards with a Device Health panel. 
+
+![dashboard](images/2022070_device_count_link.png)
+
+  Users can now click on the particular # of devices to see a complete list of their details and any events that may be occurring on them.
+
+![dashboard](images/2022070_device_health_detail.png)
+
+- Newly designed device-specific dashboard emphasizes additional visibility to all telemetry being submitted to xConnect
+
+![dashboard](images/2022070_device_specific.png)
+
+- Summary e-mail addresses can now be managed via a friendly UI
+
+![dashboard](images/2022070_global_settings.png)
+
+- Remote command improvements:
+  
+  - Users are now able to archive previous command history, which will prevent unnecessary historical records from being included on an export: 
+  
+![dashboard](images/2022070_command_archive.png)
+
+  - Commands that are in a pending or "gateway received" state can be re-run: 
+
+![dashboard](images/2022070_command_rerun.png)
+
+  - Added support for Wildcards in device criteria search: 
+
+![dashboard](images/2022070_wildcard_in.png)
+
+- Improved command output rendering. Users will now be able to easily view larger command output from a remote command: 
+
+![dashboard](images/2022070_command_output.png)
+
+- Telemetry reports are now filterable by a customer: 
+
+![dashboard](images/2022070_telemetry_report.png)
+
+## Bug Fixes  
+- Remote Commands: Clicking the "Save" button multiple times when saving an existingcommand causes duplicate associations.
+- Device Dashboard: Slight delay when user clicks on the execute button on remote command modal. 
+- Resolved issue with exporting command history that includes special non-ascii characters. 
+- Disabled auto-fill on username and password controls to ensure secure experience.
+- Remote Commands: Ensure that command output is properly formatted and includes line breaks.
+- Gateway Software: Fix for tracking which user executed a command.
+- Access to "My Account" modal when logged in as a power user.
 
 # Release 2021.08.0: August 23rd, 2021
 ## Enhancements
