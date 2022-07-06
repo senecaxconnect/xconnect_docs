@@ -6,5 +6,5 @@
 </div>
 
 <div class="aligncenter" style="text-align: center">
-    <h1> Guides and solutions </h1>
+    <h1> Documentation </h1>
 </div>
