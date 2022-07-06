@@ -8,46 +8,35 @@ repo_url: 'https://github.com/senecaxconnect/xconnect_docs'
 
 nav:
   - Home: index.md
-  - Platform:
-      - Overview: Platform_Overview.md
+  - Introduction to xConnect: Platform_Overview.md
+  - Getting Started: Getting_Started.md
+  - Learn about the platform:
       - Server Agent: Agent_Overview.md
       - Gateway: Gateway_Overview.md
       - Web Dashboard: Dashboard_Overview.md
       - Network Requirements: Network_Requirements.md
-  - Getting Started:
-      - Quick Start Guide: Getting_Started.md
-      - Step 1 - Gateway Setup:
-          - Virtual Gateway: Gateway_Virtual.md
-          - Physical/Turnkey Appliance: Gateway_TurnKey.md
-          - Self-Hosted Docker Container: Gateway_Docker.md
-      - Step 2 - Install Agent: Agent_Install.md
-      - Step 3 - Web Dashboard: Dashboard_Setup.md
-  - Dashboard Usage Guide:
+  - Guides:
       - Dashboards: Usage_Dashboards.md
       - Bookmarks: Usage_Bookmarks.md
       - User Types: Usage_Roles.md
       - Navigation: Usage_SideNav.md
-      - Management:
-          - Customers: Usage_ManageCustomers.md
-          - Users: Usage_ManageUsers.md
-          - Gateways: Usage_ManageGateways.md
-          - Devices: Usage_ManageDevices.md
-          - Event Configurations: Usage_ManageEventConfigurations.md
-          - Email Profiles: Usage_ManageEmailProfiles.md
-          - Remote Commands: Usage_ManageRemoteCommands.md
-          - 3rd Party Connectors: Usage_ManageConnectors.md
+      - Customer Management: Usage_ManageCustomers.md
+      - User Management: Usage_ManageUsers.md
+      - Gateway Management: Usage_ManageGateways.md
+      - Device Management: Usage_ManageDevices.md
+      - Event Configurations: Usage_ManageEventConfigurations.md
+      - Email Profiles: Usage_ManageEmailProfiles.md
+      - Remote Commands: Usage_ManageRemoteCommands.md
+      - 3rd Party Connectors: Usage_ManageConnectors.md
       - Event Logs: Usage_EventLogs.md
-  - Additional Documentation:
-      - Network Requirements: Network_Requirements.md
 
   - Developer Documentation:
-      - Agent:
-        - Agent API: Agent_API.md
+      - Agent: Agent_API.md
       - Platform:
         - Azure-Based Authentication: Auth_AzureAD.md
         - Genetec Integration: Setup_GenetecIntegration.md
         - API Request Signing: API_RequestSigning.md
-  - Support: Support.md
+  - Get Help: Support.md
   - Release Notes: Release_Notes.md
 
 theme:

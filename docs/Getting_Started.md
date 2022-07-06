@@ -1,61 +1,35 @@
-# Quick Start Guide
+# Getting Started
 
-This guide is a condensed version of the installation process. Detailed instructions are available 
-for each step of the installation process and can be found within this guide or on the navigation menu.
+Setting up xConnect is a breeze. There are only a few steps you need to perform to have your devices firing telemetry to our platform. 
 
-Please follow the steps below in the same order of operations as described:
+As mentioned in the [Introduction to xConnect](/xconnect_docs/Platform_Overview), a gateway is currently required for all use-cases regardless of internet connectivity in order to connect agents and edge devices to the xConnect platform. 
+This gateway is an isolated ingestion and relay point for secure communications between our cloud and your edge devices being monitored and managed.
 
+At a high-level, the steps you need to follow are:
 ```mermaid
       graph LR
-          A(Prerequisites) --> B(Gateway Setup)
-          B -->C(Agent Setup)
-          C -->D(Dashboard Setup);
+          A(Network Requirements Met) --> B(Login to xConnect)
+          B -->C(Create Gateway)
+          C -->D(Connect Agents);
           linkStyle default stroke-width:2px,fill:none,stroke:black;
 ```
+!!! note
+    If you have not received your login credentials for [senecaxconnect.com](http://senecaxconnect.com), please contact support@senecaxconnect.com before continuing.
 
-1. Confirm Prerequisites
-2. Configure Gateway
-3. Configure Agent(s)
-4. Configure Dashboard
+## Gateway and Agent Setup
 
-## Prerequisites
-<div class="aligncenter" style="width: 100%">
-<p class="aligncenter" style="text-align: center">
-    <img src="https://image.flaticon.com/icons/svg/394/394592.svg" style="max-width:25%;" alt="" />
-</p>
-</div>
-Confirm the following before continuing your xConnect installation and configuration:
-
-
-* Network Access has been configured or confirmed against [xConnect Network Requirements](/xconnect_docs/Network_Requirements)
-* You've received credentials for the xConnect Web Dashboard ([senecaxconnect.com](http://senecaxconnect.com))
-* Have a PC that can be used to complete IP address changes to gateway (only required if using Seneca-provided Physical Gateway)
-    
-
-## Gateway Setup
-
-### xConnect Guardian Virtual Gateway (Arrow-Hosted)
-
-[Virtual Gateway Setup](/xconnect_docs/Gateway_Virtual)
-
-### Physical/Turnkey Gateway (Seneca-provided)
-
-[Turnkey Gateway Setup](/xconnect_docs/Gateway_TurnKey)
-
-###Virtual Machine Gateway (Self-Hosted)
-
-[Docker Gateway Setup](/xconnect_docs/Gateway_Docker)
-
-## Agent Setup
-
-It is recommended to always download the latest version of the Agent. This is available from our 
-download repository here:
-
-[Download repository](https://download.senecaxconnect.com/files/Agent/xConnect_Server_Agent(Latest).zip)
+1. [Confirm Network Requirements](/xconnect_docs/Network_Requirements)
+2. Login to ([xConnect](http://senecaxconnect.com)). You will be greeted by a "Getting Started" page
+3. Click 'Create Gateway' to create your first Gateway:
+   ![Create Gateway](images/gs_create_gateway.png "Create Gateway")
+4. Name your gateway and create a New Customer to associate it to:
+   ![Create Customer](images/gs_create_customer.png "Create Customer")
+5. Wait for your gateway creation to complete and click 'Next' and then 'Finish'
+   ![Gateway Progress](images/gs_gateway_progress.png "Gateway Progress")
+6. Copy and run the provided command in an Administrative PowerShell terminal on each agent system you would like to connect to the new gateway
+   ![Install Agent](images/gs_install_agent.png "Install Agent")
+   
 
 ## Dashboard Setup
 
-Once the gateway and agent(s) are installed and configured, you can login to your xConnect
-Dashboard instance here:
-
-[Seneca xConnect Cloud Dashboard](https://www.senecaxconnect.com)
+Once the gateway and agent(s) are installed and configured, you are ready to configure your dashboard. For details on setting up for dashboard, please follow the guides in the navigation menu under 'Guides'

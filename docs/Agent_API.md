@@ -2,20 +2,10 @@
 The following are endpoints that can be used to interact with the xConnect Agent. 
 
  
-        
-
-!!! note
-    **As of current release, the API is only bound to localhost or 127.0.0.1 and cannot be 
-    accessed by any other networked machines.** If a remote device needs to access the API, please contact
-    support for an HTTPS version of the API.
- 
-
-
-
 
 ## Get Latest Sensor Data
 
-Used to collect the latest sensor data from all xConnect Agent sensor points
+Used to view the latest telemetry data that xConnect has collected on the agent system
 
 **URL** : `http://localhost:8886/getSensorLatest`
 

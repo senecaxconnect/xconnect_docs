@@ -1,6 +1,6 @@
-# Feature Overview
+# Introduction to xConnect
 
-xConnect Remote Management Platform is the latest enhancement to the already impressive Seneca line of products. xConnect allows you to audit, manage, and maintain all aspects of a enterprise or end-user's network. From edge device monitoring to storage integrity, xConnect puts you in control of your entire environment from a single, intuitive dashboard.
+xConnect is the latest enhancement to the already impressive Seneca line of products. xConnect allows you to audit, manage, and maintain all aspects of a enterprise or end-user's network. From edge device monitoring to storage integrity, xConnect puts you in control of your entire environment from a single, intuitive dashboard.
 
 xConnect monitors your environment with advanced intelligence, and empowers you to manage and maintain many functions of your installation from a single web-based user interface. While its functionality may be expected to center around the performance monitoring of servers, the application also provides command and control functionality on the device level.
 
@@ -11,7 +11,7 @@ This platform is designed with managed service providers in mind to enable intui
 - Temperatures, fan speeds, power supplies
 - RAID controllers, physical, logical and virtual storage
 - System utilization
-- Application monitoring
+- Application monitoring (APM)
 - Network health
 - Application health
 
@@ -37,32 +37,31 @@ setup and configuration.
 
 - xConnect Agent
 - xConnect Gateway
-- xConnect Web Dashboard (Cloud)
+- xConnect Dashboard
 
 ```mermaid
       graph LR
           A(Edge Devices) --> B(Agent)
           B --> A
           B -->C(Gateway)
-          C -->D(xConnect Cloud Dashboard - Azure);
+          C -->D(Dashboard);
           linkStyle default stroke-width:2px,fill:none,stroke:black;
 ```
 
-For greenfield projects where servers and gateways have been 
-manufactured by Seneca, this setup and configuration can be simplified by Seneca pre-configuring and
-pre-installing a majority of this installation.
+For greenfield projects where PCs or servers and gateways have been 
+manufactured by Seneca, this setup and configuration can be simplified by Seneca pre-installing our Agent software.
 
 We will explain how to install the xConnect Agent on existing servers, and how to
-configure it once installed. If purchasing a new server from Seneca, the installation process is not
-necessary, and you can jump straight to the configuration step. 
+configure it once installed. If purchasing a new device from Seneca, the installation process may not
+necessary, and you can jump straight to the Getting Started guide.
 However, **it is recommended to always grab the latest version from our [download repository](https://download.senecaxconnect.com/files/Agent/xConnect_Server_Agent(Latest).zip)**
 
-Once the xConnect Agents has been installed, your next step is to configure
-your xConnect Secure Gateway. The Secure Gateway is responsible for providing a seamless
-encrypted tunnel between Agents and the xConnect Web Client Dashboard.
+Once the xConnect Agents has been installed, your next step is to connect it to an xConnect Gateway. 
+The Gateway is responsible for providing a seamless
+encrypted ingestion and relay point between Agents and the xConnect platform.
 
-The xConnect Agent resides locally on x86 compute devices discovering sensors and
-applications. The xConnect Gateway sends real-time
+The xConnect Agent runs locally within the operating system of the machine discovering sensors and
+applications automatically. The xConnect Gateway sends real-time
 data (telemetry) to the xConnect web interface, providing system and device information. In the event of an
 issue, xConnect can trigger a workflow to immediately notify or react to an issue in the
 environment.
@@ -75,7 +74,7 @@ environment.
           style B fill:#04acec
           B --> A
           B -->C(Gateway)
-          C -->E(xConnect Cloud Management- Azure);
+          C -->D(Dashboard);
           linkStyle default stroke-width:2px,fill:none,stroke:black;
 ```
 
@@ -98,13 +97,12 @@ Additional technical detail can be found here: [xConnect Agent Detail](/xconnect
           A(Edge Devices) --> B(Agent)
           B --> A
           B -->C(Gateway)
-          C -->D(xConnect Cloud Dashboard - Azure);
+          C -->D(Dashboard);
           style C fill:#04acec
           linkStyle default stroke-width:2px,fill:none,stroke:black;
 ```
 
-This is a required component of the xConnect Remote Management Platform. This physical or
-virtual gateway is responsible for being the encrypted tunnel between the Agents and the
+This is a required component of the xConnect Remote Management Platform. This gateway is responsible for being the encrypted tunnel between the Agents and the
 Web Client Dashboard.
 
 There are multiple deployment options for this Secure Gateway:
@@ -112,10 +110,7 @@ There are multiple deployment options for this Secure Gateway:
 - **Arrow-hosted Gateway (also referred to as vBridge or Virtual Gateway)**: This is a Secure Gateway that sits in our cloud and hosted by us. It is generally included in your subscription and can be setup with a few simple steps.
 - **Physical (aka Turnkey)**: This is a hardware appliance sold by Seneca and with the Secure Gateway software and configured with your subscription already
 - **Self-hosted Virtual Machine**: Virtual machines can be configured by Seneca to match the features and functionality of our Turnkey appliance 
-with the purchase of professional services. 
-- **Self-hosted Docker Container**: This is a container image (available on Docker Hub) of the xConnect Gateway software that can 
-onboard a gateway in minutes with minimal configuration. Some features (ie. Remote Desktop and Secure Tunneling) are not available
-without configuration help by Seneca.
+with the purchase of professional services.
 
 Additional technical detail can be found here: [xConnect Secure Gateway Detail](/xconnect_docs/Gateway_Overview)
 
@@ -126,7 +121,7 @@ Additional technical detail can be found here: [xConnect Secure Gateway Detail](
           A(Edge Devices) --> B(Agent)
           B --> A
           B -->C(Gateway)
-          C -->D(xConnect Cloud Dashboard - Azure);
+          C -->D(Dashboard);
           style D fill:#04acec
           linkStyle default stroke-width:2px,fill:none,stroke:black;
 ```
