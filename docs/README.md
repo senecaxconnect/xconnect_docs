@@ -1,7 +1,7 @@
 # xConnect Documentation Library
 
-This the documentation repository for xConnect.
+Documentation has moved.
 
-Please visit http://docs.senecaxconnect.com or https://senecaxconnect.github.io/xconnect_docs/ to view the documentation in HTML.
+Please visit http://docs.senecaxconnect.com for the latest xConnect Platform documentation.
 
 As always, support questions should be sent to support@senecaxconnect.com
